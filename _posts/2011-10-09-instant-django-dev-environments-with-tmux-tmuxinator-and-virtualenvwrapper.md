@@ -68,7 +68,8 @@ A file should now open in your text editor. The Tmuxinator docs use a Rails-insp
 
 ## <span id="A_Django_Example">A Django Example</span>
 
-<pre># ~/.tmuxinator/my_project.yml
+{% highlight yaml %}
+# ~/.tmuxinator/my_project.yml
 # you can make as many tabs as you wish...
 
 project_name: my_project
@@ -83,7 +84,8 @@ tabs:
       panes:
         - tail -f /opt/local/var/log/nginx/access.log
         - tail -f /opt/local/var/log/nginx/error.log
-        - sudo python -m smtpd -n -c DebuggingServer localhost:25</pre>
+        - sudo python -m smtpd -n -c DebuggingServer localhost:25
+{% endhighlight %}
 
 ## <span id="Explanation_of_the_Example">Explanation of the Example</span>
 
@@ -132,7 +134,8 @@ If you&#8217;re a Screen user who has read this far, I encourage you to try out 
 
 One thing I love about Tmux is that you can have multiple sessions open. So, for example, while I&#8217;m working I usually have two sessions open: my Django project session and a session for system administration that has my Chef repository (using <a href="https://github.com/tobami/littlechef" target="_blank">LittleChef</a>) and a few SSH tabs open:
 
-<pre># ~/.tmuxinator/work.yml
+{% highlight yaml %}
+# ~/.tmuxinator/work.yml
 # you can make as many tabs as you wish...
 
 project_name: work
@@ -142,7 +145,8 @@ tabs:
   - chef: venvwrapper && workon kitchen
   - qa: ssh username@my_qa_server
   - prod: ssh username@my_prod_web_server
-  - (several more ssh sessions here)</pre>
+  - (several more ssh sessions here)
+{% endhighlight %}
 
 This is nice because I can quickly switch sessions within Tmux with `Ctrl-b s`.
 

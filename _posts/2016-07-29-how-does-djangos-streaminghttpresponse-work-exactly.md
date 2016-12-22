@@ -25,28 +25,28 @@ Most Django responses use `HttpResponse`. At a high level, this means that the b
 
 Here&#8217;s a short example of using `HttpResponse`:
 
-<div class="highlight highlight-source-python">
-  <pre>    <span class="pl-k">def</span> <span class="pl-en">my_view</span>(<span class="pl-smi">request</span>):
-        message <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Hello, there!<span class="pl-pds">'</span></span>
-        response <span class="pl-k">=</span>  HttpResponse(message)
-        response[<span class="pl-s"><span class="pl-pds">'</span>Content-Length<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-c1">len</span>(message)
+{% highlight python %}
+def my_view(request):
+    message = 'Hello, there!'
+    response =  HttpResponse(message)
+    response['Content-Length'] = len(message)
 
-        <span class="pl-k">return</span> response</pre>
-</div>
+    return response
+{% endhighlight %}
 
 A `StreamingHttpResponse`, on the other hand, is a response whose body is sent to the client in multiple pieces, or &#8220;chunks.&#8221;
 
 Here&#8217;s a short example of using `StreamingHttpResponse`:
 
-<div class="highlight highlight-source-python">
-  <pre>    <span class="pl-k">def</span> <span class="pl-en">hello</span>():
-        <span class="pl-k">yield</span> <span class="pl-s"><span class="pl-pds">'</span>Hello,<span class="pl-pds">'</span></span>
-        <span class="pl-k">yield</span> <span class="pl-s"><span class="pl-pds">'</span>there!<span class="pl-pds">'</span></span>
+{% highlight python %}
+def hello():
+    yield 'Hello,'
+    yield 'there!'
 
-    <span class="pl-k">def</span> <span class="pl-en">my_view</span>(<span class="pl-smi">request</span>):
-        <span class="pl-c"># <span class="pl-k">NOTE</span>: No Content-Length header!</span>
-        <span class="pl-k">return</span> StreamingHttpResponse(hello)</pre>
-</div>
+def my_view(request):
+    # NOTE: No Content-Length header!
+    return StreamingHttpResponse(hello)
+{% endhighlight %}
 
 You can read more about how to use these two classes in [Django&#8217;s documentation](https://docs.djangoproject.com/en/1.9/ref/request-response/). The interesting part is what happens next &#8212; after you return the response.
 
@@ -80,29 +80,31 @@ As with `HttpResponse`, Django ensures that `StreamingHttpResponse` conforms to 
 
 Here&#8217;s how `StreamingHttpResponse` satisfies these requirements ([full source](https://docs.djangoproject.com/en/1.9/_modules/django/http/response/#StreamingHttpResponse)):
 
-<div class="highlight highlight-source-python">
-  <pre>    <span class="pl-en">@</span><span class="pl-c1">property</span>
-    <span class="pl-k">def</span> <span class="pl-en">streaming_content</span>(<span class="pl-smi"><span class="pl-smi">self</span></span>):
-        <span class="pl-k">return</span> <span class="pl-c1">map</span>(<span class="pl-v">self</span>.make_bytes, <span class="pl-v">self</span>._iterator)
-<span class="pl-c"># ...</span>
+{% highlight python %}
+@property
+def streaming_content(self):
+    return map(self.make_bytes, self._iterator)
+# ...
 
-    <span class="pl-k">def</span> <span class="pl-c1">__iter__</span>(<span class="pl-smi"><span class="pl-smi">self</span></span>):
-        <span class="pl-k">return</span> <span class="pl-v">self</span>.streaming_content</pre>
-</div>
+def __iter__(self):
+    return self.streaming_content
+{% endhighlight %}
 
 You give the class a generator and it coerces the values that it produces into bytestrings.
 
 Compare that with the approach in `HttpResponse` ([full source](https://docs.djangoproject.com/en/1.9/_modules/django/http/response/#HttpResponse)):
 
-<div class="highlight highlight-source-python">
-  <pre>    <span class="pl-en">@content.setter</span>
-    <span class="pl-k">def</span> <span class="pl-en">content</span>(<span class="pl-smi"><span class="pl-smi">self</span></span>, <span class="pl-smi">value</span>):
-        <span class="pl-c"># ...</span>
-        <span class="pl-v">self</span>._container <span class="pl-k">=</span> [value]
 
-    <span class="pl-k">def</span> <span class="pl-c1">__iter__</span>(<span class="pl-smi"><span class="pl-smi">self</span></span>):
-        <span class="pl-k">return</span> <span class="pl-c1">iter</span>(<span class="pl-v">self</span>._container)</pre>
-</div>
+
+{% highlight python %}
+@content.setter
+def content(self, value):
+    # ...
+    self._container = [value]
+
+def __iter__(self):
+    return iter(self._container)
+{% endhighlight %}
 
 Ah ha! An iterator with a single item. Very interesting. Now, let&#8217;s take a look at what a WSGI server does with these two different responses.
 
@@ -110,16 +112,16 @@ Ah ha! An iterator with a single item. Very interesting. Now, let&#8217;s take a
 
 Gunicorn&#8217;s synchronous worker offers a good example of what happens after Django returns a response object. The code is [relatively short](https://github.com/benoitc/gunicorn/blob/39f62ac66beaf83ceccefbfabd5e3af7735d2aff/gunicorn/workers/sync.py#L176-L183) &#8212; here&#8217;s the important part (for our purposes):
 
-<div class="highlight highlight-source-python">
-  <pre>respiter <span class="pl-k">=</span> <span class="pl-v">self</span>.wsgi(environ, resp.start_response)
-<span class="pl-k">try</span>:
-    <span class="pl-k">if</span> <span class="pl-c1">isinstance</span>(respiter, environ[<span class="pl-s"><span class="pl-pds">'</span>wsgi.file_wrapper<span class="pl-pds">'</span></span>]):
+{% highlight python %}
+respiter = self.wsgi(environ, resp.start_response)
+try:
+    if isinstance(respiter, environ['wsgi.file_wrapper']):
         resp.write_file(respiter)
-    <span class="pl-k">else</span>:
-        <span class="pl-k">for</span> item <span class="pl-k">in</span> respiter:
+    else:
+        for item in respiter:
             resp.write(item)
-    resp.close()</pre>
-</div>
+    resp.close()
+{% endhighlight %}
 
 Whether your response is streaming or not, Gunicorn iterates over it and writes each string the response yields. If that&#8217;s the case, then what makes your streaming response actually &#8220;stream&#8221;?
 
