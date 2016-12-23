@@ -4,7 +4,6 @@ permalink: /about/index.html
 title: About Me
 description: I'm the husband of a wonderful wife, father to an amazing daughter, and a programmer living in Portland, Oregon.
 tags: [about]
-image:
 ---
 
 Lately I write about programming, meditation, reading and writing fiction, and the amazing natural environment of the Pacific Northwest.
