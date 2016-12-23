@@ -355,8 +355,8 @@ header.site-header nav {
     .post-list {
         list-style-type: none;
         list-style: none;
-        @include column(7);
-        @include push(2);
+        @include column(8);
+        @include push(1);
         display: block;
         float: none;
         
@@ -380,6 +380,7 @@ header.site-header nav {
             
             h1 {
                 font-size: $fs3;
+                word-wrap: break-word;
             }
         }
         
@@ -851,24 +852,23 @@ footer {
 
 }
 
-
 @media only screen and (max-width: $breakpoint-1-max-width) {
 
-.post {
-    @include column(9);
-    max-width: 420px;
-    display: block;
-    margin: 0 auto;
-    float: none;
-}
+    .post {
+        @include column(9);
+        max-width: 420px;
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
 
-footer {
-    font-size: $fs5;
-}
+    footer {
+        font-size: $fs5;
+    }
 
-small {
-    font-size: $fs6;
-}
+    small {
+        font-size: $fs6;
+    }
 
 }
 
@@ -883,7 +883,8 @@ small {
     overflow: hidden; /* clearfix */
     margin-left: -1rem;
     margin-right: -1rem;
-    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    //font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-size: $fs4;
     color: #ccc;
     text-align: center;
 }
