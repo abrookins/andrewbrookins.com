@@ -433,8 +433,8 @@ header.site-header nav {
     h1, h2, h3, h4, h5 {
         padding-top: ($lh * 1/2);
         margin-bottom: ($lh * 1/2);
-        line-height: 1.25em
-
+        line-height: 1.25em;
+        word-wrap: break-word;
     }
     
     figure {
