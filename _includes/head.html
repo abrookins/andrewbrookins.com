@@ -20,7 +20,6 @@
 <link rel='stylesheet' href='{{ site.url }}/assets/css/cal.css' media='all' />
 <link rel="stylesheet" href='{{ site.url }}/assets/css/autumn.css' media='all' />
 
-
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/i.css">
 
@@ -37,6 +36,11 @@
 <!-- Icons -->
 <!-- 16x16 -->
 <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+
+{% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+{% endif %}
+
 
 <div id="bump">
   <body class="">
