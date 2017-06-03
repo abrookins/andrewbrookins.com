@@ -11,8 +11,6 @@ wpautop:
 categories:
   - technology
 ---
-# My Ideal Software Development Environment
-
 > Someone who looks for me in form
 > or seeks me in sound
 > is on a mistaken path

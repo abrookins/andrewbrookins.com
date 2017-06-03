@@ -1,9 +1,9 @@
 ---
 title: 'Can You Write Code on an iPad?'
-date: 2017-06-04T11:19:45+00:00
+date: 2017-06-03T11:19:45+00:00
 author: Andrew
 layout: post
-permalink: /tech/can-you-write-code-on-an-ipad
+permalink: /tech/can-you-write-code-on-an-ipad/
 lazyload_thumbnail_quality:
   - default
 wpautop:
@@ -11,8 +11,6 @@ wpautop:
 categories:
   - technology
 ---
-# Can You Write Code on an iPad?
-
 ## Summary
 
 This is a story about how I experimented with using an iPad Air 2 to write code, what worked and what didn't, and where I ended up.
