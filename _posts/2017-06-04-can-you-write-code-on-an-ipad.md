@@ -9,19 +9,15 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - technology
+  - Technology
 ---
 This is a story about how I experimented with using an iPad Air 2 to write code, what worked and what didn't, and where I ended up.
-
-If you just want to skip to the end and find out if I'm still doing this, well, I'm not. Despite the iPad being incredibly light and a nice tablet, iOS was too limiting for me. Still, I was determined to make it work. I only gave it up because my hands ached after using tiny Bluetooth keyboards for a few weeks!
-
-It was a great experiment, though, because it led me toward a better setup: a Samsung Chromebook Plus and a remote development environment hosted on Google Cloud Platform. Coming soon: *Can You Write Code on a Chromebook?*.
 
 ## Why?
 
 Why did I head down this ludicrous path?
 
-That's a long story. You can read it at [My Ideal Software Development Environment](ideal.html).
+That's a long story. You can read it at [My Ideal Software Development Environment](/tech/my-ideal-software-development-environment/).
 
 ## The Experiment: an iPad Air 2
 

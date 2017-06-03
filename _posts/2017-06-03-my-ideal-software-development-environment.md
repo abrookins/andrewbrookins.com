@@ -9,7 +9,7 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - technology
+  - Technology
 ---
 > Someone who looks for me in form
 > or seeks me in sound
@@ -85,5 +85,5 @@ So I made the switch, and it's been great. Vim over SSH freed me up to try diffe
 * A Galaxy S8 Phone with DeX dock (weird, but intriguing)
 * A Surface Pro or Surface Book (cost prohibitive)
 
-Since I already owned an iPad, I started there: [Can You Write Code on an iPad?](ipad.html).
+Since I already owned an iPad, I started there: [Can You Write Code on an iPad?](/tech/can-you-write-code-on-an-ipad/).
 
