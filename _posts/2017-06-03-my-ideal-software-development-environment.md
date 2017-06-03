@@ -1,3 +1,16 @@
+---
+title: 'My Ideal Software Development Environment'
+date: 2017-06-03T11:19:45+00:00
+author: Andrew
+layout: post
+permalink: /tech/my-ideal-software-development-environment/
+lazyload_thumbnail_quality:
+  - default
+wpautop:
+  - -break
+categories:
+  - technology
+---
 # My Ideal Software Development Environment
 
 > Someone who looks for me in form

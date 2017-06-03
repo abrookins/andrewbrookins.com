@@ -1,3 +1,16 @@
+---
+title: 'Can You Write Code on an iPad?'
+date: 2017-06-04T11:19:45+00:00
+author: Andrew
+layout: post
+permalink: /tech/can-you-write-code-on-an-ipad
+lazyload_thumbnail_quality:
+  - default
+wpautop:
+  - -break
+categories:
+  - technology
+---
 # Can You Write Code on an iPad?
 
 ## Summary
