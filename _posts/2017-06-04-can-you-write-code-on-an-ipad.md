@@ -11,8 +11,6 @@ wpautop:
 categories:
   - technology
 ---
-## Summary
-
 This is a story about how I experimented with using an iPad Air 2 to write code, what worked and what didn't, and where I ended up.
 
 If you just want to skip to the end and find out if I'm still doing this, well, I'm not. Despite the iPad being incredibly light and a nice tablet, iOS was too limiting for me. Still, I was determined to make it work. I only gave it up because my hands ached after using tiny Bluetooth keyboards for a few weeks!
