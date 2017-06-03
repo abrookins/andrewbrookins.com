@@ -65,9 +65,9 @@ If I couldn't run a good editor natively on the iPad, with my code on a remote s
 
 Even on a fast LAN connection, in my experiments VNC was choppy and weird. I couldn't imagine it working on coffee shop internet. A terminal session, on the other hand, only had to send minimal data: text.
 
-Two powerful text editors exist, designed for exactly the constraints imposed by a terminal session: Emacs and Vim. I was already familiar with Vim and comfortable with its modal editing paradigm, so I decided to shift all my development to back to Vim after a several year hiatus away from it, to see if I work with it again.
+Two powerful text editors exist, designed for exactly the constraints imposed by a terminal session: Emacs and Vim. I was already familiar with Vim and comfortable with its modal editing paradigm, so I decided to shift all my development back to Vim after a several year hiatus away from it, to see if I would enjoy working with it again.
 
-Still using my laptop at this point, I updated my Vim configuration. I already used tmux and zshell paired with IDEs like RubyMine and PyCharm, so I began writing code in Vim within a tmux window instead of my IDE, dropping back to the IDE at times.
+Still using my laptop at this point, I made a few tweaks to my Vim configuration to update it. I already used tmux and zshell paired with IDEs like RubyMine and PyCharm, so I began writing code in Vim within a tmux window instead of my IDE.
 
 In a week or two, I had fully reacclimatized to Vim and was pretty happy, so I took the next step: finding a place to run Vim that wasn't on my computer.
 
