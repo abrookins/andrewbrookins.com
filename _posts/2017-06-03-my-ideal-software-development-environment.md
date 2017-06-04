@@ -78,7 +78,7 @@ Still, the Eclipse Che architecture is close to my ideal: a REST API that provid
 
 Most of what I wanted was possible already, I realized.
 
-While no editor exists that matches my requirements exactly, in the meantime I could use Vim running on a remote server, accessed via SSH. That setup would be less possible if I were a C# developer or built a lot of mobile apps, but for the most part, I'm a web developer.
+While no editor existed that matched my requirements exactly, in the meantime I could use Vim running on a remote server, accessed via SSH. That setup would be less possible if I were a C# developer or built a lot of mobile apps, but for the most part, I'm a web developer.
 
 So I made the switch, and it's been great. Vim over SSH freed me up to try different devices, and I had my eye on a few:
 
