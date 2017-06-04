@@ -11,12 +11,12 @@ wpautop:
 categories:
   - Technology
 ---
-> Someone who looks for me in form
-> or seeks me in sound
-> is on a mistaken path
-> and cannot see the Tathagata.
+> Someone who looks for me in form  
+> or seeks me in sound  
+> is on a mistaken path  
+> and cannot see the Tathagata.  
 
--- The Diamond Sutra, translated by Thich Nhat Hanh
+-- *The Diamond Sutra*, translated by Thich Nhat Hanh
 
 > The world should provide me my computing environment and maintain it for me and make it available everywhere. If this were done right, my life would become much simpler and so could yours.
 
@@ -38,11 +38,11 @@ I pondered this question until it led me to a vision of my ideal future computer
 
 ## The Computer
 
-The most important thing about the computer is that there will be hardly anything on it. The environment that it connects to -- which is composed of remote services -- is ambient and available in many forms.
+The most important thing about the computer is that there will be hardly anything on it. The environment that it connects to -- which is composed of remote services -- will be ambient and available in many forms.
 
-Its smallest form is probably the size of a phone or watch. In any case, I can take it on runs, or with me to the grocery store, make calls and send messages, and otherwise use it as a phone.
+Its smallest form is probably the size of a phone or watch. In any case, I can take it on runs, or to the grocery store, make calls and send messages, and otherwise use it as a phone.
 
-Another form is a nine- or 12-inch tablet that is as light as a piece of paper for reading and mobile work. In a bag on my shoulder, I won't feel it at all when I walk two miles to my favorite coffee shop, even if I bring a keyboard attachment. When I hold it, it will be cool to the touch and absolutely silent. Reading with it in one hand will be comfortable, and so will occasional writing with a stylus, light gaming, and watching videos. When I want to work on it, which will involve writing code, I'll attach a keyboard with a built-in trackpad or external mouse.
+Another form is a nine- or 12-inch tablet that is as light as a piece of paper. In a bag on my shoulder, I won't feel it at all on a three mile walk, even if I bring a keyboard attachment. When I hold it, it will be cool to the touch and absolutely silent. Reading with it in one hand will be comfortable, and so will occasional writing with a stylus, light gaming, and watching videos. When I want to work on it, which will involve writing code, I'll attach a keyboard and trackpad or mouse.
 
 If the tablet form isn't large enough for my work, I'll attach the computer to a larger screen.
 
@@ -52,33 +52,35 @@ Data stored on the computer will be used for caching. Data I create will be sent
 
 Being that I am a software developer, I will use this device to write production-quality code in languages like JavaScript, Python, Ruby, and Go.
 
-Instead of hardware upgrades, I will scale up or down the services that I use from this computer. If I need a faster development environment for a project, I will pay -- maybe temporarily -- to give my remote development environment more resources. If my photo library becomes too large to contain in cloud storage, I will upgrade to more storage.
+Instead of hardware upgrades, I will scale up or down the services that I use from this computer. If I need a faster development environment for a project, I will pay -- maybe temporarily -- to give my remote development environment more resources. If my photo library gets too big, I will pay for more cloud storage.
 
 ## The Editor
 
-I've seen the power of a great IDE like PyCharm, even for dynamic languages. However, I don't want to have to buy and maintain a heavy, expensive computer to run an IDE and development environment.
+I've seen the power of a great IDE like PyCharm, even for dynamic languages. However, I don't want to have to buy and maintain a heavy, expensive computer to run one.
 
 I'm also interested in new applications of code assistance: what about machine learning algorithms that could sweep my code while I sleep? And why can't my automated tests continue running while I walk to the coffee shop with my laptop?
 
 The IDE I want has a fast native UI that communicates with remote servers for its intelligence features. My code, too, is stored on one of these remote servers. These could be third-party servers or ones I control. The editor will have useful suggestions, deep refactoring tools, a debugger, and all the other features that are available on an IDE on a fast PC or Mac. However, the work involved to provide those features will happen on a remote server, with the result displayed instantly in a beautiful UI on my light, low-powered device.
 
-And while a network connection will be required for the deeper intelligence features of this hypothetical editor, the editor will still function without one. Offline, the editor would still allow editing cached versions files with syntax highlighting, and intelligence services would start again immediately when the network connection is reestablished.
+And while a network connection will be required for the deeper intelligence features of this hypothetical editor, the editor will still function without one. Offline, the editor allow editing cached versions files with syntax highlighting, and intelligence services would start again immediately when the network connection is reestablished.
 
 ## Hints of Things to Come
 
-There are hints of this future editor around, in the form of language servers that speak the [Language Server Protocol](http://langserver.org/). Visual Studio Code relies on language servers for its intelligence features, although the servers are typically running on the same system as the editor. Eclipse Che is an editor that presents a web application that speaks to a remote service for intelligence features. There are other web applications like Codeanywhere, Cloud9, and Codenvy that give you access to remote development environments. However, all of these web-based editors fall short of mature programs like Vim and PyCharm.
+There are hints of this future editor around, in the form of language servers that speak the [Language Server Protocol](http://langserver.org/). Visual Studio Code relies on language servers for its intelligence features, although the servers are typically running on the same system as the editor and interacting with local code.
 
-In part, the gap between these web applications and mature editors is due to web applications having limited access to keyboard shortcuts. Many keystrokes are absorbed by the browser, and the set of these unavailable keystrokes depends on which browser the user is using. The other part of the gap, of course, is the collection of features that these more mature editors have accumulated over years of development.
+Eclipse Che is an editor that presents a web application that speaks to a REST API for intelligence features. Your code resides on the server that hosts the REST API; your browser runs the editor UI. There are other web applications like Codeanywhere, Cloud9, and Codenvy (built on Eclipse Che) that give you access to remote development environments via the web. However, all of these web-based editors fall short of mature programs like Vim and PyCharm.
 
-Still, the Eclipse Che architecture is close to my ideal: a REST API that provides intelligence features, allowing the UI to be light. Now, perhaps someone needs to build native UIs for Che instead of a web applications, or browsers need to start allowing people to run web applications divorced from the browser UI, like you can in Chrome OS.
+The gap between these web applications and mature editors is due in part to web applications having limited access to keyboard shortcuts. Many keystrokes are absorbed by the browser, and some by the OS, and the set of these unavailable keystrokes depends on which browser and OS the user is using. Then there is the fact that mature native editors have accumulated features over years of development, giving them a head start.
+
+Still, the Eclipse Che architecture is close to my ideal: a REST API that provides intelligence features, allowing the UI to be light. Now, maybe someone can build native UIs for Che instead of a web application, or else browsers will start allowing people to run web applications divorced from the browser UI, like you can in Chrome OS, so they can receive more keyboard shortcuts.
 
 ## Time to Experiment
 
 Most of what I wanted was possible already, I realized.
 
-While no editor exists that matches my requirements exactly, in the meantime I could use Vim running on a remote server, accessed via SSH. That setup would be less possible if I were a C# developer or built mobile apps, but for the most part, I'm a web developer.
+While no editor exists that matches my requirements exactly, in the meantime I could use Vim running on a remote server, accessed via SSH. That setup would be less possible if I were a C# developer or built a lot of mobile apps, but for the most part, I'm a web developer.
 
-So I made the switch, and it's been great. Vim over SSH freed me up to try different devices, and I have my eye on a few:
+So I made the switch, and it's been great. Vim over SSH freed me up to try different devices, and I had my eye on a few:
 
 * An iPad with bluetooth keyboard (already owned)
 * A Chromebook Plus (pretty cheap)

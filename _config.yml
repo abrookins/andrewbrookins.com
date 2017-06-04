@@ -53,9 +53,9 @@ assets:
 gems:
   - jekyll-paginate
 
-paginate: 4
+paginate: 6
 
-baseurl:          https://andrewbrookins.com/
+#baseurl:          https://andrewbrookins.com/
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
