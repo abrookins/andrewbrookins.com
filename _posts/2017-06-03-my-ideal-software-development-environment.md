@@ -15,12 +15,12 @@ categories:
 > or seeks me in sound  
 > is on a mistaken path  
 > and cannot see the Tathagata.  
-
--- *The Diamond Sutra*, translated by Thich Nhat Hanh
+>
+> -- *The Diamond Sutra*, translated by Thich Nhat Hanh
 
 > The world should provide me my computing environment and maintain it for me and make it available everywhere. If this were done right, my life would become much simpler and so could yours.
-
--- [Rob Pike, interviewed for *The Setup*](https://usesthis.com/interviews/rob.pike/)
+>
+> -- [Rob Pike, interviewed for *The Setup*](https://usesthis.com/interviews/rob.pike/)
 
 ## The Beginning
 

@@ -11,13 +11,15 @@ wpautop:
 categories:
   - Technology
 ---
+> The merit in all things consists in the difficulty.
+> 
+> -- Aramis
+
 This is a story about how I experimented with using an iPad Air 2 to write code, what worked and what didn't, and where I ended up.
 
 ## Why?
 
-Why did I head down this ludicrous path?
-
-That's a long story. You can read it at [My Ideal Software Development Environment](/tech/my-ideal-software-development-environment/).
+Why did I head down this ludicrous path? That's a long story. You can read it at [My Ideal Software Development Environment](/tech/my-ideal-software-development-environment/).
 
 ## The Experiment: an iPad Air 2
 
@@ -26,7 +28,9 @@ That's a long story. You can read it at [My Ideal Software Development Environme
 	<figcaption>My iPad Air 2 and Logitech keyboard</figcaption>
 </figure>
 
-What I wanted was an ultralight, thin-client computing environment. The two-year-old iPad Air 2 that I used occasionally was about the right size and weight, though the idea that I could use iOS for work seemed laughable. However, I figured that the iPad could stand in for the device I would one day buy. And of course, most of the things I did were already cloud-hosted, with native and web applications that ran on phones, tablets, and laptops.
+Without going into too much detail, let's say that I became obsessed with creating an ultralight, thin-client computing environment, and few computers on the market seemed to fit my requirements.
+
+However, my two-year-old iPad Air 2 was about the right size and weight. The idea that I could use iOS for work seemed laughable, but I figured that the iPad could stand in for the device I would one day buy. And of course, most of the things I did were already cloud-hosted, with native and web applications that ran on phones, tablets, and laptops.
 
 Despite iOS's limitations, it is very much oriented toward thin-client uses:
 
@@ -78,7 +82,7 @@ In a week or two, I had fully reacclimatized to Vim and was pretty happy, so I t
 
 ### Google Cloud Platform
 
-I could use a Virtual Private Server for my development environment, but doing so involved a fixed price for a fixed amount of disk, RAM, CPU, and network traffic. On the other hand, a cloud provider would make some very cool things possible.
+I could use a virtual private server for my development environment, but they tend to be priced for a fixed amount of disk, RAM, CPU, and network traffic. On the other hand, a cloud provider would make some very cool things possible.
 
 First off, I could install my tools on a Linux disk image and pay for the *compute nodes* (to use Google Cloud Platform terminology) that run my tools separately from the disk. For a couple of days I might run with one CPU and 4 GB of RAM, and then if I needed to temporarily, I could scale the compute node up -- perhaps to run a graphical desktop and work on an Android app. Meanwhile, my network traffic would always be low compared to something like a busy website, so no need to pay for traffic I won't use!
 
