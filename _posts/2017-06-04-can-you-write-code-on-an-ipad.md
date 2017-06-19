@@ -44,7 +44,7 @@ So I began the experiment.
 
 ## The Development Environment
 
-The most important part of my ideal development envornment was that code and dependent programs would exist off of my device. Local caching would keep me going if I went offline temporarily. The environment should provide roughly the same level of intelligence that I expect from PC and Mac IDEs.
+The most important part of my ideal development environment was that code and dependent programs would exist off of my device. Local caching would keep me going if I went offline temporarily. The environment should provide roughly the same level of intelligence that I expect from PC and Mac IDEs.
 
 That was already a tall order, and I had other requirements that I hoped to achieve eventually. Accepting that it wouldn't be perfect, I decided that I could make compromises if they got me close to my ideal.
 
@@ -78,7 +78,7 @@ Two powerful text editors exist, designed for exactly the constraints imposed by
 
 Still using my laptop at this point, I made a few updates to my old Vim configuration. I updated to the latest version of Neovim and configured `vim-test` to run tests in a terminal split. This is pretty great, as it gives you access to debuggers like `pry` running alongside your code in a Vim buffer. Then I freshened up my tmux configuration and began writing code in Neovim within a tmux window, instead of my IDE.
 
-In a week or two, I had fully reacclimatized to Vim and was pretty happy, so I took the next step: finding a place to run Vim that wasn't on my computer.
+In a week or two, I had fully reacclimated to Vim and was pretty happy, so I took the next step: finding a place to run Vim that wasn't on my computer.
 
 ### Google Cloud Platform
 
@@ -170,16 +170,16 @@ Vim is great at editing text, and using it instead of a Vim emulator in an IDE f
 
 ## Can You Write Code on a ____?
 
-Ultimately, after a few weeks, I stopped using an iPad as my primary device. The limitations were starting to get to me, but what forced me to stop was that my hands ached. Those tiny Blutooth keyboards hurt to type on after a while!
+Ultimately, after a few weeks, I stopped using an iPad as my primary device. The limitations were starting to get to me, but what forced me to stop was that my hands ached. Those tiny Bluetooth keyboards hurt to type on after a while!
 
-However, I consider the experiment a success: I found out that I was really happy with a light, thin client device that could act like both a latpop and a tablet.
+However, I consider the experiment a success: I found out that I was really happy with a light, thin client device that could act like both a laptop and a tablet.
 
 So I looked around for other devices that I could write code on that were similar. There were only two or three on the market:
 
 * Microsoft Surface Pro / Surface Book
 * Samsung Chromebook Plus and Chromebook Pro
 
-Every other hybrid laptop on the market weighs more than I want or is somehow compromised. Meanwhile, Apple maintains its lust for OS and device purity, desiring that I pay thousands of dollars for a phone, tablet, computer, watch, and whatever else they can design, with three differet OSes, rather than building practical, multi-purpose systems.
+Every other hybrid laptop on the market weighs more than I want or is somehow compromised. Meanwhile, Apple maintains its lust for OS and device purity, desiring that I pay thousands of dollars for a phone, tablet, computer, watch, and whatever else they can design, with three different OSes, rather than building practical, multi-purpose systems.
 
 Ultimately, I grabbed a Chromebook Plus for $417 on an open-box special at Best Buy. So, let me give you a preview of the writeup of my next experiment: *Can You Code on a Chromebook?*
 

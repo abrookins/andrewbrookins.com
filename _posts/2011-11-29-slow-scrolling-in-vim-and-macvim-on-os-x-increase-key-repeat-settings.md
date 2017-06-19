@@ -11,7 +11,7 @@ aktt_notify_twitter:
 categories:
   - Technology
 ---
-Vim, Neovim, and MacVim can all exhibit slow scrolling in macOS. In some cases, the problem is OS-specific: key repeat settings can slow down scrolling with the `j` and `j` keys. Other times, the problem is really about Vim's ability to render long lines with syntax highlighting.
+Vim, Neovim, and MacVim can all exhibit slow scrolling in macOS. In some cases, the problem is OS-specific: key repeat settings can slow down scrolling with the `j` and `k` keys. Other times, the problem is really about Vim's ability to render long lines with syntax highlighting.
 
 Fear not! There are solutions to both problems.
 
