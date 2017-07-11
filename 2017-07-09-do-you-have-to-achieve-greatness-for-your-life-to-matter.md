@@ -16,7 +16,7 @@ Did you get the sense that the statement was already present in your mind, and I
 
 Imagine for a moment that the statement is true. You're an old woman looking back at her life. You did many things, but you didn't achieve true greatness.
 
-How did that feel? If it didn't bother you at all, then my work is already done. Otherwise, we are going to examine very closely the suffering that this idea can cause, and a way out.
+How did that feel? If it didn't bother you at all, then my work is already done. Otherwise, we are going to examine very closely the suffering that this idea can cause.
 
 ## Nothingness, the Eternal Soul, and Reincarnation
 
@@ -92,18 +92,18 @@ This letter started by examining the anxiety a young person felt after concludin
 
 I asked some questions about how long a life might last and what constitutes a life in spans of time like seventy years or 24 hours. Then I gave two examples of small-seeming actions that had far-reaching consequences.
 
-Now I want to finish this letter by narrowing the scope even more, into a single second.
+Now I will conclude by narrowing the scope even more, to a single second.
 
-"Everything can change in a single second" is a phrase that is burned into my brain, probably by movie trailers. When you think of the possibilities within a second, that's kind of what jumps to mind, right? In a single second, you dramatically save a child about to be hit by a bus. In a single second, you defuse the bomb that was about to kill forty hostages. We can just keep cranking up the drama.
+"A single second changed her life forever" is a phrase that is burned into my brain, probably by dozens of movie trailers. When you think of what's possible within a second, that's kind of what jumps to mind, right? In a single second, you dramatically save a child about to be hit by a bus. In a single second, you defuse the bomb that was about to kill forty hostages. We can just keep cranking up the drama.
 
-But in real life, how often do you perceive anything actually changing in a single second? My thoughts change, but my life? Not so much. Or does it?
+But in real life, how often do you perceive anything actually changing in a single second? My thoughts change, but my life? Not so much.
 
-A second is just long enough to act. To make a decision. To speak. Long enough for a glance, for a genuine smile, for a kind touch, for a piercing shout.
+And yet, a second is just long enough to act. To make a decision. To speak. Long enough for a glance, for a genuine smile, for a kind touch, for a piercing scream.
 
-Each of these actions, despite taking only a second, is a conversion of biological energy in your body into something else. The energy does not disappear; instead, it begins to travel. It will take another form, it will produce an effect. That motion will continue, and the effect will become the cause of another effect. In every moment, with every action you take, this energy is blooming from you, beginning its journey, triggering other movements and beginnings, with rapidly imperceptible complexity at every point.
+Each of these actions, despite taking only a second, is a conversion of energy in your body into something else. The energy does not disappear; instead, it begins to travel. It will take another form, it will produce an effect. That motion will continue, and the effect will become the cause of another effect. In every moment, with every action you take, this energy is blooming from you, beginning its individual journey, triggering other movements and beginnings, with rapidly imperceptible complexity.
 
-It seems to me that if you were to draw a line from someone's birth until their death and call it that person's life, and place dots for major events, and consider that line the substance of the person's life, then the lack of a big dot signifying a great action would be sad. It would be natural to worry about this line while it's being drawn, to question if the dots would be big enough.
+If you were to draw a line from someone's birth until their death and call it that person's life, and place dots for major events, and consider that line the substance of the person's life, then the lack of a big dot signifying a great action would be sad indeed. It would be natural to worry about this line while it's being drawn, to question if the dots will be big enough.
 
-Please consider: is your life really just a straight line with a few dots? If so, shouldn't there be a dot for every second? For a seventy-year-old, that's over two *billion* dots. And for each dot, we should zoom in and start another line. This is the line for the energy you put into motion in that second. Then we should follow that line to see what kind of greatness it eventually produces. Unfortunately for us, the line will extend beyond the end of your life, so the map will have to be very large. How large do you think it'll need to be, exactly?
+Consider, though: is your life really just a straight line with a few dots? Shouldn't there be a dot for every second? For a seventy-year-old, that's over two *billion* dots. And for each dot, we'd have to zoom in and start a parallel line. This is the line for the energy that you put into motion in one second on the original line. Then we should follow that line to see what kind of greatness it might produce. Unfortunately for us, the new line will extend beyond the end of the first line, and that's just one of the two billion dots, so this map is going to get very large. How large do you think it'll need to be, exactly?
 
 When you can tell me how large that map should be, maybe you will have an answer to the question, "do you have to achieve an act of greatness for your life to matter?"
