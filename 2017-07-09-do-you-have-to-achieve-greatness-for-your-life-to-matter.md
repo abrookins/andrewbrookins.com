@@ -1,10 +1,10 @@
-# Dear Alma: Do You Have to Achieve Greatness for Your Life to Matter?
+# Dear Alma: Do You Have to Achieve an Act of Greatness for Your Life to Matter?
 
 After the movie *The Social Network* came out, I saw a post on the internet written by a teenager who said he had seen the movie and already knew he would never achieve Mark Zuckerberg's level of greatness. The spirit of his post was, "I'll never be that great, so what is the point of life?"
 
 I pondered his question for seven years, and now I have finished thinking about it. This letter is for you, in case you ever ask the same question and I'm not around to give you my answer.
 
-Also, about that answer. I have no platitudes to offer. Instead, I have a few short thought experiments that could make you uncomfortable, and a *lot* of questions. I hope that your mind dwells on these questions over the next couple of days. With any luck, they will lead you to the answer you seek.
+Also, about that answer. I have no platitudes to offer. Instead, I have a few short thought experiments that could make you uncomfortable, and a *lot* of questions. I hope that your mind dwells on these questions over the next couple of days. With any luck, they will lead you to an answer.
 
 ## First Thought Experiment
 
@@ -76,17 +76,34 @@ You get the idea, right? Some people are great because of a single event, while 
 
 We are truly in the thick of it now. Let's continue from the basis that a life is made of actions.
 
-## Fifth Thought Experiment
+## Final Thought Experiment
 
 I want you to consider two scenarios:
 
-- A child learning how to play a cello gives a bad performance in front of an audience. Other than her parents, few people give positive comments, and she leaves the stage. You are in the audience, empathize with the child, and approach her afterward to give honest praise about her hard work. She thanks you, and you promptly forget about the episode. The girl continues practicing. She remembers that day as her first public embarrassment, and she ruminates about it often. With the pain, though, she always remembers you. In fact, she remembers your kind words seven hundred times, and each time pushes her to practice harder. Later, she joins an ensemble that comes to be known as the one of the greatest of its generation. Ten thousand people's broken hearts are consoled by this music.
+- You are in the audience when a child gives a bad cello performance. Other than her parents, few people make positive comments, and then she leaves the stage. You empathize with the child, so you approach her afterward and give honest praise about her hard work. She thanks you, and you promptly forget about the episode. The girl continues practicing. She remembers that day as her first public embarrassment; she ruminates about it often. With the pain, though, she always remembers you. In fact, she remembers your kind words a total of seven hundred times in her life, and each time pushes her to practice harder. Later, she joins an ensemble that earns some renown. Many thousands of people are consoled by this ensemble's music while it stays together, and the recordings continue to reach people for decades afterward.
 
-- Two candidates run for a political office. One supports better funding of mental health care services. You vote for him. The vote is close; a handful of people decide the election for the man you chose. Soon after, you move to another country and never return. While the politician is in office, he at first tries to back away from his campaign promises, but after pressure from a coalition of mental health advocates and his wife, a devout Catholic, he begins working on legislation that would revamp the mental health care system. The legislation passes. Thousands of people see an increase in quality of life, happiness, and meaning as a result. One hundred that would have died within five years without the new plan live instead.
+- Two candidates run for a political office. One supports better funding of mental health care services. You vote for him. The vote is close; a handful of people decide the election for the man you chose. Soon after the election, you move to another country and never return to your first home. While the politician is in office, he tries to back away from his campaign promises, but after pressure from a coalition of mental health advocates and his wife, a devout Catholic, he begins working on legislation that would revamp the mental health care system. The legislation passes. Hundreds of thousands of people see a lasting increase in quality of life, happiness, and meaning as a result; some that would have died within without the plan live instead.
 
-How many actions were involved in producing the great things done in these examples?
+How many actors were involved in producing the great things done in these examples? Whose lives were made meaningful (objectively, not subjectively) as a result of achieving greatness through these actions? Can a human being ever know the answer to these questions?
 
+## Conclusion: Life in a Single Second
 
-## A Flash of Lightning
+This letter started by examining the anxiety a young person felt after concluding that the greatness of someone else's life was probably not possible within his own. That is, within the span of his life and attributed to him.
 
-Greatness is like a flash of lightning that appears in the world when the conditions are right. Are the clouds great because they generated lightning, or is the tree that it sets on fire great for receiving it?
+I asked some questions about how long a life might last and what constitutes a life in spans of time like seventy years or 24 hours. Then I gave two examples of small-seeming actions that had far-reaching consequences.
+
+Now I want to finish this letter by narrowing the scope even more, into a single second.
+
+"Everything can change in a single second" is a phrase that is burned into my brain, probably by movie trailers. When you think of the possibilities within a second, that's kind of what jumps to mind, right? In a single second, you dramatically save a child about to be hit by a bus. In a single second, you defuse the bomb that was about to kill forty hostages. We can just keep cranking up the drama.
+
+But in real life, how often do you perceive anything actually changing in a single second? My thoughts change, but my life? Not so much. Or does it?
+
+A second is just long enough to act. To make a decision. To speak. Long enough for a glance, for a genuine smile, for a kind touch, for a piercing shout.
+
+Each of these actions, despite taking only a second, is a conversion of biological energy in your body into something else. The energy does not disappear; instead, it begins to travel. It will take another form, it will produce an effect. That motion will continue, and the effect will become the cause of another effect. In every moment, with every action you take, this energy is blooming from you, beginning its journey, triggering other movements and beginnings, with rapidly imperceptible complexity at every point.
+
+It seems to me that if you were to draw a line from someone's birth until their death and call it that person's life, and place dots for major events, and consider that line the substance of the person's life, then the lack of a big dot signifying a great action would be sad. It would be natural to worry about this line while it's being drawn, to question if the dots would be big enough.
+
+Please consider: is your life really just a straight line with a few dots? If so, shouldn't there be a dot for every second? For a seventy-year-old, that's over two *billion* dots. And for each dot, we should zoom in and start another line. This is the line for the energy you put into motion in that second. Then we should follow that line to see what kind of greatness it eventually produces. Unfortunately for us, the line will extend beyond the end of your life, so the map will have to be very large. How large do you think it'll need to be, exactly?
+
+When you can tell me how large that map should be, maybe you will have an answer to the question, "do you have to achieve an act of greatness for your life to matter?"
