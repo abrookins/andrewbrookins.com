@@ -1,10 +1,21 @@
-# Dear Alma: Do You Have to Achieve an Act of Greatness for Your Life to Matter?
-
+---
+title: 'Dear Alma: Do You Have to Achieve an Act of Greatness for Your Life to Matter?'
+date: 2017-07-10
+author: Andrew
+layout: post
+permalink: /life/do-you-have-to-achieve-an-act-of-greatness/
+lazyload_thumbnail_quality:
+  - default
+wpautop:
+  - -break
+categories:
+  - Life
+---
 After the movie *The Social Network* came out, I saw a post on the internet written by a teenager who said he had seen the movie and already knew he would never achieve Mark Zuckerberg's level of greatness. The spirit of his post was, "I'll never be that great, so what is the point of life?"
 
 I pondered his question for seven years, and now I have finished thinking about it. This letter is for you, in case you ever ask the same question and I'm not around to give you my answer.
 
-Also, about that answer. I have no platitudes to offer. Instead, I have a few short thought experiments that could make you uncomfortable, and a *lot* of questions. I hope that your mind dwells on these questions over the next couple of days. With any luck, they will lead you to an answer.
+I have no platitudes to offer. Instead, I have a few short thought experiments that could make you uncomfortable, and a *lot* of questions. I hope that your mind dwells on these questions over the next couple of days. With any luck, they will lead you to an answer.
 
 ## First Thought Experiment
 
@@ -26,7 +37,7 @@ You may believe that after death, there is nothingness, or that your soul is ete
 
 Instead of talking about when life ends, I want you to consider when death begins. I know, I know. Death?! But let's go there for a moment.
 
-## Third Thought Experiment
+## Second Thought Experiment
 
 As you read this, is it closer to the time you woke up today, or the time you'll go to sleep? If it's closer to the time you woke up, are you the same person today as the person who went to sleep? Is today the same day as yesterday? (You're five years old now and ask me this all the time; it's a valid question.)
 
@@ -38,7 +49,7 @@ What would it even mean if you were a different person after you woke up? Does t
 
 Of course, we both know that going to sleep isn't the same as the death of the body, and I won't insult your intelligence by claiming that they are alike. But let's continue the experiment. Aside from the complexity of your brain, what are the similarities and differences between the moment your body was born from your mother's womb and the moment you gained consciousness today?
 
-Oops! I said I would only talk about death, and then I meandered back to birth. "Back" to birth doesn't sound right, does it?
+Oops! I said I would talk about death, and then I meandered back to birth. "Back" to birth doesn't sound right, does it?
 
 ## How Long is a Life?
 
@@ -48,7 +59,7 @@ Odd as the questions are, the central conflict in the pro-life/pro-choice debate
 
 This essay is not about that debate and we won't address it, but clearly, our ideas about the moment that life begins -- and thus about the duration of life -- are important enough to warrant decades of entrenched conflict. These are serious questions!
 
-## Fourth Thought Experiment
+## Third Thought Experiment
 
 Given that these silly questions are actually very serious, let's keep experimenting with them.
 
@@ -68,7 +79,7 @@ This time I want to push an answer on you: Your actions. I hope we can agree tha
 
 Here are examples of what most people would probably call "greatness":
 
-- The winner of a gold metal at the Olympics, or a career athlete who wins ten Olympic gold medals
+- The winner of a gold medal at the Olympics, or a career athlete who wins ten Olympic gold medals
 - The founder of a very successful company, or a serial entrepreneur who creates many successful companies
 - The author of a well-received and long-remembered novel, or a novelist who writes many such novels
 
@@ -78,11 +89,11 @@ We are truly in the thick of it now. Let's continue from the basis that a life i
 
 ## Final Thought Experiment
 
-I want you to consider two scenarios:
+Consider two scenarios:
 
 - You are in the audience when a child gives a bad cello performance. Other than her parents, few people make positive comments, and then she leaves the stage. You empathize with the child, so you approach her afterward and give honest praise about her hard work. She thanks you, and you promptly forget about the episode. The girl continues practicing. She remembers that day as her first public embarrassment; she ruminates about it often. With the pain, though, she always remembers you. In fact, she remembers your kind words a total of seven hundred times in her life, and each time pushes her to practice harder. Later, she joins an ensemble that earns some renown. Many thousands of people are consoled by this ensemble's music while it stays together, and the recordings continue to reach people for decades afterward.
 
-- Two candidates run for a political office. One supports better funding of mental health care services. You vote for him. The vote is close; a handful of people decide the election for the man you chose. Soon after the election, you move to another country and never return to your first home. While the politician is in office, he tries to back away from his campaign promises, but after pressure from a coalition of mental health advocates and his wife, a devout Catholic, he begins working on legislation that would revamp the mental health care system. The legislation passes. Hundreds of thousands of people see a lasting increase in quality of life, happiness, and meaning as a result; some that would have died within without the plan live instead.
+- Two candidates run for a political office. One supports better funding of mental health care services. You vote for him. The vote is close; a handful of people decide the election for the man you chose. Soon after the election, you move to another country and never return to your first home. While the politician is in office, he tries to back away from his campaign promises, but after pressure from a coalition of mental health advocates and his wife, a devout Catholic, he begins working on legislation that would revamp the mental health care system. The legislation passes. Hundreds of thousands of people see a lasting increase in quality of life, happiness, and meaning as a result; some that would have died without the plan live instead.
 
 How many actors were involved in producing the great things done in these examples? Whose lives were made meaningful (objectively, not subjectively) as a result of achieving greatness through these actions? Can a human being ever know the answer to these questions?
 
@@ -100,10 +111,10 @@ But in real life, how often do you perceive anything actually changing in a sing
 
 And yet, a second is just long enough to act. To make a decision. To speak. Long enough for a glance, for a genuine smile, for a kind touch, for a piercing scream.
 
-Each of these actions, despite taking only a second, is a conversion of energy in your body into something else. The energy does not disappear; instead, it begins to travel. It will take another form, it will produce an effect. That motion will continue, and the effect will become the cause of another effect. In every moment, with every action you take, this energy is blooming from you, beginning its individual journey, triggering other movements and beginnings, with rapidly imperceptible complexity.
+Each of these actions, despite taking only a second, is a conversion of energy in your body into something else. The energy does not disappear; instead, it begins to travel. It will take another form, it will produce an effect. Then that motion will continue, and the effect will become the cause of another effect. In every moment, with every action you take, this energy is blooming from you, beginning its individual journey, triggering other movements and beginnings, with rapidly incomprehensible complexity.
 
 If you were to draw a line from someone's birth until their death and call it that person's life, and place dots for major events, and consider that line the substance of the person's life, then the lack of a big dot signifying a great action would be sad indeed. It would be natural to worry about this line while it's being drawn, to question if the dots will be big enough.
 
-Consider, though: is your life really just a straight line with a few dots? Shouldn't there be a dot for every second? For a seventy-year-old, that's over two *billion* dots. And for each dot, we'd have to zoom in and start a parallel line. This is the line for the energy that you put into motion in one second on the original line. Then we should follow that line to see what kind of greatness it might produce. Unfortunately for us, the new line will extend beyond the end of the first line, and that's just one of the two billion dots, so this map is going to get very large. How large do you think it'll need to be, exactly?
+But is your life really just a straight line with a few dots? Shouldn't there be a dot for every second? For a seventy-year-old, that's over two *billion* dots. And for each dot, we'd have to zoom in and start a parallel line. This is the line for the energy that you put into motion in one second on the original line. Then we should follow that line to see what kind of greatness it might produce. Unfortunately for us, the new line will extend beyond the end of the first line, and that's just one of the two billion dots, so this map is going to get very large. How large do you think it might get, exactly?
 
-When you can tell me how large that map should be, maybe you will have an answer to the question, "do you have to achieve an act of greatness for your life to matter?"
+When you can tell me how large that map might be, maybe you will have an answer to the question, "do you have to achieve an act of greatness for your life to matter?"

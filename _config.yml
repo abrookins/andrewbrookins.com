@@ -55,7 +55,8 @@ gems:
 
 paginate: 6
 
-baseurl:          https://andrewbrookins.com/
+#baseurl:          https://andrewbrookins.com/
+baseurl:        
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
