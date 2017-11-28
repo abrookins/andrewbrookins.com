@@ -25,7 +25,6 @@
 <link rel="stylesheet" href="{{ site.url }}/assets/css/i.css">
 
 <!-- Fresh Squeezed jQuery -->
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 <meta http-equiv="cleartype" content="on">
@@ -37,6 +36,18 @@
   #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
   #mc_embed_signup form{padding: 0;}
 </style>
+
+{% if page.custom_css %}
+  {% for stylesheet in page.custom_css %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
+  {% endfor %}
+{% endif %}
+
+{% if page.custom_js %}
+  {% for js_file in page.custom_js %}
+    <script src='{{ js_file }}' type="text/javascript"></script>
+  {% endfor %}
+{% endif %}
 
 <!-- Icons -->
 <!-- 16x16 -->

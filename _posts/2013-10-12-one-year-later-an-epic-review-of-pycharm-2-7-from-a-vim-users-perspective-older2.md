@@ -15,7 +15,7 @@ categories:
 ---
 This is a review of PyCharm 2.7 that covers all of the features of the editor that I have used on a near-daily basis over the past year. My perspective is that of a professional (and hobby) software developer, occasional open-source contributor and former happy user of Vim.
 
-### <span id="Wait_There_is_newer_version_of_this_post_that_covers_PyCharm_3"><strong>Wait! <a href="/python/one-year-later-an-epic-review-of-pycharm-2-7-from-a-vim-users-perspective/">There is newer version of this post that covers PyCharm 3.</a></strong><br /> </span>
+### <span id="Wait_There_is_newer_version_of_this_post_that_covers_PyCharm_3"><strong>Wait! <a href="/tech/one-year-later-an-epic-review-of-pycharm-2-7-from-a-vim-users-perspective/">There is newer version of this post that covers PyCharm 3.</a></strong><br /> </span>
 
 About text editors and me: I&#8217;ve configured the crap out Vim, Emacs and Sublime Text 2, used many plugins and written some of my own, and read [Learning the vi and Vim Editors](http://shop.oreilly.com/product/9780596529833.do) for fun. On my quest for the One True Editor I&#8217;ve frequently dipped into lots of other editors and IDEs, so I may draw some non-Vim comparisons in this review.
 

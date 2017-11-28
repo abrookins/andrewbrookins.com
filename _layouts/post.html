@@ -3,14 +3,13 @@
 <section class="article">
 
 {% if page.image.feature %}
-  <div class="overlay"></div>
   {% if page.image.feature contains 'https://' or page.image.feature contains 'http://' %}
   <div class="featured-image" style="background-image: url({{ page.image.feature }})"></div>
   {% else %}
   <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
   {% endif %}
 {% else %}
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/sky.jpg)"></div>
+  <div class="featured-image" style="background-image: url({{ site.url }}/images/matthew-smith-5935.jpg)"></div>
 {% endif %}
 
 

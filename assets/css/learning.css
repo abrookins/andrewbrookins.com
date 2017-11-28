@@ -1,0 +1,19 @@
+.description {
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.post {
+  overflow: visible;
+}
+
+#container {
+  position: relative;
+  width: 100vw;
+  left: calc(-50vw + 50%);
+  right: calc(-50vw + 50%);
+}
+
