@@ -11,17 +11,16 @@ def make_scatter(filename):
         for r in reader:
             returns = float(r['Satisfaction']) + \
                 float(r['Joy']) + float(r['Stability']) + float(r['Benefit to Others'])
+            cost = float(r['Units Invested'])
 
             out.append({
                 'name': r['Investment'],
                 'x': float(r['Age (Years)']),
-                'y': returns / float(r['Units Invested']),
-                'z': float(r['Units Invested'])
+                'y': (returns - cost) / float(r['Units Invested']),
+                'z': cost
             })
         return json.dumps(out)
 
 
 if __name__ == '__main__':
-    data = make_scatter(sys.argv[1])
-    template = sys.argv[2]
-    print()
+    print(make_scatter(sys.argv[1]))

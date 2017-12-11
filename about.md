@@ -1,8 +1,10 @@
 ---
-layout: post
+layout: post-dark
 permalink: /about/index.html
 title: About Me
 tags: [about]
+image: 
+  feature: me-alma-e.jpg
 ---
 
 <figure>
@@ -24,3 +26,4 @@ Here are a few of my favorite posts:
 
 <h2>Contact me</h2>
 You can find me on <a href="https://twitter.com/abrookins">Twitter</a> and <a href="https://github.com/abrookins">GitHub</a>. Or email me: a AT andrewbrookins.com.
+

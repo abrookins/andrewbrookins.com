@@ -2,6 +2,14 @@
   font-size: 16px;
 }
 
+.highcharts-tooltip span {
+    height:auto;
+    width:400px;
+    overflow:auto;
+    white-space:normal !important;
+    font-family: "Calendas Plus", "Hoefler Text", "Georgia", serif;
+  }
+
 .hidden {
   display: none;
 }
