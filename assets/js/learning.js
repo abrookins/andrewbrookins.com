@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  Highcharts.chart('container', {
+  window.learningInvestmentsChart = Highcharts.chart('container', {
     chart: {
       type: 'bubble',
       backgroundColor: '#f9f9f9'
@@ -37,8 +37,8 @@ $(document).ready(function() {
     },
     tooltip: {
       formatter: function() {
-        var id = this.point.name.toLowerCase().split(' ').join('-'),
-          markup = document.getElementById(id),
+        var className = this.point.name.toLowerCase().split(' ').join('-'),
+          markup = document.getElementsByClassName(className)[0],
           description = "<h4>" + this.point.name + "</h4>";
 
         if (markup) {
@@ -51,7 +51,8 @@ $(document).ready(function() {
       whiteSpace: "normal",
       backgroundColor: '#f9f9f9',
       borderWidth: 1,
-      borderColor: '#f9f9f9'
+      borderColor: '#f9f9f9',
+      hideDelay: 100
     },
     plotOptions: {
       series: {
@@ -92,7 +93,7 @@ $(document).ready(function() {
           "z": 3.0
         },
         {
-          "name": "Wordpress",
+          "name": "WordPress",
           "x": 8.0,
           "y": 3.0,
           "z": 1.5
@@ -335,5 +336,15 @@ $(document).ready(function() {
 
 
     }]
+  });
+
+  $(document).keyup(function (e) {
+    if (e.keyCode === 27) {
+      window.learningInvestmentsChart.tooltip.hide();
+    }
+  });
+
+  $('body').on('click', '#container', function (e) {
+    window.learningInvestmentsChart.tooltip.hide();
   });
 });

@@ -1,18 +1,16 @@
 ---
-layout: post-dark
+layout: post
 permalink: /about/index.html
 title: About Me
 tags: [about]
-image: 
-  feature: me-alma-e.jpg
 ---
+
+I'm a father and programmer living in Portland, Oregon. Lately I solve cloud infrastructure problems with Ruby and JavaScript at IBM, and in my free time I kick it with the family, meditate, and run a Dungeons and Dragons game.
 
 <figure>
 	<img src="/images/family.jpg" style="max-width: 400px;">
 	<figcaption>A photograph of the family</figcaption>
 </figure>
-
-I'm a father and programmer living in Portland, Oregon. Lately I solve cloud infrastructure problems with Ruby and JavaScript at Compose, an IBM company, and in my free time I kick it with the family, meditate, and run a Dungeons and Dragons game.
 
 Here are a few of my favorite posts:
 

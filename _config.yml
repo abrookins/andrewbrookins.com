@@ -56,8 +56,8 @@ gems:
 paginate: 6
 
 # Don't leave this blank when you deploy!
-#baseurl:          https://andrewbrookins.com/
-base_url: ""
+baseurl:          https://andrewbrookins.com/
+#base_url: ""
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
