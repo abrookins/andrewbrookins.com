@@ -431,7 +431,7 @@ When `extend` copies methods, it does so by creating a new singleton class and i
 
 ---
 
-By creating a new singleton class and adding it to the hierarchy of the target class's metaclass, `exclude` makes those methods available when Ruby searches through the class's ancestors to find class methods during runtime.
+By creating a new singleton class and adding it to the hierarchy of the target class's metaclass, `extend` makes those methods available when Ruby searches through the class's ancestors to find class methods at runtime.
 
 So it does basically the same thing as `include`, but with a different target -- the class's metaclass rather than the class itself. You can see this in `irb`:
 
@@ -457,10 +457,10 @@ So it does basically the same thing as `include`, but with a different target --
 
 Once again, a singleton class is inserted, but this time it's linked to the metaclass (`singleton_class`) of `AnotherHero` rather than the class itself.
 
----
-**Quick note on using `include` for class methods**: Often `include` is used to mix in instance methods _and_ class methods. This is done by implementing a `self.included` method in the module, like so:
+### Using `include` for class methods
 
----
+Often `include` is used to mix in instance methods _and_ class methods. This is done by implementing a `self.included` method in the module, like so:
+
 
 ```ruby
 module Runnable
@@ -817,7 +817,7 @@ But where did this term, "mixin," come from? The best reference I could find to 
 
 There are some great blog posts, lectures, and books that cover Python and Ruby internals if you want to read more about what goes on behind the scenes in both of these approaches to mixins.
 
-For Python, you'll want to read anything on multiple inheritance. My favorite book on Python is <a target="_blank" href="https://www.amazon.com/gp/product/1491946008/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1491946008&linkCode=as2&tag=andrewbrookin-20&linkId=eaf281ad80f2f800b1ec06541b85528f">Fluent Python: Clear, Concise, and Effective Programming</a> covers the topic well. 
+For Python, you'll want to read anything on multiple inheritance. My favorite book on Python is <a target="_blank" href="https://www.amazon.com/gp/product/1491946008/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1491946008&linkCode=as2&tag=andrewbrookin-20&linkId=eaf281ad80f2f800b1ec06541b85528f">Fluent Python: Clear, Concise, and Effective Programming</a>, which covers the topic well. 
 
 Going deeper into Python internals, there's the lecture series, [CPython internals: A ten-hour codewalk through the Python interpreter source code](http://pgbovine.net/cpython-internals.htm). And this read-through of CPython code around attribute access touches on the code that makes class variables available to class instances, [How Does Attribute Access Work?](https://medium.com/stepping-through-the-cpython-interpreter/how-does-attribute-access-work-d19371898fee)
 
