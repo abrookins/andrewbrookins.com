@@ -931,7 +931,7 @@ a.pagination-item:hover {
 pre {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     overflow: auto;
-		line-height: $lhsmall;
+    line-height: $lhsmall;
 }
 
 pre > code {
@@ -939,6 +939,26 @@ pre > code {
 }
 
 code {
-	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-family: Consolas, Menlo, Courier, monospace;
 	font-size: $fs45;
 }
+
+// Iphone 
+
+@media only screen and (max-width: $breakpoint-1-max-width) {
+
+    pre {
+        font-size: $fs56;
+    }
+
+    pre > code {
+        font-size: $fs56;
+    }
+
+    code {
+        font-size: $fs56;
+    }
+
+}
+
+
