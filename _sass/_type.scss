@@ -87,6 +87,18 @@ blockquote, blockquote p {  font-size: $fs4; }
 
 .archive input { font-size: $fs3}
 
+pre {
+    font-size: $fs6;
+}
+
+pre > code {
+    font-size: $fs6;
+}
+
+code {
+	font-size: $fs5;
+}
+
 }
 
 

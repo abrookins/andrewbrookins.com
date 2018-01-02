@@ -19,6 +19,11 @@ This review is for the Professional Edition of PyCharm 3. I'll try to cut straig
 
 My perspective is that of a professional software developer who has used Vim, Emacs, Sublime Text, PyDev and others. For the past year and a half I've used PyCharm for all my Python, JavaScript and CoffeeScript.
 
+## Table of Contents
+{:.no_toc}
+* TOC
+{:toc}
+
 # <span id="Vim_emulation_with_IdeaVim">Vim emulation with IdeaVim</span>
 
 I've discarded a lot of editors that claimed to have Vim emulation either built-in or through a plugin. PyCharm's is the best.

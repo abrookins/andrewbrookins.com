@@ -48,7 +48,8 @@ small {
 
 sup {
     vertical-align: super;
-    font-size: $fs6;
+    font-size: $fs5;
+		padding-left: 5px;
 }
 
 .hilite {
@@ -930,4 +931,14 @@ a.pagination-item:hover {
 pre {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     overflow: auto;
+		line-height: $lhsmall;
+}
+
+pre > code {
+    font-size: $fs5;
+}
+
+code {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: $fs45;
 }

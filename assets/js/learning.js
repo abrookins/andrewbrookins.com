@@ -1,8 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function () {
   window.learningInvestmentsChart = Highcharts.chart('container', {
     chart: {
       type: 'bubble',
-      backgroundColor: '#f9f9f9'
+      backgroundColor: '#f9f9f9',
+      events: {
+        click: function (e) {
+          learningInvestmentsChart.tooltip.hide();
+        }
+      }
     },
     legend: {
       enabled: false
@@ -13,7 +18,7 @@ $(document).ready(function() {
     xAxis: {
       title: {
         enabled: true,
-        text: 'Age of Investment'
+        text: 'Age of Investment (Years)'
       },
       startOnTick: true,
       endOnTick: true,
@@ -24,7 +29,7 @@ $(document).ready(function() {
     },
     yAxis: {
       title: {
-        text: 'Happiness ROI'
+        text: 'Happiness Units ROI'
       },
       labels: {
         enabled: true
@@ -36,7 +41,7 @@ $(document).ready(function() {
       tickLength: 0
     },
     tooltip: {
-      formatter: function() {
+      formatter: function () {
         var className = this.point.name.toLowerCase().split(' ').join('-'),
           markup = document.getElementsByClassName(className)[0],
           description = "<h4>" + this.point.name + "</h4>";
@@ -80,7 +85,8 @@ $(document).ready(function() {
       }
     },
     series: [{
-      data: [{
+      data: [
+        {
           "name": "PHP",
           "x": 10.0,
           "y": 2.6,
@@ -88,19 +94,19 @@ $(document).ready(function() {
         },
         {
           "name": "Drupal",
-          "x": 10.0,
+          "x": 9.5,
           "y": 0.6666666666666666,
           "z": 3.0
         },
         {
-          "name": "WordPress",
+          "name": "Wordpress",
           "x": 8.0,
           "y": 3.0,
           "z": 1.5
         },
         {
           "name": "Vim",
-          "x": 10.0,
+          "x": 9.5,
           "y": 3.0,
           "z": 4.0
         },
@@ -118,7 +124,7 @@ $(document).ready(function() {
         },
         {
           "name": "Meditation",
-          "x": 4.0,
+          "x": 4.5,
           "y": 5.222222222222222,
           "z": 4.5
         },
@@ -142,13 +148,13 @@ $(document).ready(function() {
         },
         {
           "name": "HTTP",
-          "x": 10.0,
+          "x": 9.0,
           "y": 2.6666666666666665,
           "z": 3.0
         },
         {
           "name": "Node.js",
-          "x": 7.0,
+          "x": 6.0,
           "y": 1.0,
           "z": 1.0
         },
@@ -160,13 +166,13 @@ $(document).ready(function() {
         },
         {
           "name": "Clojure",
-          "x": 7.0,
+          "x": 6.5,
           "y": 1.6666666666666667,
           "z": 1.5
         },
         {
           "name": "Functional Programming",
-          "x": 7.0,
+          "x": 6.5,
           "y": -0.5,
           "z": 2.0
         },
@@ -202,19 +208,13 @@ $(document).ready(function() {
         },
         {
           "name": "Concurrency",
-          "x": 8.0,
+          "x": 7.5,
           "y": 4.333333333333333,
           "z": 3.0
         },
         {
-          "name": "MS Access",
-          "x": 10.0,
-          "y": 0.5,
-          "z": 2.0
-        },
-        {
           "name": "Filemaker Pro",
-          "x": 10.0,
+          "x": 9.0,
           "y": 0.0,
           "z": 2.0
         },
@@ -244,13 +244,13 @@ $(document).ready(function() {
         },
         {
           "name": "Golang",
-          "x": 4.0,
+          "x": 4.5,
           "y": 3.0,
           "z": 2.0
         },
         {
           "name": "iOS Dev",
-          "x": 7.0,
+          "x": 6.5,
           "y": 1.0,
           "z": 3.0
         },
@@ -268,12 +268,12 @@ $(document).ready(function() {
         },
         {
           "name": "SQL",
-          "x": 9.0,
+          "x": 9.5,
           "y": 1.8333333333333333,
           "z": 3.0
         },
         {
-          "name": "Solr/Search",
+          "name": "Solr",
           "x": 3.0,
           "y": 2.0,
           "z": 2.0
@@ -310,7 +310,7 @@ $(document).ready(function() {
         },
         {
           "name": "Algorithms",
-          "x": 9.0,
+          "x": 8.5,
           "y": 0.5,
           "z": 2.0
         },
@@ -322,19 +322,35 @@ $(document).ready(function() {
         },
         {
           "name": "Docker",
-          "x": 3.0,
+          "x": 3.2,
           "y": 1.75,
           "z": 2.0
         },
         {
           "name": "UI/UX Design",
-          "x": 2.0,
-          "y": 2.0,
+          "x": 0.5,
+          "y": 4.0,
           "z": 1.0
+        },
+        {
+          "name": "Kubernetes",
+          "x": 0.0,
+          "y": 5.0,
+          "z": 1.0
+        },
+        {
+          "name": "Graph Databases",
+          "x": 0.5,
+          "y": 3.5,
+          "z": 1.0
+        },
+        {
+          "name": "Cloud Infra.",
+          "x": 6.5,
+          "y": 2.0,
+          "z": 3.0
         }
       ]
-
-
     }]
   });
 
@@ -342,9 +358,5 @@ $(document).ready(function() {
     if (e.keyCode === 27) {
       window.learningInvestmentsChart.tooltip.hide();
     }
-  });
-
-  $('body').on('click', '#container', function (e) {
-    window.learningInvestmentsChart.tooltip.hide();
   });
 });

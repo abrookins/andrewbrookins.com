@@ -9,7 +9,7 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Technology
+  - Technology, Learning
 custom_css:
   - /assets/css/learning.css
 custom_js:
@@ -20,28 +20,40 @@ image:
   feature: caleb.jpg
 ---
 
-I'm coming up on ten years as a professional software developer. One tip I learned from reading _Practical Thinking and Learning_ was to treat your learning investments as a portfolio that you monitor over time. This post reviews the most notable learning investments I've made in the past decade and my subjective assessment of the returns.
+I'm coming up on ten years as a professional software developer. One tip I learned from reading _Pragmatic Thinking and Learning_ was to treat learning as an investment and manage these investments as a portfolio over time. This post reviews the most notable learning investments I made in the past decade and my subjective assessment of the returns.
 
-I chose a bubble graph to represent these learning investments, so that I could see the energy invested alongside returns. In the graph, the x axis is the age of the skill investment, the y axis is the ROI, and z axis (the size of each bubble) is the energy invested.
+I chose a bubble graph to represent this data. In the graph, the x axis is the age of the skill investment, the y axis is the ROI, and z axis (the size of each bubble) is the energy invested.
 
 <div id="container" style="min-height: 600px; max-height: 1000px;"></div>
+
+## Insights
+
+Here are a few insights that this process helped clarify:
+
+- In the first four years of my career, I seem to have invested a huge amount of energy, and this matches what I remember: I stayed up very late and woke up early to work on learning projects
+- When my daughter was born around year five of my career, I began to make fewer investments overall and more non-technical investments; however, many of these investments had high returns
+- Some investments in my career didn't pay off very much given the effort involved: Devops, Drupal, iOS dev, Node.js, MySQL, functional programming, Clojure
+- Some of my highest-return investments were non-technical: running, meditation, D&D
+- There are areas I'm 100% confident will yield more returns with modest continued investment: Ruby, Rails, concurrency, Python, Linux/UNIX, technical writing (blogging)
+- A few investments are close enough to high-returning that I'll keep investing low effort in them and monitor the results: Golang, Java, WordPress
+- I'm experimenting with some new investments that I'm not sure will pay off: UI/UX design, Kubernetes, and Graph Databases
 
 
 ## How I Made the Graph
 
-To create the graph, I wrote down the major learning investments I made over the past ten years and then assigned two abstract numbers for each: one representing the energy I invested and the other, the benefit I gained. With these, I could calculate my return on investment (ROI) for each investment and graph the result.
+To create the graph, I wrote down the major learning investments I made over the past ten years and then assigned two abstract numbers to each: one representing the energy I invested and the other the benefit I gained. With these, I could calculate my return on investment (ROI) for each investment and graph the result.
 
 ### The Return on Investment Formula
 
-According to [Investopedia](https://www.investopedia.com/terms/r/returnoninvestment.asp), the ROI of an investment is the gain minus the cost, divided by the cost.
+According to [Investopedia](https://www.investopedia.com/terms/r/returnoninvestment.asp), the return on an investment is the gain minus the cost, divided by the cost.
 
-So, what is the cost and gain of learning investments? Cost was easy: I considered the energy I invested in learning something its cost. Gain was harder. After tossing around a few ideas for how to measure gain, I decided on my final approach: "Happiness Units."
+So, what is the gain and cost of learning investments? Cost was easy: I considered the energy I invested in learning something its cost. Gain was harder. After tossing around a few ideas for how to measure gain, I decided on my final approach: "Happiness Units."
 
 ### Measuring Learning Investments With Happiness Units
 
 The problem I ran into with rating my gain from learning investments was that some of my investments had financial benefit, while others were more about satisfaction or joy. I wanted to create a number that could rate both types of investment.
 
-After pondering this, I created a measurement called Happiness Units. The number of Happiness Units gained from a learning investment is the sum of four numbers representing types of gain from the investment: satifaction, joy, stability (financial or otherwise), and benefit to others.
+After pondering this, I created a measurement called Happiness Units. The number of Happiness Units gained from a learning investment is the sum of four numbers representing types of gain from the investment: satisfaction, joy, stability (financial or otherwise), and benefit to others.
 
 With that decided, I gave each learning investment a Happiness Unit rating, came up with a rough estimate of the energy I'd invested for its "cost," and recorded the age of the investment (roughly speaking, the date I began learning).
 
@@ -50,6 +62,18 @@ Happiness ROI, then, is the gain in Happiness Units minus the cost in energy inv
 ## Learning Investments Sorted By Age
 
 Following are my descriptions of each learning investment in the graph, sorted roughly by the age of the investment.
+
+### Kubernetes
+
+<p class="kubernetes">
+  Containers are interesting by themselves, but things get really interesting when you try to "orchestrate" them. Kubernetes seems to have become the leader in the pack of current technologies to do this, so I'm throwing some attention on it to get the basics down.
+</p>
+
+### Graph Databases
+
+<p class="graph-databases">
+  This is a new area I'm beginning to invest in, after being exposed to JanusGraph while working at IBM. I'm working on a learning project that may use a graph database. I'll see what I think after more experimentation!
+</p>
 
 ### Ruby
 
@@ -78,14 +102,14 @@ Following are my descriptions of each learning investment in the graph, sorted r
 ### UI/UX Design
 
   <p class="ui/ux-design">
-    For much of my career, I considered UI and UX design off-limits to me. Not only did I have little practice in the craft, but I told myself I wasn't innately talented at it; making things look good just wasn't something I could do. However, in recent years I've practiced having more of a growth mindset, and this year I've found myself a lot more interested in exactly <i>how</i> something can be made to look good and work well. I'm studying and practicing at design now, and ultimately would like to be someone who could design a software interaction well <i>and</i> code it up.
+    For most of my career, I thought I lacked the natural talent to do design work, so I never tried. However, I have a more growth-oriented mindset now, and I'm very excited by the world of design. Ultimately, I'd like to be someone who can design a software interaction well <i>and</i> code it up, so I'm beginning to invest in this area.
   </p>
 
 
 ### Meditation
 
   <p class="meditation">
-    Meditation saved me during a period of depression I experienced after becoming a father. (To call parenting "difficult" would be a criminal misuse of English.) My tecnical skill investments declined rapidly around year 5, when my daughter was born. However, I began investing deeply in high-returning non-technical skills, the most important of which was meditation. If my career imploded tomorrow, I would be happy with the increased time I had to meditate. If you can find an activity like that to invest in, do it post-haste.
+    Meditation saved me during a period of depression I experienced after becoming a father. (To call parenting "difficult" would be a criminal misuse of English.) If my career imploded tomorrow, I would be happy with the increased time I had to meditate. If you can find an activity like that to invest in, do it post-haste.
   </p>
 
 ### Dungeons & Dragons
@@ -94,10 +118,10 @@ Following are my descriptions of each learning investment in the graph, sorted r
     My antidote to technical and parenting burn-out is one part meditation and another part Dungeons & Dragons. It's an analog activity that I do face-to-face with friends and an absolute minimum of technology. I can't recommend it highly enough, as a kind of uber-game that can become anything you want: turn-based strategy, social/acting improv, immersive story-telling platform -- truly anything.
   </p>
 
-### Solr/Search
+### Solr
 
-  <p class="solr/search">
-    I spent over a year as a lead on the Discovery team at Safari Books Online, which meant Solr and search-related issues were my bread and butter. Getting a taste for search as a problem domain was intriguing. Challenges often boiled down to how to "boost" certain facts about a piece of content correctly, or else how to create a good user experience. Certainly an area where a person could specialize in algorithms, UI and UX, and more. However, I don't see specializing in it <i>myself</i>.
+  <p class="solr">
+    Solr was my bread and butter for a year or two. Getting a taste for search as a problem domain was intriguing. Challenges often boiled down to how to "boost" certain facts about a piece of content correctly, or else how to create a good user experience around search. Certainly this is an area where a person could specialize in algorithms, UI and UX, and more. However, I don't see specializing in it <i>myself</i>.
   </p>
 
 ### Docker
@@ -139,13 +163,19 @@ Following are my descriptions of each learning investment in the graph, sorted r
 ### Java
 
   <p class="java">
-    Java was big news when I was a teenager, so I toyed with it and Object Oriented Programming, but only really learned it a few years ago while doing plugin development for Intellij Idea. It's a nice enough language, but what sets it apart is the depth of available libraries and the number of awesome opens-source applications written in it.
+    Java was big news when I was a teenager, so I toyed with it and Object Oriented Programming, but only really learned it a few years ago while doing plugin development for Intellij Idea. Now I feel comfortable jumping into a Java project at IBM when the need arises.
   </p>
+
+### Cloud Infrastructure
+
+<p class="cloud-infra.">
+  I've invested modest amounts of time learning and using Google Cloud Platform, Amazon Web Services, and now IBM Cloud/Bluemix. The best of these investments was probably AWS because of how popular it is with companies. The most directly relevant to be now is IBM Cloud.
+</p>
 
 ### Remote Work
 
   <p class="remote-work">
-    Remote work is less a "perk," as it's listed on Stack Overflow's jobs page, than it is a set of challenging skills like asynchronous communication and motivating yourself. I was thrown into the fire with my first remote job (or "distributed team," which is the term in vogue) several years ago. After burning a while, I'm now productive and happy working from home, and I can't see myself going back to an office. To satisfy my need for social interaction, I occasionally work at a co-working space, and I like to meet my coworkers once or twice a year.
+    Remote work sounds like a perk; in fact, I consider it a set of skills like asynchronous communication and motivating yourself. After a challenging first couple of years, I'm now productive and happy working from home. To satisfy my need for social interaction with quasi-strangers, I occasionally work at a co-working space, and I like to meet my coworkers once or twice a year.
   </p>
 
 ### Intellij IDEs
@@ -163,7 +193,7 @@ Following are my descriptions of each learning investment in the graph, sorted r
 ### iOS Development
 
   <p class="ios-dev">
-    I spent a year or so working on Dark Horse Digital, which is Dark Horse's digital comics platform. As part of that work, I learned the basics of iOS development and contributed some probably bad code to an old version of the iOS app. It was a lot of fun, but for some reason it never enticed me away from web development. Every year since then, I've asked myself: "Would I rather do mobile apps?" And every year, I seem more interested in the web! Maybe 2018 is the year I become an iOS developer.
+    I worked on iOS development while at Dark Horse Comics. It was a lot of fun, but for some reason it never enticed me away from web development. Every year since then, I've asked myself: "Would I rather do mobile apps?" And every year, I'm still more interested in the web. Maybe 2018 will be the year I become an iOS developer.
   </p>
 
 
