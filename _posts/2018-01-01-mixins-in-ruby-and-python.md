@@ -11,7 +11,7 @@ wpautop:
 categories:
   - Technology, Ruby, Python
 image:
-  feature: caleb.jpg
+  feature: david-clode-smaller.jpg
 ---
 
 The venerable "mixin" is a technique I learned as a Python developer. Now, after writing Ruby code for the past year, I'm excited to compare how these two languages approach mixins, including similarities, differences, and traps. There will be code!
