@@ -9,13 +9,15 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Technology
+  - Technology, iOS
 ---
 > The merit in all things consists in the difficulty.
 > 
 > -- Aramis
 
 This is a story about how I experimented with using an iPad Air 2 to write code, what worked and what didn't, and where I ended up.
+
+**Update**: I continued my quest in [Can you Write Code on a Chromebook?](/technology/can-you-code-on-a-chromebook-plus/).
 
 ## Why?
 

@@ -1,6 +1,6 @@
 ---
 title: 'Mixins in Python and Ruby Compared'
-date: 2017-12-30
+date: 2018-01-01
 author: Andrew
 layout: post
 permalink: /technology/mixins-in-python-and-ruby-compared/
