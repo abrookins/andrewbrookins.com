@@ -17,7 +17,7 @@ categories:
 
 This is a story about how I experimented with using an iPad Air 2 to write code, what worked and what didn't, and where I ended up.
 
-**Update**: I continued my quest in [Can you Write Code on a Chromebook?](/technology/can-you-code-on-a-chromebook-plus/).
+**Update**: I continued my quest in [Can you Write Code on a Chromebook?](/technology/can-you-code-on-a-chromebook-plus/)
 
 ## Why?
 
