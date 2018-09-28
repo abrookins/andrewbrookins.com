@@ -10,6 +10,7 @@ aktt_notify_twitter:
   - 'no'
 categories:
   - Technology
+exclude_from_homepage: true
 ---
 Today I ran into trouble configuring a Windows 7 guest on a Linux host: Windows 7 couldn&#8217;t find an appropriate driver for the virtual NIC.
 

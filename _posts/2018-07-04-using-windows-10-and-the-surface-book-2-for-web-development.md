@@ -3,7 +3,7 @@ title: 'Using Windows 10 and the Surface Book 2 for Web Development'
 date: 2018-07-04
 author: Andrew
 layout: post
-permalink: /technology/demonstrating-stability-patterns-with-an-outage-simulator/
+permalink: /technology/using-windows-10-and-the-surface-book-2-for-web-development/
 lazyload_thumbnail_quality:
   - default
 wpautop:
@@ -21,7 +21,7 @@ I’ve been a web developer who uses a Mac for almost ten years. However, for a 
 
 If you, too, are thinking of switching and are a web developer who uses open-source tools, this post is for you. I hope by describing some of the problems I had, you can decide if you really want to spend your personal time making the switch.
 
-**Update 8/27**: If you're a Mac user reading this post, let me save you the trouble: just stick with macOS. Windows is a pain in the ass.
+**Update 8/27**: If you're a Mac user reading this post, let me save you the trouble: just stick with macOS. Windows is a pain in the butt.
 
 ## What is this Meat Grinder of Which You Speak?
 
@@ -29,7 +29,7 @@ I tested all the code I work with regularly on the Windows Subsystem for Linux (
 
 The experiment went okay. The many things I love about the device and the aspects of Windows 10 that improve on areas of macOS balance out my crushed dream of using WSL, without a VM, and the i5 model. I don’t plan on going back to macOS, though my MacBook Pro, with its terrible keyboard, remains on a shelf in the closet. My wife forbade me to sell it because she’s betting I’ll be back within six months.
 
-Despite the fact that I plan on sticking with Windows, I can’t really say “If you are a web developer currently using a Mac to work with open-source tools, go out and buy a Windows machine.” I ran into trouble along the way, which I will describe. So beware: if you choose this path, it may not be easy.
+Despite the fact that I plan on sticking with Windows, I can’t really say “If you are a web developer currently using a Mac to work with open-source tools, go out and buy a Windows machine.” I ran into trouble along the way, which I will describe. So beware: if you choose this path, it probably won't be easy.
 
 Still, I’m well into my second month using Windows and a Linux VM for 100% of my software development tasks, both for my day job and for hobby coding, and I’m happy with the setup. The Surface Book 2 is also better than an iPad Pro up for the things I want to do with a tablet, and I’ve never run out of battery in public.
 

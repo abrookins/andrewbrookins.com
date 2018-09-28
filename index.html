@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Recent Posts
+title: All Posts
 ---
 
 <div id='bump'>
@@ -8,32 +8,17 @@ title: Recent Posts
       <article class="archive-wrap">
           <ol class="post-list">
              <lh><h2><span class="bb">{{ page.title }}</span></h2></lh>
-              {% for post in paginator.posts %}
-              <li>
-                <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-                    <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
-                    <p class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
-                </div>
-              </li>
+             {% for post in site.posts %}
+                {% unless post.exclude_from_homepage %}
+                <li>
+                  <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                      <p class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
+                  </div>
+                </li>
+                {% endunless %}
               {% endfor %}
           </ol>
-
-          <div class="pagination">
-            {% if paginator.next_page %}
-            <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-            {% else %}
-            <span class="pagination-item older">Older</span>
-            {% endif %}
-            {% if paginator.previous_page %}
-              {% if paginator.page == 2 %}
-              <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-              {% else %}
-              <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-              {% endif %}
-            {% else %}
-            <span class="pagination-item newer">Newer</span>
-            {% endif %}
-          </div>
-          </article>
-        </section>
+      </article>
+    </section>
 </div>

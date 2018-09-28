@@ -10,6 +10,7 @@ aktt_notify_twitter:
   - 'no'
 categories:
   - Technology
+exclude_from_homepage: true
 ---
 **Note:** This is an outdated, unmaintained, archived post. Proceed with caution.
 

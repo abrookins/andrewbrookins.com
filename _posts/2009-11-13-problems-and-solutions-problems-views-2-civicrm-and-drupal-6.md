@@ -10,6 +10,7 @@ aktt_notify_twitter:
   - 'no'
 categories:
   - Technology
+exclude_from_homepage: true
 ---
 The following is a quick run-down of problems you might run into using Views 2 integration with CiviCRM 2.2.3 and Drupal 6 (or higher):
 

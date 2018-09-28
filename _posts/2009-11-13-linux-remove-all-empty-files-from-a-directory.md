@@ -9,22 +9,13 @@ permalink: /tech/linux-remove-all-empty-files-from-a-directory/
 categories:
   - Technology
 ---
+
 One-liner to remove all empty files from a directory:
-	  
-`<br />
-	% ls -s | grep -e '^ 0' | sed 's/^...//' | xargs -n1 rm -v<br />
-` 
+ 
+`ls -s | grep -e '^ 0' | sed 's/^...//' | xargs -n1 rm -v`
 
 Or these two, suggested by Jameson Williams on the Portland Linux/Unix Group ([http://www.pdxlinux.org/](http://www.pdxlinux.org/ "http://www.pdxlinux.org/")):
 
-1.
-	  
-`<br />
-	find . -empty -maxdepth 1 -delete<br />
-` 
-	  
-2.
-	  
-`<br />
-	find * -prune -empty -exec rm {}\;</p>
-<p>`
+1. `find . -empty -maxdepth 1 -delete`
+
+2. `find * -prune -empty -exec rm {}\;`

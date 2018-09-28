@@ -8,6 +8,7 @@ guid: http://andrewbrookins.com/?p=296
 permalink: /tech/deplying-fat-free-crm-to-heroku/
 categories:
   - Technology
+exclude_from_homepage: true
 ---
 </p> 
 

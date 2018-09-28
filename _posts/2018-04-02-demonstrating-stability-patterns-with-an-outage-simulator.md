@@ -38,9 +38,9 @@ You don't have to use the simulator yourself -- feel free to ignore it and study
 
 ## Upstream Service Outage: API Gateway Only
 
-<div class="resp-container">
-  <iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/D20Wj6HafWhYoJTHYIGafEQZTdlWTteq?orgId=2&panelId=2&from=1522710399332&to=1522710430664" frameborder="0" class="resp-iframe"></iframe>
-</div>
+<a href="https://snapshot.raintank.io/dashboard-solo/snapshot/D20Wj6HafWhYoJTHYIGafEQZTdlWTteq?orgId=2&panelId=2&from=1522710399332&to=1522710430664">
+  <img src="/images/1-outage-api-gateway-only.png">
+</a>
 
 [View full-screen.](https://snapshot.raintank.io/dashboard/snapshot/D20Wj6HafWhYoJTHYIGafEQZTdlWTteq)
 
@@ -64,9 +64,9 @@ You can see the effect of error handling in the graph. During the outage, the ho
 
 
 ## Upstream Service Outage: Circuit Breakers, No Timeouts
-<div class="resp-container">
-  <iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/HKwdggq40bravNJjtV3NC9r0ZJ7JRD7l?orgId=2&from=1522710567352&to=1522710604312&panelId=2" frameborder="0" class="resp-iframe"></iframe>
-</div>
+<a href="https://snapshot.raintank.io/dashboard-solo/snapshot/HKwdggq40bravNJjtV3NC9r0ZJ7JRD7l?orgId=2&from=1522710567352&to=1522710604312&panelId=2">
+  <img src="/images/2-outage-cb-no-timeouts.png">
+</a>
 
 [View full-screen.](https://snapshot.raintank.io/dashboard/snapshot/HKwdggq40bravNJjtV3NC9r0ZJ7JRD7l)
 
@@ -83,9 +83,9 @@ You can see that circuit breakers did not change the result much. This is becaus
 
 
 ## Slow Upstream Service: No Timeouts, No Circuit Breakers
-<div class="resp-container">
-<iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/g8vdW9R1I3lfSYRxhgW8GhiYPJMm1gW6?orgId=2&panelId=2&from=1522710718701&to=1522710761585" frameborder="0" class="resp-iframe"></iframe>
-</div>
+<a href="https://snapshot.raintank.io/dashboard-solo/snapshot/g8vdW9R1I3lfSYRxhgW8GhiYPJMm1gW6?orgId=2&panelId=2&from=1522710718701&to=1522710761585">
+  <img src="/images/3-slow-no-timeouts-no-cb.png">
+</a>
 
 [View full-screen.](https://snapshot.raintank.io/dashboard/snapshot/g8vdW9R1I3lfSYRxhgW8GhiYPJMm1gW6)
 
@@ -103,9 +103,9 @@ Because there were no timeouts set on the requests to the recommendations, every
 
 
 ## Slow Upstream Service: Only Circuit Breakers
-<div class="resp-container">
-<iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/65naYmcKBPBqcKD9osZf4yloYJimbYe5?orgId=2&panelId=2&from=1522711109284&to=1522711160970" frameborder="0" class="resp-iframe"></iframe>
-</div>
+<a href="https://snapshot.raintank.io/dashboard-solo/snapshot/65naYmcKBPBqcKD9osZf4yloYJimbYe5?orgId=2&panelId=2&from=1522711109284&to=1522711160970">
+  <img src="/images/4-slow-only-cb.png">
+</a>
 
 [View full-screen.](https://snapshot.raintank.io/dashboard/snapshot/65naYmcKBPBqcKD9osZf4yloYJimbYe5)
 
@@ -123,10 +123,9 @@ Once again, every request for recommendations hung for multiple seconds. Circuit
 
 
 ## Slow Upstream Service: 0.5-Second Timeouts Only
-
-<div class="resp-container">
-<iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/d9oqJFUNxLEnOYSGO9vfWKaoj4WKoDuD?orgId=2&panelId=2&from=1522696568798&to=1522696750610" frameborder="0" class="resp-iframe"></iframe>
-</div>
+<a href="https://snapshot.raintank.io/dashboard-solo/snapshot/d9oqJFUNxLEnOYSGO9vfWKaoj4WKoDuD?orgId=2&panelId=2&from=1522696568798&to=1522696750610">
+  <img src="/images/5-slow-0.5-timeouts-only.png">
+</a>
 
 [View full-screen.](https://snapshot.raintank.io/dashboard/snapshot/d9oqJFUNxLEnOYSGO9vfWKaoj4WKoDuD?orgId=2)
 
@@ -148,9 +147,9 @@ This is why we need circuit breakers. A circuit breaker, once open, won't send a
 
 ## Slow Upstream Service: 5-Second Timeouts Only
 
-<div class="resp-container">
-  <iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/4vds2RBfyWtc2Mf6hkWL7fk0KmY8YDsN?orgId=2&panelId=2&from=1522699809276&to=1522699870879" frameborder="0" class="resp-iframe"></iframe>
-</div>
+<a href="https://snapshot.raintank.io/dashboard-solo/snapshot/4vds2RBfyWtc2Mf6hkWL7fk0KmY8YDsN?orgId=2&panelId=2&from=1522699809276&to=1522699870879">
+  <img src="/images/6-slow-5-timeouts-only.png">
+</a>
 
 [View full-screen.](https://snapshot.raintank.io/dashboard/snapshot/4vds2RBfyWtc2Mf6hkWL7fk0KmY8YDsN)
 
@@ -168,9 +167,9 @@ The longer timeout shifts pressure from the recommendations service up to the ho
 
 
 ## Slow Upstream Service: Retries Only
-<div class="resp-container">
-  <iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/a614HndNvphRyILKDBPPeE8HcHHNZleE?orgId=2&panelId=2&from=1522702089630&to=1522702140412" frameborder="0" class="resp-iframe"></iframe>
-</div>
+<a href="https://snapshot.raintank.io/dashboard-solo/snapshot/a614HndNvphRyILKDBPPeE8HcHHNZleE?orgId=2&panelId=2&from=1522702089630&to=1522702140412">
+  <img src="/images/7-slow-retries-only.png">
+</a>
 
 [View full-screen.](https://snapshot.raintank.io/dashboard/snapshot/a614HndNvphRyILKDBPPeE8HcHHNZleE)
 
@@ -192,9 +191,9 @@ Despite the fact that retrying with exponential backoff and jitter is better in 
 
 
 ## Slow Upstream Service: 0.5-Second Timeouts and Retries
-<div class="resp-container">
-  <iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/a614HndNvphRyILKDBPPeE8HcHHNZleE?orgId=2&panelId=2&from=1522702089630&to=1522702140412" frameborder="0" class="resp-iframe"></iframe>
-</div>
+<a href="https://snapshot.raintank.io/dashboard/snapshot/KgScsvsF0FytPDkfAIKqeDjkETfQO92N">
+  <img src="/images/8-slow-0.5-timeouts-and-retries.png">
+</a>
 
 [View full-screen.](https://snapshot.raintank.io/dashboard/snapshot/KgScsvsF0FytPDkfAIKqeDjkETfQO92N)
 
@@ -212,9 +211,9 @@ The good news is that we can do better!
 
 
 ## Slow Upstream Service: 0.5-Second Timeouts and Circuit Breakers
-<div class="resp-container">
-  <iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/TIJbdHFnzV8jYfU47yQv5n8o7oYe9R0l?orgId=2&from=1522700589515&to=1522700644602&panelId=2" frameborder="0" class="resp-iframe"></iframe>
-</div>
+<a href="https://snapshot.raintank.io/dashboard-solo/snapshot/TIJbdHFnzV8jYfU47yQv5n8o7oYe9R0l?orgId=2&from=1522700589515&to=1522700644602&panelId=2">
+  <img src="/images/9-slow-0.5-timeouts-and-cb.png">
+</a>
 
 [View full-screen.](https://snapshot.raintank.io/dashboard/snapshot/TIJbdHFnzV8jYfU47yQv5n8o7oYe9R0l)
 

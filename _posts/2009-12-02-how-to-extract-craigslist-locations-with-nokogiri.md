@@ -10,6 +10,7 @@ aktt_notify_twitter:
   - 'no'
 categories:
   - Technology
+exclude_from_homepage: true
 ---
 [Solace](http://solace.heroku.com) is a web app I created to search multiple Craigslist locations for the same query. It uses YQL to make the search, but in order to generate the YQL queries I first needed to generate a list of all valid Craigslist locations.
 
