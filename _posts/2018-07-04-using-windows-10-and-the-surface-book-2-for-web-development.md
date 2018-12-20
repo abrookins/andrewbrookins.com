@@ -10,8 +10,6 @@ wpautop:
   - -break
 categories:
   - Technology, Windows
-custom_css:
-  - /assets/css/simulator.css
 image:
   feature: northwest-passagenew.jpg
 ---
