@@ -14,30 +14,36 @@ image:
   feature: northwest-passagenew.jpg
 ---
 
-The first program written for a computer ran June 21, 1948 on the Manchester Mark 1 [^1]. By that measurement, software engineers have been writing code for seventy years. For seven decades we've been cursing at compilers, pulling all-night debugging sessions and arguing about curly braces. Why do we do it? Aside from the pure joy and magic of software engineering, what is the purpose of the work?
+The first program written for a computer ran June 21, 1948 on the Manchester Mark 1 [^1]. By that measurement, software engineers have been writing code for seventy years. That means we've been cursing at compilers, pulling all-night debugging sessions, and arguing about curly braces for seven decades.
 
-There are as many potential answers to that question as there are people who ask. However, there is one answer that has the power to elevate our profession and every practitioner: that we, as software engineers, exist to serve the public good.
+Why do we do it? Aside from the joy of creation, what is the point of the work?
+
+There are as many potential answers to that question as there are people who ask. However, one answer has the power to elevate our profession and give the work life of every practitioner a sense of purpose.
+
+That answer is simple. We, as software engineers, exist to serve the public good.
 
 
-## "To protect and serve"
+## To protect and serve
 
-That software engineering is about serving the public good is an uncommon idea in our profession, where ideas of the purpose of our work come most frequently from, on the one hand, the people paying us, and on the other the companies we pay for products and services.
+That software engineering is about serving the public good is an uncommon idea in our profession, where ideas about the purpose of our work come most frequently from either the people paying us or companies we pay for products and services.
 
-Venture capitalists want us to build companies that make them money, so they sell visions of startup life as the pinnacle of our efforts. What does every software engineer have in the back of their head, the nagging dream? We should all quit our jobs and build startups, of course! And we have get to the Bay Area because nowhere else has that kind of energy! Why are you wasting time reading this essay, anyway? You should be grinding!
+Venture capitalists want us to build companies that make them money, so they sell visions of startup life as the pinnacle of our efforts. What does every software engineer have in the back of their head, the nagging dream? We should all quit our jobs and build startups, of course. And we have get to the Bay Area because nowhere else has that kind of energy! Why are you wasting time reading this essay, anyway? You should be grinding!
 
-Meanwhile, established companies hire us to build and operate the technology that powers their cash-minting business machines. Here, the meaning of our work is ... whatever the purpose of the company's existence is, because they are paying us to steer an engine that is already in motion. Emphasis on _paying us_: if software engineers aren't figuring out how to start, join, or ride a startup rollercoaster, then we're probably attempting to find the employer with the most generous benefits package that will hire us, right?
+Meanwhile, established companies hire us to build and operate the technology that powers their cash-minting business machines. The owners, executives, and managers of these companies work very hard to impress upon us the purpose of the company so that we take it on ourselves because, after all, they are paying us.
 
-Then there are the companies selling us products and services. To them, our _consumption_ contains the meaning of our work, not our _production_. We ought to buy race cars, or perhaps really fast bicycles. Products compose entire human identities these days!
+Then there are the companies selling us products and services. To them, our _consumption_ contains the meaning of our work, not our _production_. We ought to buy race cars, or perhaps really fast bicycles -- whatever floats our boats (perhaps a nice kayak?). Products compose entire human identities these days!
 
-There's nothing wrong with working at a startup, a big company, or a non-profit if you can find one -- I've done all three. And living usually entails buying things and paying people to do things. The problem is that the default narrative of the purpose of software engineering is exchanging service for payment, or else enhancing the value of early investments; or perhaps, "changing the world," but that is mostly propaganda that seems to easily infect the minds of young people.
+There's nothing wrong with working at a startup, a big company, or a non-profit if you can find one -- I've done all three. And living usually entails buying things and paying people to do things. The problem is that the default narrative of the purpose of our work is that we exchange service for payment, or else we enhance the value of investments; or perhaps we "change the world," but that is mostly propaganda that seems to easily infect the minds of young people.
 
-These are all dimensions of our work, but none are the highest purpose of our work. That purpose is to serve the public good. Adoping the Los Angeles Police Department's slogan, our highest purpose may be to "protect and serve" the public good.
+These are all dimensions of our work, but none are the highest purpose of the work, the greatest dimension. That dimension is to serve the public good. Some of us might even go further. Like the Los Angeles Police Department's slogan, we might say our highest purpose is to *protect* and serve.
 
-Which would _you_ rather do: grind on startup or protect and serve the public good? What if you could do both at the same time?
+Which would _you_ rather do: grind at a startup or protect and serve the public good? What if you could do both?
 
 Wait! You can do both? To find out how, we should explore what the "public good" might be and what serving it might look like for software engineers.
 
 ## What is the public good?
+
+Usually, we define public service as 
 
 ## Professional conduct and ethics
 
