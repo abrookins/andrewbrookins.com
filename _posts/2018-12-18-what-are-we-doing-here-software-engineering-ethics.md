@@ -83,7 +83,7 @@ The Health Insurance Portability and Accountability Act of 1996 (HIPAA) mandates
 
 Credit card companies mandate following the Payment Card Industry Data Security Standard (PCI DSS) if a business processes credit card transactions. That means any system we build that does so must be PCI compliant, or credit card companies will fine the owners of these systems.
 
-State laws muddy the picture as well. Across the U.S., a number of laws and business codes exist to protect consumer privacy [^7]. But there is no unifying federal framework that specifies the general contract between software engineers and the common good, in law or otherwise.
+State laws muddy the picture as well. Across the U.S., several laws and business codes exist to protect consumer privacy [^7]. But there is no unifying federal framework that specifies the general contract between software engineers and the common good, in law or otherwise.
 
 
 ### General Intersections with the Common Good
@@ -112,7 +112,7 @@ Principle: Because we all depend on the earth, we share a responsibility to prot
 
 #### Public health
 
-We should not build software that harms the mental or physical health of people by design -- unless we do so in order to defend the constitutional order. We should undertake or fund research to determine the unintentional impacts that our systems have on the mental and physical health of people. Examples of negative impacts include blue light affecting sleep patterns, phone use causing vehicular death, and "dark design patterns" that produce addictive behavior in users.
+We should not build software that harms the mental or physical health of people by design -- unless we do so to defend the constitutional order. We should undertake or fund research to determine the unintentional impacts that our systems have on the mental and physical health of people. Examples of negative impacts include blue light affecting sleep patterns, phone use causing vehicular death, and "dark design patterns" that produce addictive behavior in users.
 
 Principle: Our lives depend on the health of our minds and bodies, so we should make the health of others our highest priority.
 
