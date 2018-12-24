@@ -1,6 +1,6 @@
 ---
 title: What Are We Doing Here?
-date: 2018-12-18
+date: 2018-12-24
 author: Andrew
 layout: post
 permalink: /technology/what-are-we-doing-here-software-engineering/
