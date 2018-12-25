@@ -31,13 +31,15 @@ _We, as software engineers, exist to serve the common good._
 
 ## What We're Up Against
 
-That software engineering is about serving the common good is an uncommon idea in our profession, where ideas about the purpose of our work come frequently from either the people paying us or the companies selling us things.
+That the ultimate purpose of software engineering is to serve the common good is an uncommon idea in our profession, where ideas about purpose come frequently from either the people paying us or the companies selling us things.
 
-Venture capitalists want us to make them money, so they compare founding a startup to living in the wild instead of captivity[^2]. Big companies, non-profits, and governments want us to take their purpose as our own -- we should absorb and personally represent their brands, missions, or constitutional functions because they are paying us. Meanwhile, from the perspective of the companies selling us things, our choices about what to _consume_ contain the meaning of our work, not our acts of production.
+Venture capitalists want us to make them money, so they compare founding a startup to living in the wild instead of captivity[^2]. Big companies, non-profits, and governments want us to absorb their brands, missions, or constitutional functions. Meanwhile, from the perspective of the companies selling us things, our choices about what to _consume_ contain the meaning of our work, not our acts of production.
 
 (Let's not even get into the media coverage of our profession, from which in 2018 a reasonable person might guess that our principle goal is to build artificial intelligence to replace every job on earth[^3].)
 
-There's nothing wrong with working for someone or taking investments, and living usually entails buying things. The problem is that we often conflate the purpose of our work with these transactions. Is the final meaning of a nurse's work that he makes the hospital more money? A firefighter's that she protects insurance companies?
+There's nothing wrong with working for someone or taking investments, and living usually entails buying things. The problem is that we often conflate the purpose of our work with these transactions.
+
+Is the final meaning of a nurse's work that he saves the hospital money? A firefighter's that she protects insurance companies?
 
 
 ## To Protect and Serve
@@ -51,9 +53,9 @@ Wait! You can do both? To find out how, we will explore what "serving the common
 
 ## What Is the Common Good?
 
-> [T]hough it is worthwhile to attain the end merely for one man, it is finer and more godlike to attain it for a nation or for city-states [^4].
+> [T]hough it is worthwhile to attain the end merely for one man, it is finer and more godlike to attain it for a nation or for city-states.
 >
-> -- Aristotle
+> -- Aristotle[^4]
 
 There are technical and non-technical definitions of "public" and "common" _goods_, especially when used in economics. The common _good_ in this essay refers to something else.
 
@@ -149,7 +151,7 @@ These Codes outline standards of behavior across many dimensions of our work as 
 
 ## Forward
 
-This is the direction we must march unwaveringly as our work becomes ever more entwined with human life. We _must_ serve the common good first.
+This is the direction in which we must march unwaveringly as our work becomes ever more entwined with human life. We _must_ serve the common good first.
 
 Each of us can step forward into a future in which software engineers are trusted servants and protectors of humanity. That first step might be to swear by a Code that places the common good above all else. For me, it is.
 
@@ -170,7 +172,7 @@ Each of us can step forward into a future in which software engineers are truste
 
 [^7]: http://www.ncsl.org/research/telecommunications-and-information-technology/state-laws-related-to-internet-privacy.aspx
 
-[^8]: https://news.gallup.com/poll/224639/nurses-keep-healthy-lead-honest-ethical-profession.aspx?g_source=CATEGORY_SOCIAL_POLICY_ISSUES&g_medium=topic&g_campaign=tiles
+[^8]: https://news.gallup.com/poll/224639/nurses-keep-healthy-lead-honest-ethical-profession.aspx
 
 [^9]: https://en.wikipedia.org/wiki/Veil_of_ignorance
 
