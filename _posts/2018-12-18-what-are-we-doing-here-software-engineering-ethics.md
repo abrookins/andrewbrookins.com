@@ -20,7 +20,7 @@ image:
 > -- TRON
 
 
-The first program written for a computer ran June 21, 1948 on the Manchester Mark 1[^1]. By that measurement, software engineers have been writing code for seventy years. That means we've been cursing at compilers, pulling all-night debugging sessions, and arguing about curly braces for seven decades.
+The first program written for a computer ran June 21, 1948 on the Manchester Mark 1[^1]. That means software engineers have been cursing at compilers, pulling all-night debugging sessions, and arguing about curly braces for seven decades.
 
 Why do we do it? Aside from the joy of creation, what is the point of the work?
 
