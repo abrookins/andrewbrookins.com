@@ -11,7 +11,7 @@ wpautop:
 categories:
   - Technology, Ethics
 image:
-  feature: northwest-passagenew.jpg
+  feature: aussieactive-384487-unsplash.jpg
 ---
 
 
@@ -88,6 +88,8 @@ State laws muddy the picture as well. Across the U.S., several laws and business
 
 ### General Intersections with the Common Good
 
+Because there is no federal or practical framework that specifies how software engineering _in general_ intersects with the common good, we need to identify the intersections ourselves.
+
 There are four areas of our domain that appear to intersect most with the common good, at least in the U.S. There may be more, but these are sufficient to deliberate over a wide variety of situations.
 
 In all these domains, there is a principle at work that we can derive by imagining negative consequences happening to ourselves rather than others, similar to the "veil of ignorance" thought experiment proposed by John Rawls [^9].
@@ -117,7 +119,7 @@ We should not build software that harms the mental or physical health of people 
 Principle: Our lives depend on the health of our minds and bodies, so we should make the health of others our highest priority.
 
 
-## How Can We Serve the Common Good?
+## How Can You Serve the Common Good?
 
 If you make the common good your first priority as a software engineer, you might question:
 
@@ -127,20 +129,29 @@ If you make the common good your first priority as a software engineer, you migh
 - Is storing data about people on a hard disk without disk encryption secure enough to keep people safe?
 - Have we built a login system that protects the safety of our users if we do not require two-factor authentication?
 
-Empowered by a large enough group of your peers following the same principle, or alone by strong moral conviction, you might be able to say at a crucial moment, even if doing so risks setting back your career, "No, I cannot do that."
+Empowered by a large enough group of your peers following the same principle, or alone by strong moral conviction, you might be able to say at a crucial moment, even if doing so risks setting back your career, "No, I will not do that."
 
 
-## Professional Conduct and Ethics
+## The Code
 
-There is a reason that Americans consider nurses the most ethical profession in the United States[^8]. Gallup didn't ask, so we can't know what it is for sure. Still, if we examine the way that nurses work, we might glean some insights.
+There must be a reason that Americans consider nurses the most ethical profession in the United States[^8]. Gallup didn't ask what it is, so we can't know for sure. Still, if we examine the way that nurses work, we might glean some insights.
 
 You might ask yourself if you think a nurse would prioritize the health and safety of a patient over a hospital's finances. Given the high degree of public trust in nurses, who beat out doctors and police officers, my suspicion is that most Americans think nurses would prioritize patient health above everything else.
 
 That might be because Provisions 1-3 of the _Code of Ethics for Nurses_ are about recognizing the inherent dignity in all people, the primacy of the nurse's commitment to the patient, and the responsibility for nurses to advocate for patients [^10].
 
-Software engineers ought to have such a Code. There are two that some of us already follow. These are the _ACM Code of Ethics and Professional Conduct_[^11], which is designed for all computing professionals and is also the most up to date, and the _ACM Software Engineering Code of Ethics and Professional Practice_[^12].
+Software engineers ought to have such a Code, and it should express our expectations for conduct in all the domains of our profession that intersect with the common good.
+
+There are at least two Codes that some software engineers already follow. These are the _ACM Code of Ethics and Professional Conduct_[^11], which is designed for all computing professionals and is also the most up to date, and the _ACM Software Engineering Code of Ethics and Professional Practice_[^12].
 
 These Codes outline standards of behavior across many dimensions of our work as software engineers. They both start with our commitment to something greater than money or our employer: the common good.
+
+
+## Forward
+
+This is the direction we must march unwaveringly as our work becomes ever more entwined with human life. We _must_ serve the common good first.
+
+Each of us can step forward into a future in which software engineers are trusted servants and protectors of humanity. That first step might be to swear by a Code that places the common good above all else. For me, it is.
 
 
 ## References
