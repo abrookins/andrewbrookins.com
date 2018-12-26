@@ -31,22 +31,22 @@ _We, as software engineers, exist to serve the common good._
 
 ## What We're Up Against
 
-That the ultimate purpose of software engineering is to serve the common good is an uncommon idea in our profession, where ideas about purpose come frequently from either the people paying us or the companies selling us things.
+That the ultimate purpose of software engineering is to serve the common good is an uncommon idea in our profession, where suggestions about the purpose of our work come frequently from people paying us and selling us things.
 
-Venture capitalists want us to make them money, so they compare founding a startup to living in the wild instead of captivity[^2]. Big companies, non-profits, and governments want us to absorb their brands, missions, or constitutional functions. Meanwhile, from the perspective of the companies selling us things, our choices about what to _consume_ contain the meaning of our work, not our acts of production.
+Venture capitalists want us to make them money, so they compare founding a startup to living in the wild instead of captivity[^2]. Businesses, non-profits, and governments want us to absorb their brands, missions, or constitutional functions. Meanwhile, from the perspective of the companies selling us products and services, our choices about what to consume contain the meaning of our work, not our acts of production.
 
 (Let's not even get into the media coverage of our profession, from which in 2018 a reasonable person might guess that our principle goal is to build artificial intelligence to replace every job on earth[^3].)
 
-There's nothing wrong with working for someone or taking investments, and living usually entails buying things. The problem is that we often conflate the purpose of our work with these transactions.
+There's nothing wrong with working for someone or founding a startup, and living usually entails buying things. The problem is that we often conflate the purpose of our work with these transactions.
 
 Is the final meaning of a nurse's work that he saves the hospital money? A firefighter's that she protects insurance companies?
 
 
 ## To Protect and Serve
 
-Buying, selling, and enhancing the value of investments are all dimensions of our work, but none are the highest purpose of the work. That is to serve the common good. Some of us might go even further. Like the Los Angeles Police Department, we might *protect* and serve.
+The missions of the organizations for whom we practice our art, the desire of our investors for a return on their investments, and our private professional goals are all dimensions of our work, but none are the highest purpose of the work. That is to serve the common good. Some of us might go even further. Like the Los Angeles Police Department, we might *protect* and serve.
 
-Which would you rather do: grind at a startup or protect and serve the common good? What if you could do both?
+Which would you rather do, grind at a startup or protect and serve the common good? What if you could do both?
 
 Wait! You can do both? To find out how, we will explore what "serving the common good" might look like for software engineers.
 
@@ -61,7 +61,7 @@ There are technical and non-technical definitions of "public" and "common" _good
 
 Here, we do not mean public goods that a society collectively maintains, such as roads and other infrastructure. Some programs are so crucial to modern society that we may soon think of them this way, and maybe we ought to; parts of the internet come to mind. However, by claiming that software engineers ought to serve the common good, this essay does not mean that we should all direct our energy toward building public goods.
 
-Instead, a philosophical definition of the common good is more useful to us as software engineers. Seen this way, it is a tool we can use while deliberating over how to act.
+Instead, a philosophical definition of the common good is more useful to us. Seen this way, it is a tool we can use when deliberating about how to act.
 
 To that end, let us say that the common good is the set of interests and facilities that members of a society agree should be important and available to all members of the society. Note that the concept includes both "interests" and "facilities."
 
@@ -96,25 +96,25 @@ There are four areas of our domain that appear to intersect most with the common
 
 In all these domains, there is a principle at work that we can derive by imagining negative consequences happening to ourselves rather than others, similar to the "veil of ignorance" thought experiment proposed by John Rawls [^9].
 
-#### Privacy
+#### *Privacy*
 
 Our software should safeguard the privacy of the people who use it by retaining as little information about them as possible, explaining what we keep and what we do with it, and giving users the ability to delete this information.
 
 Principle: Information about us can be dangerous, so we should keep as little of that information about others as possible.
 
-#### Security
+#### *Security*
 
 We should design our systems with security adequate to protect the people who use it from theft and attack.
 
 Principle: When we entrust our data to a private system, its operators have a relational obligation to us to protect that data.
 
-#### The environment
+#### *The Environment*
 
 We should do as much as possible with as few of the earth's resources as we can. We should avoid polluting the environment.
 
 Principle: Because we all depend on the earth, we share a responsibility to protect it.
 
-#### Public health
+#### *Public Health*
 
 We should not build software that harms the mental or physical health of people by design -- unless we do so to defend the constitutional order. We should undertake or fund research to determine the unintentional impacts that our systems have on the mental and physical health of people. Examples of negative impacts include blue light affecting sleep patterns, phone use causing vehicular death, and "dark design patterns" that produce addictive behavior in users.
 
@@ -164,7 +164,7 @@ Each of us can step forward into a future in which software engineers are truste
 
 [^3]: https://www.economist.com/special-report/2016/06/25/automation-and-anxiety
 
-[^4]: Aristotle. Nicomachean Ethics [Internet]. The Internet Classics Archive; available at http://classics.mit.edu/Aristotle/nicomachaen.html. I.2.1094b7–10 (last accessed 30 Jan 2011).
+[^4]: http://classics.mit.edu/Aristotle/nicomachaen.1.i.html
 
 [^5]: https://plato.stanford.edu/entries/common-good/
 
