@@ -14,12 +14,6 @@ image:
   feature: aussieactive-384487-unsplash.jpg
 ---
 
-
-> I fight for the user!
->
-> -- TRON
-
-
 The first program written for a computer ran June 21, 1948 on the Manchester Mark 1[^1]. That means software engineers have been cursing at compilers, pulling all-night debugging sessions, and arguing about curly braces for seven decades.
 
 Why do we do it? Aside from the joy of creation, what is the point of the work?
@@ -31,9 +25,9 @@ _We, as software engineers, exist to serve the common good._
 
 ## What We're Up Against
 
-That the ultimate purpose of software engineering is to serve the common good is an uncommon idea in our profession, where suggestions about the purpose of our work come frequently from people paying us and selling us things.
+That the ultimate purpose of software engineering is to serve the common good is an uncommon idea in our profession, where suggestions about the purpose of our work come frequently from other people.
 
-Venture capitalists want us to make them money, so they compare founding a startup to living in the wild instead of captivity[^2]. Businesses, non-profits, and governments want us to absorb their brands, missions, or constitutional functions. Meanwhile, from the perspective of the companies selling us products and services, our choices about what to consume contain the meaning of our work, not our acts of production.
+Venture capitalists and Silicon Valley entrepreneurs portray software engineering as a means to generate wealth[^2], perhaps by "changing the world" along the way. Businesses and non-profits that hire us want us to take their brands and missions as our own. Meanwhile, from the perspective of the companies selling us products and services, our choices about what to consume contain the meaning of our work, not our acts of production.
 
 (Let's not even get into the media coverage of our profession, from which in 2018 a reasonable person might guess that our principle goal is to build artificial intelligence to replace every job on earth[^3].)
 
@@ -160,7 +154,7 @@ Each of us can step forward into a future in which software engineers are truste
 
 [^1]: Mike Hally (2005). Electronic brains: stories from the dawn of the computer age. National Academies Press. p. 96. ISBN 978-0-309-09630-0.
 
-[^2]: http://www.paulgraham.com/boss.html
+[^2]: http://www.paulgraham.com/wealth.html
 
 [^3]: https://www.economist.com/special-report/2016/06/25/automation-and-anxiety
 

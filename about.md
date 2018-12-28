@@ -14,13 +14,11 @@ I'm a father and programmer living in Portland, Oregon. Lately I solve cloud inf
 
 Here are a few of my favorite posts:
 
-<ul>
-	<li><a href="https://andrewbrookins.com/life/dear-alma-how-to-quit-drinking/">Dear Alma: How to Quit Drinking</a></li>
-	<li><a href="http://andrewbrookins.com/buddhism/on-starting-a-daily-meditation-practice/">On Starting a Daily Meditation Practice</a></li>
-	<li><a href="https://www.safaribooksonline.com/blog/2014/11/15/thrive-remote-developer/">How to Thrive as a Remote Worker</a> (on my employer's blog)</li>
-	<li><a href="http://andrewbrookins.com/books/self-reliant-veganism/">Self-Reliant Veganism</a></li>
-	<li><a href="http://andrewbrookins.com/books/reading-murakami-five-years-later/">Reading Murakami Five Years Later</a></li>
-</ul>
+- [Dear Alma: How to Quit Drinking](https://andrewbrookins.com/life/dear-alma-how-to-quit-drinking/)
+- [What Are We Doing Here?](https://andrewbrookins.com/technology/what-are-we-doing-here-software-engineering/)
+- [Mixins in Python and Ruby Compared](https://andrewbrookins.com/technology/mixins-in-python-and-ruby-compared/)
+- [Ten Years of Learning Investments](https://andrewbrookins.com/technology/ten-years-of-learning-investments/)
+- [Can You Code on an iPad?](https://andrewbrookins.com/tech/can-you-write-code-on-an-ipad/)
 
 <h2>Contact me</h2>
 You can find me on <a href="https://twitter.com/abrookins">Twitter</a> and <a href="https://github.com/abrookins">GitHub</a>. Or email me: a AT andrewbrookins.com.
