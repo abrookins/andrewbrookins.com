@@ -19,6 +19,7 @@ Here are a few of my favorite posts:
 - [Mixins in Python and Ruby Compared](https://andrewbrookins.com/technology/mixins-in-python-and-ruby-compared/)
 - [Ten Years of Learning Investments](https://andrewbrookins.com/technology/ten-years-of-learning-investments/)
 - [Can You Code on an iPad?](https://andrewbrookins.com/tech/can-you-write-code-on-an-ipad/)
+- [How Does Django's StreamingHttpResponse Work, Exactly?](https://andrewbrookins.com/django/how-does-djangos-streaminghttpresponse-work-exactly/)
 
 <h2>Contact me</h2>
 You can find me on <a href="https://twitter.com/abrookins">Twitter</a> and <a href="https://github.com/abrookins">GitHub</a>. Or email me: a AT andrewbrookins.com.
