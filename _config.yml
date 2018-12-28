@@ -56,7 +56,6 @@ gems:
 paginate: 6
 
 # Don't leave this blank when you deploy!
-environment: production
 baseurl:          https://andrewbrookins.com/
 #base_url: ""
 
