@@ -20,7 +20,7 @@ Why do we do it? Aside from the joy of creation, what is the point of the work?
 
 There are as many answers to that question as there are people who ask. However, one answer can elevate our profession and fill our work with purpose:
 
-_We, as software engineers, exist to serve the common good._
+_We exist to serve the common good._
 
 
 ## What We're Up Against
