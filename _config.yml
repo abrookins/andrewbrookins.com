@@ -1,0 +1,64 @@
+title:            Andrew Brookins
+tagline:          Technology, ethics, and literature.
+canonical:        https://andrewbrookins.com
+
+# Owner/author information
+owner:
+  name:           Andrew Brookins
+  email:          a@andrewbrookins.com
+  twitter:        abrookins
+  # Plug in your disqus shortname!
+
+
+# Open Graph customization
+opengraph:
+  locale:           en_US
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: About
+    url: /about
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/Los_Angeles
+future:      true
+highlighter: rouge
+markdown:    kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
+
+sass:
+    style: :compressed
+
+syntax_highlighter_opts:
+  line_numbers:
+  line_numbers_start: 1
+  tab_width: 4
+  bold_every: 10
+  css: class
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+assets:
+  sources:
+    - _assets/fonts
+
+gems:
+  - jekyll-paginate
+
+paginate: 6
+
+# Don't leave this blank when you deploy!
+environment: production
+baseurl:          https://andrewbrookins.com/
+#base_url: ""
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]

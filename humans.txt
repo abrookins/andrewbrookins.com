@@ -1,0 +1,11 @@
+---
+---
+
+/* TEAM */
+Creator: {{ site.owner.name }}
+Contact: {{ site.owner.email }}
+
+/* SITE */
+Last update: {{ site.time | date: '%F' }}
+Standards: {{ site.tools.standards }}                        
+Software: {{ site.tools.software }}
