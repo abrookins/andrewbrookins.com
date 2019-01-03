@@ -1,6 +1,6 @@
 ---
 id: 1332
-title: 'Dear Alma: One day left to live'
+title: 'Dear Alma: One Day Left to Live'
 date: 2015-03-30T19:39:19+00:00
 author: Andrew
 layout: post

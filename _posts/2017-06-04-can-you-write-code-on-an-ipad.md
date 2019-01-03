@@ -10,6 +10,7 @@ wpautop:
   - -break
 categories:
   - Technology, iOS
+manual_newsletter: true
 ---
 > The merit in all things consists in the difficulty.
 > 
@@ -17,7 +18,7 @@ categories:
 
 This is a story about how I experimented with using an iPad Air 2 to write code, what worked and what didn't, and where I ended up.
 
-**Update**: I continued my quest in [Can you Write Code on a Chromebook?](/technology/can-you-code-on-a-chromebook-plus/)
+**Update**: I continued my quest in [Can you Write Code on a Chromebook?](/technology/can-you-code-on-a-chromebook-plus/) and [Using Windows 10 and the Surface Book 2 for Web Development](https://andrewbrookins.com/technology/using-windows-10-and-the-surface-book-2-for-web-development/).
 
 ## Why?
 
@@ -114,6 +115,7 @@ I dug out my old Microsoft Universal Keyboard, which was decent but flawed due t
 
 - Dropbox as my filesystem because it was so well-integrated in other iOS apps, and because it supported headless Linux installs, giving me full access to my iOS files via a Linux terminal
 
+{% include newsletter.html %}
 
 ## Things I Loved
 

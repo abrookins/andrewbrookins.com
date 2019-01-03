@@ -24,7 +24,9 @@
 
         {{ content }}
 
-      {% include newsletter.html %}
+      {% unless page.manual_newsletter %}
+        {% include newsletter.html %}
+      {% endunless %}
 
       {% if page.comments %}
       <aside class="disqus">

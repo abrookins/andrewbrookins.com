@@ -1,6 +1,6 @@
 ---
 id: 1322
-title: Protect against bias while hiring
+title: Protect Against Bias While Hiring
 date: 2015-02-24T11:49:22+00:00
 author: Andrew
 layout: post

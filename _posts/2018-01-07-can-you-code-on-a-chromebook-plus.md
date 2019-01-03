@@ -10,10 +10,11 @@ wpautop:
   - -break
 categories:
   - Technology, Chromebooks, iOS, Android
+manual_newsletter: true
 ---
 This is an update to [Can you Write Code on an iPad?](https://andrewbrookins.com/tech/can-you-write-code-on-an-ipad/), in which I tried writing code on an iPad, grew dissatisfied, and then bought a Samsung Chromebook Plus.
 
-Eventually, I also became dissatisfied with the Chromebook Plus, sold it and all my old hardware lying around, bought an iPad Pro, and the cycle of suffering continued.
+Eventually, I also became dissatisfied with the Chromebook Plus, sold it and all my old hardware lying around, bought an iPad Pro, and the cycle of suffering continued. I also tried [Windows 10 and the Surface Book 2](https://andrewbrookins.com/technology/using-windows-10-and-the-surface-book-2-for-web-development/).
 
 But if you're here, you probably want to read about about writing code on the Chromebook Plus. Let's get to it!
 
@@ -46,6 +47,8 @@ Briefly, I looked into Chrome apps for writing code, either files stored on the 
 Running Linux in an Android app was pretty awesome, until I A) tried to install some packages that didn't work and B) hit Control-W to delete a word, which closed the entire app -- because there was no way to let an Android app have full control of the keyboard.
 
 So, I settled on using [Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=en) to SSH into a Linux server running on Google Cloud Platform. Secure Shell could establish a SOCKS 5 proxy, and another Chrome app (I forget the name) could route traffic through the proxy, giving me access to remote development servers via Chrome. That worked well!
+
+{% include newsletter.html %}
 
 ### Android
 

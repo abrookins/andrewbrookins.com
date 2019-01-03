@@ -1,6 +1,6 @@
 ---
 id: 1343
-title: Becoming a better learner
+title: Becoming a Better Learner
 date: 2015-06-26T21:49:25+00:00
 author: Andrew
 layout: post

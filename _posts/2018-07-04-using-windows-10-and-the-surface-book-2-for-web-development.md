@@ -15,11 +15,17 @@ image:
 ---
 
 
-I’ve been a web developer who uses a Mac for almost ten years. However, for a [variety of reasons](#appendix-why-dont-i-just-use-a-mac), I’m looking for a new platform. So, for the past month, I put Windows 10 and the Surface Book 2 through a meat grinder of web development tasks. My mission was to discover if a PC could replace my Mac. And you know what? Windows 10 and the Surface Book 2 are pretty good. Good enough, perhaps.
+I’ve been a web developer who uses a Mac for almost ten years, but lately I'm on a quest to find the [perfect software development platform](/tech/my-ideal-software-development-environment/). Ideally, one that lacks hardware lock-in and painful keyboards.
 
-If you, too, are thinking of switching and are a web developer who uses open-source tools, this post is for you. I hope by describing some of the problems I had, you can decide if you really want to spend your personal time making the switch.
+To summarize the quest to date, I fell in love with and then abandoned the [iPad with a remote Linux server](/tech/can-you-write-code-on-an-ipad/) and the [Chromebook Plus](/technology/can-you-code-on-a-chromebook-plus/) with a similar setup. Then I retreated to macOS for a while. Aside from desktop Linux, which I've used in the past and want to avoid, only Windows 10 was left to try.
 
-**Update 8/27**: If you're a Mac user reading this post, let me save you the trouble: just stick with macOS. Windows is a pain in the butt.
+So, I picked up a Surface Book 2 and put Windows 10 through a meat grinder of web development tasks for the past month. My mission was to discover if a PC could replace my Mac. And you know what? Windows 10 and the Surface Book 2 were pretty good. Good enough, perhaps.
+
+This post is an experience report describing some of the problems I had with Windows 10 and the different Go, Python, and Ruby development environment setups I tried.
+
+**Update 1/1/19**: After using Windows on and off for the past few months, I still prefer a Mac for real work. macOS can handle the complexity of my dev setup (Rails frontend apps, Kubernetes operators written in Go, Python glue code, multiple VPNs, etc.) without any distractions. Windows can't. I'll keep trying, though, because I'd love to choose my own hardware.
+ 
+
 
 ## What is this Meat Grinder of Which You Speak?
 
@@ -29,7 +35,7 @@ The experiment went okay. The many things I love about the device and the aspect
 
 Despite the fact that I plan on sticking with Windows, I can’t really say “If you are a web developer currently using a Mac to work with open-source tools, go out and buy a Windows machine.” I ran into trouble along the way, which I will describe. So beware: if you choose this path, it probably won't be easy.
 
-Still, I’m well into my second month using Windows and a Linux VM for 100% of my software development tasks, both for my day job and for hobby coding, and I’m happy with the setup. The Surface Book 2 is also better than an iPad Pro up for the things I want to do with a tablet, and I’ve never run out of battery in public.
+Still, I’m well into my second month using Windows and a Linux VM for 100% of my software development tasks, both for my day job and for hobby coding, and I’m ~happy~ adjusting to the setup. The Surface Book 2 is also better than an iPad Pro up for the things I want to do with a tablet, and I’ve never run out of battery in public.
 
 ## Hardware
 
@@ -51,7 +57,7 @@ The Surface Pen works great. It never needs to charge because it uses a battery.
 
 The screen is nice, but not as nice as the new MacBook Pro screen, or the iPad Pro screen. The reason is that it’s too reflective. Using it anywhere near a window, you are going to see some very vibrant blues, whites, and greens – reflected from the view outside.
 
-![A Surface Book 2 displays reflections of SE Rex Street](/images/surface-reflectionnew.jpg)
+![A Surface Book 2 displays reflections from my window](/images/surface-reflectionnew.jpg)
 
 However, I use this laptop outdoors a lot, working in various parks around town, without problems. The _one_ time I did have to move to a different spot was when I tried to work directly under the noon-time sun, without any shade, and the sun reflecting on the metallic body of the laptop nearly blinded me. “It’s almost like computers were made to be used inside,” my wife said later.
 
@@ -91,6 +97,16 @@ I already knew from past experiments that VirtualBox could provide a guest acces
 *   Restarted VirtualBox
 
 Getting access to a host’s VPN connection within a guest is really its own mini-quest, so I’ll leave it at that. But as far as me bushwhacking a path to productive web development on Windows goes, I recommend VirtualBox if you need to use the host’s VPN, and VMWare if you want to use Desktop Linux.
+
+## A Quick Note on X Servers for Windows (X410, VcXsrv, etc.)
+
+Tons of people on the internet claim to use a Windows-10-native X server to run Linux applications from the Windows 10 desktop. This seems like a good setup because it eliminates a lot of the friction of running two desktop GUIs (Windows 10 and Linux) to use a VM. However, none of these X servers worked properly in my testing.
+
+The test they had to pass was running Intellij Ultimate and Firefox. None of them could do either of those well. Performance was unusable. Web pages in Firefox rendered so slowly, you could watch new page slowly draw onto the screen. Or else the X server couldn't deal with Intellij's dialogs and popups.
+
+Of course, even if this worked, you would still be left with the problem that most Linux applications can't handle switching between HiDPI screens like the Surface Book 2's built-in display and lower DPI screens like an external monitor. Gnome Terminal and Tilix need to be restarted with manual scaling flags when switching, Firefox needs you to "void your warranty" to get it to scale properly on HiDPI, and even Intellij requires changing settings to stay readable when switching screens.
+
+Bah, I say!
 
 ## Essential macOS Software that is Missing from Windows
 
@@ -169,27 +185,3 @@ I’m prioritizing experiments with touch and pen input directly to my laptop ov
 When Apple was creating amazing Macs, like the 2010 MacBook Pro, it was easier to make the argument that sacrificing the freedom PCs provided was worth it to get the quality a Mac delivered. That was the whole point of buying a Mac: Apple’s locked-down hardware created the best computing experience at a higher cost, and it also happened to run a UNIX variant operating system that let developers use open-source tools directly on the hardware. No more VMs, remote servers (at least for writing code), or flaky Linux-on-laptops-designed-for-Windows.
 
 Of course, nothing lasts forever. With Microsoft actively building features for open-source developers in Windows, and manufacturers like Dell, Purism, and System76 building Linux-first systems, PCs seem like the better platform for developers like me in 2018\. Windows isn’t perfect, but I’m keeping my Surface Book 2, with its Linux VM and working keyboard. Farewell, macOS!
-
-[](#appendix-why-dont-i-just-use-a-mac)
-
-## Appendix: Why Don’t I Just Use a Mac?
-
-Summary: This is a rant about Apple, iOS, and macOS.
-
-For the past couple of years, I have been on a quest for the [perfect software development platform](/tech/my-ideal-software-development-environment/). To summarize the quest to date, I fell in love with and then abandoned the [iPad with a remote Linux server](/tech/can-you-write-code-on-an-ipad/) and the [Chromebook Plus](/technology/can-you-code-on-a-chromebook-plus/) with a similar setup. Then I retreated to macOS for a while, only to recently (and I hope finally) try Windows. In case you’re wondering, I _have_ used Desktop Linux, and I’m going to pass for now because I want to use pen input, but you do you.
-
-Originally, I desired a ubiquitous computing environment that scaled up and down in physical size depending on my needs. That is, it’s a voice assistant or a watch when I’m out running, a phone when I need a phone, a tablet when I need a tablet (though does anyone ever _need_ a tablet?), a laptop when I’m at a coffee shop, and a desktop when I’m at home. And I can do software development on it.
-
-Sounds kind of like iOS, right? Except I tried that. Doing real work on iOS with an iPad, especially coding, just isn’t possible. It could work if you’re an executive who writes emails and does meetings all day. It doesn’t work for web development, and it wasn’t made for web developers. Heck, it’s barely usable with a keyboard at all – or these crazy things called “files.” Last year everyone congratulated Apple on their new file management features in iOS 11\. Have you tried doing anything with files in iOS 11? You’ll go crazy if you do. Forget about it. And if you’re wondering if you can plug an iPad into an external monitor and get any kind of useful desktop experience, you can’t in a meaningful way – I tried.
-
-I could go on a long rant about the iPad (specifically, the “Pro”) and iOS alone. Here are just a couple more criticisms: have you picked an iPad Pro up in your hands? Somehow, Apple has made them both too sharp along the edges and too slippery on the back. They’re lightweight and look nice, but actually using one for any length of time is mildly uncomfortable. And if you use an Apple Pencil, you will end up stupidly plugging it into the iPad to create a spear-weapon in public over and over again, whenever the Pencil loses its Bluetooth connection or runs low on battery.
-
-Apple’s argument is that it makes the best tablet experience, the best phone experience, and the best desktop experience. If you want those experiences, you should just buy them separately. Except I don’t want, or need, an entertainment tablet – I want a touch surface to work on. And Apple still hasn’t provided that with iOS. Meanwhile, they’ve abandoned macOS, leaving it to rot with terrible half-baked features like “Launchpad” while they simultaneously manage to destroy their hardware offering with one of the worst keyboards ever made (I own one, and it’s as bad as people say).
-
-Also, for what it’s worth, I’ve tried pairing an iPad with a Mac using “hand-off.” I’m sure this workflow is fine if you just want to occasionally pick up an iPad and read a web page or doodle on it. However, try to do much more and you end up with two sets of files, often out of sync, and if you work for a big company, tons of VPN head-aches.
-
-So, today, my opinion is that iOS is fine on my phone. Good on Apple for their stance on privacy, as well. However, the iPad is basically useless for anything other than entertainment. You can’t just add an iPad into your work setup and get a nice package with touch input and no downsides. And the Mac, taken alone, is slowly dying as Apple starves it.
-
-Having assessed Chromebooks running Linux remotely and locally, with Android and without, I have different misgivings about that platform. First of all, I feel uncomfortable buying computers from an advertising company. However, at least Google seems to be taking a path closer to that of Microsoft than Apple, by trying to combine two experiences, the tablet and desktop, into one device. That seems correct to me, but I’ve tried it and didn’t like it. They have a long road ahead, and unlike macOS or Windows, neither ChromeOS nor Android has a huge base of popular productivity software.
-
-So that is the long and short of why I’m not using a Mac (or a Chromebook).

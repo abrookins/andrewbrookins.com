@@ -1,6 +1,6 @@
 ---
 id: 1348
-title: 'Dear Alma: How to quit drinking'
+title: 'Dear Alma: How to Quit Drinking'
 date: 2015-08-09T17:30:20+00:00
 author: Andrew
 layout: post

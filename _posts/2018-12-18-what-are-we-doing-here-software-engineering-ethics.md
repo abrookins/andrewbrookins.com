@@ -12,6 +12,7 @@ categories:
   - Technology, Ethics
 image:
   feature: aussieactive-384487-unsplash.jpg
+manual_newsletter: true
 ---
 
 The first program written for a computer ran June 21, 1948 on the Manchester Mark 1[^1]. That means software engineers have been cursing at compilers, pulling all-night debugging sessions, and arguing about curly braces for seven decades.
@@ -67,6 +68,9 @@ One example of the common good in action is a public library. The Stanford Encyc
 However, despite a society agreeing to provide access to the public library, the ability of anyone in the society to learn anything from the library may conflict with the private interest of other citizens. In the Stanford example, a baker might wish to monopolize his knowledge of certain kinds of baking; that is not possible if anyone can learn anything at the library.
 
 This example was designed to illustrate the difference between public and common goods in economic theory. For our purposes it demonstrates that the common good often modulates private interests. That is precisely how we should think of it as software engineers, as we so often are employed to satisfy private interests.
+
+
+{% include newsletter.html %}
 
 
 ## The Intersection of Software Engineering and the Common Good
