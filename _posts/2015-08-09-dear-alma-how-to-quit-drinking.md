@@ -18,7 +18,7 @@ Dear Alma,
 
 I assume that if you’re reading this letter for its true purpose, you could use some advice. Otherwise, file it away as a curiosity until the time comes — and I hope it never does.
 
-I have been sober now continuously since January 28, 2009, which at the time of this writing is six years and a few months. But sometimes it feels as if it has been a much longer 2,384 days, and there are moments when time slows even more, and I’m certain it’s been 205,977,600 seconds, during each of which I passed the torch just a little bit farther, and if I leave you with nothing else I want to tell you that some of your greatest fights will come in moments no greater than the span of a single breath. 
+I have been sober now continuously since January 28, 2009, which at the time of this writing is six years and a few months. But sometimes it feels as if it has been a much longer 2,384 days, and there are moments when time slows even more, and I’m certain it’s been 205,977,600 seconds, during each of which I passed the torch just a little bit farther. If I leave you with nothing else I want to tell you that some of your greatest fights will come in moments no greater than the span of a single breath. 
 
 ## <span id="Physical_dependence">Physical dependence</span>
 

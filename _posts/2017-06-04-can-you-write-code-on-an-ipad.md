@@ -18,7 +18,12 @@ manual_newsletter: true
 
 This is a story about how I experimented with using an iPad Air 2 to write code, what worked and what didn't, and where I ended up.
 
-**Update**: I continued my quest in [Can you Write Code on a Chromebook?](/technology/can-you-code-on-a-chromebook-plus/) and [Using Windows 10 and the Surface Book 2 for Web Development](https://andrewbrookins.com/technology/using-windows-10-and-the-surface-book-2-for-web-development/).
+**Updates**:
+
+I continued my quest in [Can you Write Code on a Chromebook?](/technology/can-you-code-on-a-chromebook-plus/) and [Using Windows 10 and the Surface Book 2 for Web Development](https://andrewbrookins.com/technology/using-windows-10-and-the-surface-book-2-for-web-development/).
+
+In 2019 I reevaluated coding on iOS with [Coding on an iPad Pro in 2019](https://andrewbrookins.com/technology/coding-on-ipad-pro-2019/).
+
 
 ## Why?
 
