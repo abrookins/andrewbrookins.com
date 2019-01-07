@@ -39,6 +39,8 @@ There is some wiggle room around running your code directly on the iPad if you a
 
 Other than Python, I haven't found any generally useful interpreter or compiler apps on iOS.
 
+**Update**: Readers referred me to Continuous, a C# and F# IDE for iOS, and Rescript, a JavaScript/node.js IDE for iOS. These both look promising and may be equivalent to Pythonista, but I haven't used them. There is also Replete, an iOS app that gives you a ClojureScript REPL (read-eval-print loop); while fun, it seems less feature-rich than the others.
+
 ### Native iOS Editors Are Getting Better
 
 There are increasingly decent text editors that run without the interpreter or compiler component. Apps like GoCoEdit and Textastic offer editing experiences that have started to gain some of the features of desktop editors that go beyond the basics — e.g. fuzzy-finding files.
@@ -88,9 +90,9 @@ There are, of course, VPS providers like Linode and Digital Ocean. These work fi
 
 Google uses 100% renewable power, and Google Cloud Shell gives you a micro server with persistent storage and preinstalled development tools for free. The Google Cloud Console app can open a Cloud Shell session natively on iOS. However, good luck getting copy and paste to work in that app! You will also need to set any settings like font size by launching a Cloud Shell session in an iOS browser. You can’t actually use Cloud Shell from an iOS browser though — the app won’t pick up keyboard presses, at least with the onscreen keyboard.
 
-Instead of using the Cloud Console app, you could connect to a jump host that has the `gcloud` CLI tool installed. You can connect to Cloud Shell from a terminal with the recently added command, `gcloud alpha cloud-shell ssh`. The "always free" tier of GCP includes an f1-micro instance, which could be your jump host or just... your VM.
+Instead of using the Cloud Console app, you could connect to a jump host that has the `gcloud` CLI tool installed. You can connect to Cloud Shell from a terminal with the recently added command, `gcloud alpha cloud-shell ssh`. The "always free" tier of GCP includes an f1-micro instance, which could be your jump host to Cloud Shell or just... your development VM.
 
-What also works well is an old Mac that you can set up as a server, because then you can do fun stuff like access the same files as the iPad over iCloud Drive, or use `osascript` to send yourself text messages. The world is your oyster at that point. Apple has revived the Mac Mini, so that is a viable home server/desktop computer pair for the iPad. (Or you could, you know, buy a real mobile computer like a laptop.)
+What also works well is an old Mac that you can set up as a server, because then you can do fun stuff like access the same files as the iPad over iCloud Drive, or use `osascript` to send yourself text messages that deep-link into iOS apps. The world is your oyster at that point. Apple has revived the Mac Mini, so that is a viable home server/desktop computer pair for the iPad. (Or you could, you know, buy a real mobile computer like a laptop.)
 
 ### Reaching Your Development Web Server from an iOS Browser
 
