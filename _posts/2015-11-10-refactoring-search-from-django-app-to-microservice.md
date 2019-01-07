@@ -1,6 +1,6 @@
 ---
 id: 1366
-title: Refactoring search from Django app to microservice
+title: Refactoring Search from Django App to Microservice
 date: 2015-11-10T16:59:42+00:00
 author: Andrew
 layout: post

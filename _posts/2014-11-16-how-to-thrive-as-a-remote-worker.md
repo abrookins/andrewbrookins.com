@@ -1,6 +1,6 @@
 ---
 id: 1318
-title: How to thrive as a remote worker
+title: How to Thrive as a Remote Worker
 date: 2014-11-16T20:45:35+00:00
 author: Andrew
 layout: post

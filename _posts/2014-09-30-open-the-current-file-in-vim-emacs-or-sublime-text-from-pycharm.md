@@ -1,6 +1,6 @@
 ---
 id: 1246
-title: 'PyCharm: Open the current file in Vim, Emacs or Sublime Text'
+title: 'PyCharm: Open the Current File in Vim, Emacs or Sublime Text'
 date: 2014-09-30T22:13:40+00:00
 author: Andrew
 layout: post

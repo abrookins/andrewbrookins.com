@@ -1,6 +1,6 @@
 ---
 id: 1373
-title: 'How does Django&#8217;s StreamingHttpResponse work, exactly?'
+title: 'How Does Django&#8217;s StreamingHttpResponse Work, Exactly?'
 date: 2016-07-29T11:19:45+00:00
 author: Andrew
 layout: post

@@ -1,6 +1,6 @@
 ---
 id: 1239
-title: 'Video of my DjangoCon talk &#8220;The evolution of a RESTful Django backend&#8221;'
+title: 'Video Of My DjangoCon talk &#8220;The Evolution of a RESTful Django Backend&#8221;'
 date: 2014-09-19T20:38:11+00:00
 author: Andrew
 layout: post

@@ -87,5 +87,4 @@ So I made the switch, and it's been great. Vim over SSH freed me up to try diffe
 * A Galaxy S8 Phone with DeX dock (weird, but intriguing)
 * A Surface Pro or Surface Book (cost prohibitive)
 
-Since I already owned an iPad, I started there: [Can You Write Code on an iPad?](/tech/can-you-write-code-on-an-ipad/).
-
+Since I already owned an iPad, I started there: [Can You Write Code on an iPad?](/tech/can-you-write-code-on-an-ipad/). Then I tried the [Chromebook Plus](/technology/can-you-code-on-a-chromebook-plus/) with a similar setup. Finally, succumbing to insanity completely, I tested [Windows 10 and the Surface Book 2](https://andrewbrookins.com/technology/using-windows-10-and-the-surface-book-2-for-web-development/).
