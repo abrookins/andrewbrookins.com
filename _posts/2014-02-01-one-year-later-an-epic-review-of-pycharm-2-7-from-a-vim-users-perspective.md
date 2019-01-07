@@ -188,15 +188,15 @@ PyCharm is great at automating several annoying refactoring processes, like rena
 
 This is doable with ack (or grep) and Vim. But would I want to go back to that life? No. Here’s why. Let’s say I want to rename a method with a name like “add” that’s guaranteed to give me false positives from a text-based search like grep. In PyCharm I trigger the refactor menu with a keyboard shortcut:<figure>
 
-![](https://andrewbrookins.com/wp-content/uploads/2014/02/refactor_this_menu.png)</figure> 
+![](https://andrewbrookins.com/wp-content/uploads/2014/02/refactor_this_menu.png)
 
 Alright, great. I have tons of refactoring options. I’m only going to show renaming because that is what I do the most. So, I hit the Enter key on “Rename…” and I’m asked for the new name:<figure>
 
-![](https://andrewbrookins.com/wp-content/uploads/2014/02/rename_method_dialog.png)</figure> 
+![](https://andrewbrookins.com/wp-content/uploads/2014/02/rename_method_dialog.png)
 
-What’s that “Preview” button? Oh, it’s just a sweet tree containing all the occurrences of the symbol.<figure>
+What’s that “Preview” button? Oh, it’s just a sweet tree containing all the occurrences of the symbol.
 
-![](https://andrewbrookins.com/wp-content/uploads/2014/02/refactor_preview_pane.png)</figure> 
+![](https://andrewbrookins.com/wp-content/uploads/2014/02/refactor_preview_pane.png)
 
 From the preview, I can right-click on any branch of the tree and exclude all sub-items from the operation. There’s a button at the bottom (not in the screenshot) that lets me cancel or do the refactor.
 

@@ -43,7 +43,7 @@ The missions of the organizations for whom we practice our art, the desire of ou
 
 Which would you rather do, grind at a startup or protect and serve the common good? What if you could do both?
 
-Wait! You can do both? To find out how, we will explore what "serving the common good" might look like for software engineers.
+To find out how, we will explore what "serving the common good" might look like for software engineers.
 
 
 ## What Is the Common Good?
@@ -52,18 +52,20 @@ Wait! You can do both? To find out how, we will explore what "serving the common
 >
 > -- Aristotle[^4]
 
+But wait! Before we get into how software engineers can serve the "common good," we have to define the phrase.
+
 There are technical and non-technical definitions of "public" and "common" _goods_, especially when used in economics. The common _good_ in this essay refers to something else.
 
 Here, we do not mean public goods that a society collectively maintains, such as roads and other infrastructure. Some programs are so crucial to modern society that we may soon think of them this way, and maybe we ought to; parts of the internet come to mind. However, by claiming that software engineers ought to serve the common good, this essay does not mean that we should all direct our energy toward building public goods.
 
 Instead, a philosophical definition of the common good is more useful to us. Seen this way, it is a tool we can use when deliberating about how to act.
 
-To that end, let us say that the common good is the set of interests and facilities that members of a society agree should be important and available to all members of the society. Note that the concept includes both "interests" and "facilities."
+To that end, let us say that the common good is the set of interests and facilities that members of a society agree are important and should be available to all members of the society. Note that the concept includes both "interests" and "facilities."
 
 
 ## Conflicts of Interest
 
-One example of the common good in action is a public library. The Stanford Encyclopedia of Philosophy details this example well [^5]. A shared interest of the common good might be that everyone in a society has access to all human knowledge. The facility serving that interest might be the library itself.
+One example of the common good in action is a public library. The Stanford Encyclopedia of Philosophy details this example well[^5]. A shared interest of the common good might be that everyone in a society has access to all human knowledge. The facility serving that interest might be the library itself.
 
 However, despite a society agreeing to provide access to the public library, the ability of anyone in the society to learn anything from the library may conflict with the private interest of other citizens. In the Stanford example, a baker might wish to monopolize his knowledge of certain kinds of baking; that is not possible if anyone can learn anything at the library.
 
@@ -75,15 +77,21 @@ This example was designed to illustrate the difference between public and common
 
 ## The Intersection of Software Engineering and the Common Good
 
+If the common good is the set of interests and facilities that a society thinks are important and should be accessible to all members, then we can look in two places to understand what, exactly, we should do to serve the common good.
+
+The first place we should look is laws and extrajudicial mandates. In a democratic society, laws are usually created in response to modern political thinking about shared interests and facilities.
+
+The second place we should look is in ourselves. What interests do _we_ think are important, to what facilities do _we_ think everyone should have access? A society is just a group of individuals, after all.
+
 ### Legal and Practical Intersections with the Common Good
 
-The state legislates exactly where some domains intersect with the common good. However, in the U.S., that is only partially the case for software engineering.
+Laws often describe exactly where some domains intersect with the common good. However, in the U.S., that is only partially the case for software engineering.
 
-The Health Insurance Portability and Accountability Act of 1996 (HIPAA) mandates controls to protect the privacy and security of certain health information[^6]. However, HIPAA only covers medical information -- and a subset of that.
+The Health Insurance Portability and Accountability Act of 1996 (HIPAA) enforces controls to protect the privacy and security of certain health information[^6]. However, HIPAA only covers medical information -- and a subset of that.
 
 Credit card companies mandate following the Payment Card Industry Data Security Standard (PCI DSS) if a business processes credit card transactions. That means any system we build that does so must be PCI compliant, or credit card companies will fine the owners of these systems.
 
-State laws muddy the picture as well. Across the U.S., several laws and business codes exist to protect consumer privacy [^7]. But there is no unifying federal framework that specifies the general contract between software engineers and the common good, in law or otherwise.
+State laws muddy the picture as well. Across the U.S., several laws and business codes exist to protect consumer privacy[^7]. But there is no unifying federal framework that specifies the general contract between software engineers and the common good, in law or otherwise.
 
 
 ### General Intersections with the Common Good
@@ -92,7 +100,7 @@ Because there is no federal or practical framework that specifies how software e
 
 There are four areas of our domain that appear to intersect most with the common good, at least in the U.S. There may be more, but these are sufficient to deliberate over a wide variety of situations.
 
-In all these domains, there is a principle at work that we can derive by imagining negative consequences happening to ourselves rather than others, similar to the "veil of ignorance" thought experiment proposed by John Rawls [^9].
+In all these areas, there is a principle at work that we can derive by imagining negative consequences happening to ourselves rather than others, similar to the "veil of ignorance" thought experiment proposed by John Rawls[^9].
 
 #### *Privacy*
 
@@ -114,22 +122,24 @@ Principle: Because we all depend on the earth, we share a responsibility to prot
 
 #### *Public Health*
 
-We should not build software that harms the mental or physical health of people by design -- unless we do so to defend the constitutional order. We should undertake or fund research to determine the unintentional impacts that our systems have on the mental and physical health of people. Examples of negative impacts include blue light affecting sleep patterns, phone use causing vehicular death, and "dark design patterns" that produce addictive behavior in users.
+We should not build software that harms the mental or physical health of people by design -- unless we do so to defend the constitutional order.
+
+We should undertake or fund research to determine the unintentional impacts that our systems have on the mental and physical health of people. Examples of negative impacts include blue light affecting sleep patterns, phone use causing vehicular death, and "dark design patterns" that produce addictive behavior in users.
 
 Principle: Our lives depend on the health of our minds and bodies, so we should make the health of others our highest priority.
 
 
 ## How Can You Serve the Common Good?
 
-If you make the common good your first priority as a software engineer, you might question:
+If you want to make serving the common good your first priority as a software engineer, you should know and abide by the federal and state laws and extrajudicial rules that affect your work.
+
+But you also should become comfortable with applying a general framework like the one proposed in this essay. Applying such a framework would probably mean asking questions like the following:
 
 - Is this interaction pattern designed to create addictive behavior in children?
 - Is there another infrastructure provider that offers the same service while producing less pollution or using less non-renewable energy?
 - Must we link the reading behavior of a user to personally identifiable information about them in order to build this feature?
 - Is storing data about people on a hard disk without disk encryption secure enough to keep people safe?
 - Have we built a login system that protects the safety of our users if we do not require two-factor authentication?
-
-Empowered by a large enough group of your peers following the same principle, or alone by strong moral conviction, you might be able to say at a crucial moment, even if doing so risks setting back your career, "No, I will not do that."
 
 
 ## The Code
@@ -138,18 +148,18 @@ There must be a reason that Americans consider nurses the most ethical professio
 
 You might ask yourself if you think a nurse would prioritize the health and safety of a patient over a hospital's finances. Given the high degree of public trust in nurses, who beat out doctors and police officers, my suspicion is that most Americans think nurses would prioritize patient health above everything else.
 
-That might be because Provisions 1-3 of the _Code of Ethics for Nurses_ are about recognizing the inherent dignity in all people, the primacy of the nurse's commitment to the patient, and the responsibility for nurses to advocate for patients [^10].
+That might be because Provisions 1-3 of the _Code of Ethics for Nurses_ are about recognizing the inherent dignity in all people, the primacy of the nurse's commitment to the patient, and the responsibility for nurses to advocate for patients[^10].
 
-Software engineers ought to have such a Code, and it should express our expectations for conduct in all the domains of our profession that intersect with the common good.
+Software engineers ought to have such a Code, and it should express our expectations for conduct in the areas of our profession that intersect with the common good.
 
 There are at least two Codes that some software engineers already follow. These are the _ACM Code of Ethics and Professional Conduct_[^11], which is designed for all computing professionals and is also the most up to date, and the _ACM Software Engineering Code of Ethics and Professional Practice_[^12].
 
-These Codes outline standards of behavior across many dimensions of our work as software engineers. They both start with our commitment to something greater than money or our employer: the common good.
+These Codes outline standards of behavior. They also both start with our commitment to something greater than money or employers: the common good.
 
 
 ## Forward
 
-This is the direction in which we must march unwaveringly as our work becomes ever more entwined with human life. We _must_ serve the common good first.
+As our work becomes ever more entwined with human life, we _must_ serve the common good first.
 
 Each of us can step forward into a future in which software engineers are trusted servants and protectors of humanity. That first step might be to swear by a Code that places the common good above all else. For me, it is.
 

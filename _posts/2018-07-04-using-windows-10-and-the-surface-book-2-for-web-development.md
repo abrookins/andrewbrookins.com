@@ -12,6 +12,7 @@ categories:
   - Technology, Windows
 image:
   feature: northwest-passagenew.jpg
+manual_newsletter: true
 ---
 
 
@@ -74,6 +75,10 @@ If that doesn’t scare you off, then here are a few other problems I ran into. 
 Still, WSL has its uses. I run a `tmux` session in it now that copies and pastes to the Windows clipboard. Within that session, I `mosh` into a VM, which lets me use `tmux` to copy and paste text output from the VM.
 
 Meanwhile, developing in a VM has some great perks. Want to make crazy changes to Linux? Take a snapshot first. Want a second VM just like your first one to isolate new work? Clone it. And of course, a VM is easy to move around between computers, should the need arise.
+
+
+{% include newsletter.html %}
+
 
 ## Virtual Machines: Hyper-V, VMWare Workstation, or VirtualBox?
 
