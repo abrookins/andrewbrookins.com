@@ -18,7 +18,8 @@
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ site.url }}/assets/css/entypo.css" media="all">
 <link rel="stylesheet" href='{{ site.url }}/assets/css/autumn.css' media='all' />
-<link rel="stylesheet" href='{{ site.url }}/assets/css/mailchimp.css' media='all' />
+<!-- <link rel="stylesheet" href='{{ site.url }}/assets/css/mailchimp.css' media='all' /> -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/i.css">
@@ -32,24 +33,30 @@
 <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
 <style type="text/css">
-  #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
-  #mc_embed_signup form{padding: 0;}
+  #mc_embed_signup {
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+  }
+
+  #mc_embed_signup form {
+    padding: 0;
+  }
 </style>
 
 {% if page.custom_css %}
-  {% for stylesheet in page.custom_css %}
-    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
-  {% endfor %}
+{% for stylesheet in page.custom_css %}
+<link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
+{% endfor %}
 {% endif %}
 
 {% if page.custom_js %}
-  {% for js_file in page.custom_js %}
-    <script src='{{ js_file }}' type="text/javascript"></script>
-  {% endfor %}
+{% for js_file in page.custom_js %}
+<script src='{{ js_file }}' type="text/javascript"></script>
+{% endfor %}
 {% endif %}
 
 {% if jekyll.environment == 'production' %}
-  {% include analytics.html %}
+{% include analytics.html %}
 {% endif %}
 
 
@@ -59,7 +66,7 @@
 
 
 <body class="">
-<div id="bump">
+  <div id="bump">
     <header class="site-header">
       <div class="wrap">
         <hgroup>
@@ -71,9 +78,10 @@
             <li>
               <a href="/" title="{{ site.title }}">Home</a>
             </li>
-            
+
             {% for link in site.links %}
-                <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+            <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if
+                link.external %}target="_blank" {% endif %}>{{ link.title }}</a></li>
             {% endfor %}
 
           </ul>

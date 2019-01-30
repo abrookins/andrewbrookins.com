@@ -15,13 +15,21 @@ image:
 manual_newsletter: true
 ---
 
-The first program written for a computer ran June 21, 1948 on the Manchester Mark 1[^1]. That means software engineers have been cursing at compilers, pulling all-night debugging sessions, and arguing about curly braces for seven decades.
+> [T]hough it is worthwhile to attain the end merely for one man, it is finer and more godlike to attain it for a nation [...].
+>
+> -- Aristotle[^4]
+
+The first program written for a computer ran June 21, 1948 on the Manchester Mark 1[^1]. That means programmers have been cursing at compilers, pulling all-night debugging sessions, and arguing about curly braces for seven decades.
 
 Why do we do it? Aside from the joy of creation, what is the point of the work?
 
-There are as many answers to that question as there are people who ask. However, one answer can elevate our profession and fill our work with purpose:
+There are as many answers to that question as there are people who ask. However, one answer can elevate our profession and give each of us an added purpose: _We exist to serve the common good._
 
-_We exist to serve the common good._
+As technology becomes inseparable from human life, we, the builders of this technology, should view our work in this light. Doing so involves more than interpretation; "serving" implies action. But what kind of action?
+
+A Code would help by spelling out exactly what kind of actions we think serve the common good -- and which don't. We can agree on a Code and hold each other accountable to it.
+
+Before deciding on a Code, however, we must first explore competing interpretations of our work, define "the common good," and identify exactly how our activities as engineers intersect with this concept.
 
 
 ## What We're Up Against
@@ -47,10 +55,6 @@ To find out how, we will explore what "serving the common good" might look like 
 
 
 ## What Is the Common Good?
-
-> [T]hough it is worthwhile to attain the end merely for one man, it is finer and more godlike to attain it for a nation or for city-states.
->
-> -- Aristotle[^4]
 
 But wait! Before we get into how software engineers can serve the "common good," we have to define the phrase.
 

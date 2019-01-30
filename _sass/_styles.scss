@@ -966,4 +966,18 @@ code {
 .newsletter {
     border: 1px solid lightgray;
     padding: 20px;
+    background: #3b3b3b;
+    text-align: center;
+}
+
+.newsletter-text {
+    color: white;
+}
+
+#mc_embed_signup {
+    padding-bottom: 20px;
+}
+
+#mc_embed_signup .button {
+    color: black;
 }
