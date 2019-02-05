@@ -19,7 +19,7 @@ I will discuss what happens in your Django application, what happens at the Pyth
 
 This content is also available as [a README with an example Django project](https://github.com/abrookins/streaming_django).
 
-## So, what even is a <code>StreamingHttpResponse</code>?
+## So, what even is a StreamingHttpResponse?
 
 Most Django responses use `HttpResponse`. At a high level, this means that the body of the response is built in memory and sent to the HTTP client in a single piece.
 
@@ -50,7 +50,7 @@ def my_view(request):
 
 You can read more about how to use these two classes in [Django&#8217;s documentation](https://docs.djangoproject.com/en/1.9/ref/request-response/). The interesting part is what happens next &#8212; after you return the response.
 
-## When would you use a <code>StreamingHttpResponse</code>?
+## When would you use a StreamingHttpResponse?
 
 But before we talk about what happens after you return the response, let us digress for a moment: why would you even use a `StreamingHttpResponse`?
 
