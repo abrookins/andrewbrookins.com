@@ -52,7 +52,7 @@ The image I hacked together for **Supernatural Django ORM Performance** with the
 
 This isn't a cover that I want to publish, but I'd like to see if it's good enough to sell preorders.
 
-I'm still torn between having a "weird" design that stands out and a normal-ish cover with a fantasy illustration. But at least now I can run an experiment: will people buy preorders?
+I'm still torn between having a "weird" design that stands out and a normal-ish cover with a fantasy illustration. But at least now I can run an experiment: will anyone preorder?
 
 ## Interior Design
 So, the exterior will feature a fantasy illustration. But what about the interior? Here is my mockup:
@@ -73,7 +73,7 @@ Aside from the text itself, I intend to build additional learning features into 
 
 - Every chapter will include **a quiz** in the text
 
-The example application featured in both Django books I'm writing this year is a learning web app called Spellbook Quest that I plan to tie into the books. So, in the future, you could use Quest to keep track of your learning goals, add non-Spellbook content to a goal like "Learn Django Models," and complete quizzes from your Spellbook Django books interactively.
+The example application featured in both Django books I'm writing this year is a learning web app called Spellbook Quest that I plan to tie into the books. So, in the future, you could use Quest to keep track of your learning goals, add non-Spellbook content to a goal like "Learn Django Models," and complete quizzes from your Django Spellbooks interactively.
 
 ## Press Ethics
 
@@ -130,7 +130,7 @@ However, there are a slew of topics I want to publish short books about. In 2020
 - Histories of MUDs, BBSes, or IRC
 - High-performance REST APIs with Falcon
 - Deep explanations of how Docker layers work
-- Monitoring Kubernetes-hosted appliations in GCP and AWS
+- Monitoring Kubernetes-hosted applications in GCP and AWS
 - Behind the scenes stories or architecture reviews of open-source projects
 - The Gremlin query language and a graph database like Titan
 - Adding inventory control to a Unity game
