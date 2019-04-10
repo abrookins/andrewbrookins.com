@@ -21,6 +21,8 @@ Notebook launches a web-based shell to an IPython session that has some very, ve
 
 But! You can&#8217;t run a Django shell using notebook.
 
+**Use Django?** Check out the book I'm writing: [Supernatural Django ORM Performance](https://gumroad.com/products/MeGbM). You might also like [How Does Django's StreamingHttpResponse Work, Exactly?](https://andrewbrookins.com/django/how-does-djangos-streaminghttpresponse-work-exactly/).
+
 ## With Django Extensions
 
 The latest version of the <a href="https://github.com/django-extensions/django-extensions" title="Django Extensions" target="_blank">Django Extensions</a> app on Github has support for using the `shell_plus` command with Notebook. If you&#8217;re up to date, you should be able to use the following command to run a Django shell with Notebook:

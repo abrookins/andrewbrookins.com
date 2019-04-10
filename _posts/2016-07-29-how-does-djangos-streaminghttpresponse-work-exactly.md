@@ -19,7 +19,9 @@ I will discuss what happens in your Django application, what happens at the Pyth
 
 This content is also available as [a README with an example Django project](https://github.com/abrookins/streaming_django).
 
-## So, what even is a StreamingHttpResponse?
+**Use Django?** Check out the book I'm writing: [Supernatural Django ORM Performance](https://gumroad.com/products/MeGbM).
+
+## What is a StreamingHttpResponse?
 
 Most Django responses use `HttpResponse`. At a high level, this means that the body of the response is built in memory and sent to the HTTP client in a single piece.
 
