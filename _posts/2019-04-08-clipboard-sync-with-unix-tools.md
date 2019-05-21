@@ -15,22 +15,67 @@ image:
 manual_newsletter: true
 ---
 
-When developing on a remote computer over SSH, one problem has vexed me: how do you synchronize the remote clipboard with your primary machine? This problem is even more difficult on iOS, where traditional approaches don't work.
+When developing on a remote computer over SSH from iOS, one problem has vexed me: how do you synchronize the remote clipboard with your primary machine? I spent some time on a recent weekend seeing how far I could get 
 
-## Using an X Server
+## How Should it Work?
 
-If the remote computer's operating system is Linux, the typical approach is to run an X server locally and SSH to the remote machine with X forwarding turned on. You can either run a graphical terminal like gnome-terminal over X, or use `xsel` from the command line (e.g., `cat file.txt | xsel --clipboard`) to copy to the clipboard, letting the X server synchronize the clipboard.
+Ideally, when you copy something on iOS, you should be able to paste it into the remote machine, and when you copy something from the remote machine, you should be able to paste it into iOS. It is easy enough to select text within an SSH app and copy to the system clipboard, then paste that text into another app, but how do you copy large amounts of text from inside a text editor like Vim, copy command output with a command-line tool like `xsel`, or copy from the scrollback buffer within a  `tmux` session?
 
-However, there are a few problems with X forwarding:
+In all of these cases -- not only using when your finger -- you should be able to copy text on the remote server into the iOS system clipboard and then paste it into any iOS app. That's the dream.
 
-- There is no X server available for iOS
-- You can't use X forwarding if the remote machine is running macOS
-- If your client machine is a Mac, the XQuartz server can't handle high-resolution displays like the built-in one on modern Mac laptops
-- The X protocol has not aged well: even terminal programs like gnome-terminal lag excessively; browsers visibly paint down the screen...
+## When the Remote Machine is Running Linux
 
-In my experience, X forwarding works best if you use a terminal native to the primary machine -- not over X -- and only run the X server for clipboard sync. Your command line tools should pipe to `xsel`.
+If the remote computer's operating system is Linux, the typical approach on macOS, Windows, or Linux is to run an X server locally and SSH to the remote machine with X forwarding turned on. You can then either run a graphical terminal like gnome-terminal over X, or use `xsel` from the command line (e.g., `cat file.txt | xsel --clipboard`) to copy to the clipboard, letting the X server synchronize the clipboard.
 
-However, X forwarding isn't an option if your client device is an iPad, or if your development machine is running macOS.
+However, no SSH apps that I'm aware of on iOS support X forwarding -- certainly not to the extent that they synchronize the clipboard. An [X Server app exists](https://itunes.apple.com/us/app/id1440418587#?platform=ipad), but it didn't even support pasting from the iOS system clipboard, let alone synchronizing the X clipboard to the iOS system clipboard.
+
+So, X forwarding is out. However, we'd like to access the clipboard. How far can we get using just Unix/Linux command line tools and an SSH app on iOS like [Blink Shell](https://www.blink.sh)?
+
+### With a Running X Windows Session
+
+If you're connecting to a Linux machine that has a running X Windows session, perhaps your primary desktop machine, you can log in via SSH and set the `DISPLAY` environment variable -- either via your `.bashrc`/`.zshrc` file or manually -- to use the existing session's X clipboard.
+
+You would set `DISPLAY` like this:
+
+    export DISPLAY=:0
+
+**TIP**: If you don't know which display your X session is using and `:0` doesn't work, run `w -oush` to see the list of login shells. At least one of these will be a tty with a display like `:0`.
+
+After exporting `DISPLAY`, you can use `xsel --clipboard` to copy and paste from command-line applications like Vim and `tmux` into the X clipboard. There are many tutorials that explain how to do this, so if you haven't set this up yet, do some web searching and come back when it works. However, I assume that if you are running X Windows, you have probably already set up your command-line tools to copy to the X clipboard.
+
+Now, the question is: how do we get the X clipboard contents into the _iOS_ system clipboard?
+
+#### Option 1: Using Blink Shell
+
+Blink is an SSH app for iOS that in addition to having a nice command-line interface to SSH and moSH (the "mobile shell"), also has an interactive shell with access to a small number of command-line utilities.
+
+While I recommend Blink generally for its SSH features, you can use this shell to manipulate the iOS system clipboard with `pbcopy` and `pbpaste`. `pbcopy` is similar to `xsel --clipboard` in that it accepts content via pipes, like `echo test | pbcopy`. Meanwhile, calling `pbpaste` will output the iOS system clipboard contents to standard out.
+
+So the simplest thing you can do -- again, only if you are running an X Windows session on the remote computer already -- is the following:
+
+- Connect to the remote machine in one Blink terminal
+- Manipulate the `DISPLAY` env var
+- Copy text into the X clipboard via tmux, Vim, or other command-line tools
+- Keep a second terminal open, but disconnected, to use the local Blink shell. Whenever you need to synchronize the remote clipboard to the iOS clipboard, run a command like `ssh <host> "DISPLAY=:0 xsel --clipboard" | pbcopy`, which will connect to the remote machine, output the clipboard, and then pipe that output to `pbcopy`, which will copy it into the iOS system clipboard.
+
+<!-- TODO: Gif/screenshot; needs X Windows running somewhere -->
+
+#### Option 2: Using the Shortcuts App
+
+If you don't want to spend money on Blink Shell, you can also use the free Shortcuts app from Apple to create a shortcut that connects to the remote machine, outputs the X clipboard, and then copies that output to the iOS system clipboard.
+
+
+
+## Without a Running X Windows Session
+
+
+## clip.txt
+
+If you are developing over SSH on Linux, there is no such thing as the "system clipboard." The closest thing is the X clipboard.
+
+If we want to copy text within Linux programs like Vim and `tmux` and expose that text somehow to the iOS clipboard, and we don't have access to the X clipbiard,
+
+Ever since reading the book [Designing Data-Intensive Applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) by Martin Kleppmann, I've been looking for a reason to use log-structured storage.
 
 ## The Woes of pbcopy
 
