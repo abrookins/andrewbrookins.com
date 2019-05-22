@@ -1,5 +1,5 @@
 ---
-title: Command Line Clipboard Sync with Unix Tools and iOS
+title: Copying to the iOS Clipboard from Linux and macOS Servers over SSH
 date: 2019-04-08
 author: Andrew
 layout: post-dark
@@ -15,11 +15,13 @@ image:
 manual_newsletter: true
 ---
 
-When developing on a remote computer over SSH from iOS, one problem has vexed me: how do you synchronize the remote clipboard with your primary machine? I spent some time on a recent weekend seeing how far I could get 
+When developing on a remote computer over SSH from iOS, one problem has vexed me: how do you synchronize the remote clipboard with your primary machine's clipboard? I spent some time on a recent weekend seeing how far I could get on this problem using "just" 
 
 ## How Should it Work?
 
-Ideally, when you copy something on iOS, you should be able to paste it into the remote machine, and when you copy something from the remote machine, you should be able to paste it into iOS. It is easy enough to select text within an SSH app and copy to the system clipboard, then paste that text into another app, but how do you copy large amounts of text from inside a text editor like Vim, copy command output with a command-line tool like `xsel`, or copy from the scrollback buffer within a  `tmux` session?
+Ideally, when you copy text into the iOS clipboard, you should be able to paste it from that clipboard onto the remote machine, and when you copy something into the remote machine's clipboard, you should be able to paste it from that clipboard into iOS.
+
+It is easy enough to select text within an SSH app and copy to the iOS system clipboard, then paste that text into another app. Copying t but how do you copy large amounts of text from inside a text editor like Vim, copy command output with a command-line tool like `xsel`, or copy from the scrollback buffer within a  `tmux` session?
 
 In all of these cases -- not only using when your finger -- you should be able to copy text on the remote server into the iOS system clipboard and then paste it into any iOS app. That's the dream.
 
