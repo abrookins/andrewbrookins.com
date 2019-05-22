@@ -1,5 +1,5 @@
 ---
-title: Copying to the iOS Clipboard from Linux and macOS Servers over SSH
+title: Copying to the iOS Clipboard from Linux and macOS Servers over SSH Using Linux Command-Line Tools
 date: 2019-04-08
 author: Andrew
 layout: post-dark
@@ -15,7 +15,9 @@ image:
 manual_newsletter: true
 ---
 
-When developing on a remote computer over SSH from iOS, one problem has vexed me: how do you synchronize the remote clipboard with your primary machine's clipboard? I spent some time on a recent weekend seeing how far I could get on this problem using "just" 
+When developing on a remote computer over SSH from iOS, one problem has vexed me: how do you synchronize the remote clipboard with your primary machine's clipboard?
+
+Because I like to screw around, I spent some time on a recent weekend seeing how far I could get on this problem using only UNIX/Linux command line tools -- that is, without writing any code.
 
 ## How Should it Work?
 
