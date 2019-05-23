@@ -185,6 +185,27 @@ The only difference is that the SSH command to run is `lastclip`.
 
 And as mentioned before, if you would like to be a wizard you can give it a "Siri Phrase" that sounds like magic, like "exemplum."
 
+## Interlude: Removing the Manual Step
+
+Having to manually run a Shortcut or `ssh` command to copy the clipboard to iOS is weak.
+
+Wouldn't it be great if you could store the clipboard in Dropbox or iCloud Drive and watch for changes in that file from iOS, then run either the Blink command or Shortcut when the file changed?
+
+Wouldn't it be _so great_ if the `clip` script could publish events to a remote log that iOS devices could subscribe 
+
+blinkshell://run?cmd="ssh+dracula+lastclip+|+pbcopy"
+
+## Interlude: How Best to Use the "clip" Script
+
+So far, we have done some interesting things. Having to manually 
+
+## When the Machine is Running macOS
+
+Having covered possibilities for getting the contents of a "clipboard" from a remote Linux machine into the local iOS clipboard, let us examine the options for doing so if the remote machine is instead running macOS.
+
+### The Woes of pbcopy
+
+If you are connecting from an iPad to a Mac, you might think that the "Universal Clipboard" feature of iOS and macOS will save you, but it won't. The macOS tool most similar to `xsel` is `pbcopy`, which allows you to pipe command line output into the macOS clipboard. However, `pbcopy` doesn't sync with other devices over Universal Clipboard, so if you copy a line in Vim or tmux (the tools I use) on a remote Mac, that text won't be in the clipboard of your iPad running SSH.
 
 
 
