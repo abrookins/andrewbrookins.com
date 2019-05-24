@@ -50,7 +50,7 @@ export DISPLAY=:0
 
 If you don't know which display your X session is using and `:0` doesn't work, run `w -oush` to see the list of login shells. At least one of these will be a tty with a display value like `:0`.
 
-**TIP**: You can automate setting `DISPLAY` in your shell profile, or with an alias, using a command like, which gets the first display value:
+**TIP**: You can automate setting `DISPLAY` in your shell profile, or with an alias, using a command like the following, which gets the first display value:
 
 ```bash
 export DISPLAY=`w -hs | awk '{print $3}' | sort -u | grep : |  head -n 1`
