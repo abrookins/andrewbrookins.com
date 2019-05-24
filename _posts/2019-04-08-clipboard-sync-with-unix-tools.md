@@ -1,9 +1,9 @@
 ---
-title: Copying to the iOS Clipboard from Linux and macOS Servers over SSH Using Linux Command-Line Tools
+title: Synchronizing the iOS Clipboard with a Remote Server Using Command-Line Tools
 date: 2019-04-08
 author: Andrew
-layout: post-dark
-permalink: /technology/command-line-clipboard-sync-with-unix-tools/
+layout: post
+permalink: /technology/synchronizing-the-ios-clipboard-with-a-remote-server-using-command-line-tools/
 lazyload_thumbnail_quality:
   - default
 wpautop:
@@ -11,21 +11,23 @@ wpautop:
 categories:
   - Unix, technology
 image:
-  feature: ipad23.jpg
+  feature: cables.jpg
 manual_newsletter: true
 ---
 
-When developing on a remote computer over SSH from iOS, one problem has vexed me: how do you synchronize the remote clipboard with your primary machine's clipboard?
+When developing on a remote computer over SSH from iOS, one problem has vexed me: how to get content from the remote machine's clipboard into the iOS clipboard.
 
-Because I like to screw around, I spent some time on a recent weekend seeing how far I could get on this problem using only UNIX/Linux command line tools -- that is, without writing any code.
+For fun, I decided to see how far I could get toward solving this problem using only command line tools -- that is, without writing any code.
+
+This post details options available for remote machines running Linux with an active X Windows session, Linux machines without X Windows, and macOS machines.
+
+P.S., I also wrote recently about [the state of coding on the iPad Pro in 2019](https://andrewbrookins.com/technology/coding-on-ipad-pro-2019/).
 
 ## How Should it Work?
 
-Ideally, when you copy text into the iOS clipboard, you should be able to paste it onto the remote machine, and when you copy something into the remote machine's clipboard, you should be able to paste it into an iOS app.
+You can already select text with your finger in an SSH app and copy to the iOS system clipboard, as long as the text you want to copy is visible on the screen. But how do you copy large amounts of text from inside a text editor like Vim, copy command output via pipes, or copy from the scrollback buffer within a  `tmux` session?
 
-You can already select text with your finger in an SSH app and copy to the iOS system clipboard, as long as all the text you want to copy is visible on the screen. But how do you copy large amounts of text from inside a text editor like Vim, copy command output via pipes, or copy from the scrollback buffer within a  `tmux` session?
-
-In all of these cases -- not only using when your finger -- you should be able to copy text on the remote server and then paste it into any iOS app. That's the dream, anyway.
+In all of these cases -- not only when using when your finger -- you should be able to copy text on the remote server and then paste it into any iOS app. That's the dream.
 
 ## When the Remote Machine is Running Linux
 
@@ -33,7 +35,7 @@ If the remote computer's operating system is Linux, the typical approach on a cl
 
 However, no iOS app that I'm aware of supports X forwarding over SSH. An [X Server app exists](https://itunes.apple.com/us/app/id1440418587#?platform=ipad), but it didn't even support pasting from the iOS system clipboard when I tested it, let alone synchronizing the X clipboard and the iOS system clipboard.
 
-So, X forwarding is out. However, we'd still like to access the clipboard. How far can we get using just UNIX/Linux command line tools and an SSH app on iOS like [Blink Shell](https://www.blink.sh)?
+So, X forwarding is out. However, we'd still like to access the remote clipboard. How far can we get using just command line tools and an SSH app on iOS like [Blink Shell](https://www.blink.sh)?
 
 ### With a Running X Windows Session
 
@@ -41,13 +43,19 @@ If you're connecting to a Linux machine that has a running X Windows session, pe
 
 You would set `DISPLAY` like this:
 
-    export DISPLAY=:0
+```bash
+export DISPLAY=:0
+
+```
 
 If you don't know which display your X session is using and `:0` doesn't work, run `w -oush` to see the list of login shells. At least one of these will be a tty with a display value like `:0`.
 
 **TIP**: You can automate setting `DISPLAY` in your shell profile, or with an alias, using a command like, which gets the first display value:
 
-    export DISPLAY=`w -hs | awk '{print $3}' | sort -u | grep : |  head -n 1`
+```bash
+export DISPLAY=`w -hs | awk '{print $3}' | sort -u | grep : |  head -n 1`
+
+```
 
 After exporting `DISPLAY`, you can use `xsel --clipboard` to copy and paste from command-line applications like Vim and `tmux` into the X clipboard. There are many tutorials that explain how to do this, so if you haven't set this up yet, do some web searching and come back when it works. However, I assume that if you are running X Windows, you have probably already set up your command-line tools to copy to the X clipboard.
 
@@ -55,7 +63,7 @@ Now, the question is: how do we get the X clipboard contents into the _iOS_ syst
 
 #### Getting the Clipboard Contents Using Blink Shell (With X Windows)
 
-Blink is an SSH app for iOS that, in addition to having a nice command-line interface to SSH and moSH (the "mobile shell"), also has an interactive shell with access to a small number of command-line utilities.
+Blink is an SSH app for iOS that, in addition to having a nice command-line interface to SSH and Mosh (the "mobile shell"), also has a local interactive shell with access to a small number of command-line utilities that run directly on iOS.
 
 While I recommend Blink for its SSH features, you can use its local shell to manipulate the iOS system clipboard with `pbcopy`.
 
@@ -67,8 +75,6 @@ So the simplest thing you can do if you are connecting to a remote computer that
 - Copy text into the X clipboard via tmux, Vim, or other command-line tools at your leisure, using `xsel` or `xclip`
 - Keep a second Blink terminal open, but disconnected, to use the local Blink shell. Whenever you need to synchronize the remote clipboard to the iOS clipboard, run a command like `ssh <host> "DISPLAY=:0 xsel --clipboard" | pbcopy`, which will connect to the remote machine, output the clipboard, and then pipe that output to the iOS system clipboard.
 
-%% Screenshot
-
 #### Getting the Clipboard Contents Using the Shortcuts App (With X Windows)
 
 If you don't want to spend money on Blink, you can also use the free Shortcuts app from Apple to create a shortcut that connects to the remote machine, outputs the X clipboard, and then copies that output to the iOS system clipboard.
@@ -79,7 +85,7 @@ To do so, follow these steps:
 2. Fill out authentication details ("Run Script over SSH" only supports user/password authentication, not SSH keys)
 3. Set the command to something like `DISPLAY=:0 xsel --clipboard` (or use a script to get the display value automatically, as discussed earlier)
 
-%% Screenshot
+<img src="/images/shortcuts.jpg">
 
 If you are the sort of person who would enjoy speaking the words "Hey Siri, clipboard" to execute this shortcut, then you can also give it a "Siri Phrase."
 
@@ -118,6 +124,7 @@ Here is an example `clip` script:
 CLIPBOARD=${CLIPBOARD:=~/Dropbox/clip.txt}  # 1
 echo ♕ >> $CLIPBOARD                       # 2
 cat - >> $CLIPBOARD                         # 3
+
 ```
 
 It's only four lines, but there are a few arcane invocations at work:
@@ -130,15 +137,18 @@ As you can see, I'm going to throw caution to the wind and store my `clip.txt` i
 
 Does our `clip` script work? Let's try it out.
 
-        $ echo test | clip
-        $ echo "hello\nthere\nmatey" | clip
-        $ cat ~/Dropbox/clip.txt
-        ♕
-        test
-        ♕
-        hello
-        there
-        matey
+```
+$ echo test | clip
+$ echo "hello\nthere\nmatey" | clip
+$ cat ~/Dropbox/clip.txt
+♕
+test
+♕
+hello
+there
+matey
+
+```
 
 Looks like it works!
 
@@ -152,6 +162,7 @@ Now that we can write items to the clipboard, let's write a script to read the l
 #!/bin/zsh
 CLIPBOARD=${CLIPBOARD:=~/Dropbox/clip.txt}       #1
 cat $CLIPBOARD | tac | sed '/♕/Q' | tac          #2
+
 ```
 
 1. Again, we provide a default for the `CLIPBOARD` environment variable.
@@ -164,11 +175,12 @@ Let's test it out!
     hello
     there
     matey
+
 ```
 
-**TIP**: I saved this script as `~/bin/lastclip`, again because `~/bin/` is on my path.
-
 It worked! Okay, now we need to get this output into the iOS system clipboard.
+
+**TIP**: I saved this script as `~/bin/lastclip`, again because `~/bin/` is on my path.
 
 #### Getting the Clipboard Contents Using Blink Shell (Without X Windows)
 
@@ -178,21 +190,19 @@ Using these, we can pipe the last clipboard item from the Linux server into the 
 
 In the following screenshot, I use Blink to execute the `lastclip` command on the remote server (I've named my server "dracula" because I like monsters, not because I view this entire exercise as a waste of time and money) and pipe its contents to `pbcopy` on iOS.
 
-%% Screenshot
+<img src="/images/using-pbcopy.jpg">
 
 Then, as shown in the next screenshot, I can switch to Apple Notes and use the Command-V keyboard shortcut to paste from the iOS system clipboard. Thanks to `pbcopy`, the content of the clipboard is the last item stored in the clipboard (well, `clip.txt`) on the remote server, which gets pasted into Notes.
 
-%% Screenshot
+<img src="/images/notes-paste.jpg">
 
 Success! It just took a couple of shell scripts, a $20 SSH app, and manual intervention to run the command! What it lacks in convenience it makes up in satisfaction, right?
 
 #### Getting the Clipboard Contents Using the Shortcuts App (Without X Windows)
 
-As in the [initial Shortcuts example](#getting-the-clipboard-contents-using-the-shortcuts-app), you can use the Shortcuts app to create a shortcut to perform roughly the same action.
+As in the [initial Shortcuts example](#getting-the-clipboard-contents-using-the-shortcuts-app-with-x-windows), you can use the Shortcuts app to create a shortcut to perform roughly the same action.
 
 The only difference is that the SSH command to run is `lastclip`.
-
-%% Screenshot
 
 And as mentioned before, if you would like to be a wizard you can give it a magical "Siri Phrase" like "exemplum."
 
@@ -204,7 +214,7 @@ Wouldn't it be great if you could store the clipboard in Dropbox, watch for chan
 
 Well, you can't.
 
-Or, what if the `clip` script could publish events to a remote csystem that iOS devices could subscribe to, and then react by running an SSH command or Shortcut? Without, that is, having to write any code? Maybe using IFTT or Zapier?
+Or, what if the `clip` script could publish events to a remote system that iOS devices could subscribe to, and then react by running an SSH command or Shortcut? Without, that is, having to write any code? Maybe using IFTTT or Zapier?
 
 Nope, you can't -- not that I could figure out, anyway.
 
@@ -230,6 +240,7 @@ let g:clipboard = {
       \   'cache_enabled': 1,
       \ }
 set clipboard+=unnamedplus
+
 ```
 
 Now any yank operation you perform in Neovim will send the selected text to `clip`, while pasting will read the last item with `lastclip`. Cool!
@@ -239,6 +250,7 @@ tmux can also use a custom command for copy operations. I use Vi keys with tmux,
 ```
 bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "clip"
 bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "clip"
+
 ```
 
 ## When the Machine is Running macOS
@@ -257,7 +269,7 @@ It won't, that is, unless you trigger the same manual copy step that other secti
 
 #### Getting the Clipboard Contents Using Blink Shell (macOS Remote)
 
-As with the section on [using a running X Windows session](#with-a-running-x-window-session), we will use the local shell provided by the Blink app to access the `ssh` and `pbcopy` commands.
+As with the section on [using a running X Windows session](#with-a-running-x-windows-session), we will use the local shell provided by the Blink app to access the `ssh` and `pbcopy` commands.
 
 This time, because the remote machine is running macOS, we will pipe the output of `pbpaste` from the remote machine as input to `pbcopy` in the local shell provided by Blink.
 
@@ -273,6 +285,16 @@ As in the [initial Shortcuts example](#getting-the-clipboard-contents-using-the-
 
 The only difference is that the SSH command to run is `lastclip`.
 
-%% Screenshot
+And as mentioned before, if you would like to be a wizard you can give it a magical "Siri Phrase" like "exemplum."
 
-And as mentioned before, if you would like to be a wizard you can give it a magical "Siri Phrase" like "exemplum.
+## But What do I Really Think About All This?
+
+About 50% of the comments that people leave about posts related to writing code on iPads is something like the following:
+
+> This is stupid. Only masochists would do this. Get a real computer.
+>
+>   -- Sincerely, a realist
+
+To which I can only reply: absolutely spot on! Everything about trying to use iOS as a productive operating system for software development is maddening. If you really need a touch-enabled operating system with a tablet form factor and robust support for software development, get a Surface device. iPads are great for reading, writing, drawing, watching TV, and playing games -- but not writing code.
+
+However, there is something about the iPad that excites the imagination of people like me. Wouldn't you like to carry around a device almost as thin and light as paper on which you could write code? I think that would be cool! Maybe 2019 will be our year.
