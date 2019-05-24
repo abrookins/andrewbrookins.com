@@ -133,7 +133,7 @@ It's only four lines, but there are a few arcane invocations at work:
 2. Append White Chess Queen to the end of the clipboard file.
 3. Append standard input (piped content) to the clipboard file.
 
-As you can see, I'm going to throw caution to the wind and store my `clip.txt` in Dropbox. We'll explore encryption options later in this post.
+As you can see, I'm going to throw caution to the wind and store my `clip.txt` in Dropbox. You are free to augment `clip` and `lastclip` with some command-line encryption and decryption steps.
 
 Does our `clip` script work? Let's try it out.
 
