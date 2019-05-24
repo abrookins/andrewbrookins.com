@@ -27,7 +27,7 @@ P.S., I also wrote recently about [the state of coding on the iPad Pro in 2019](
 
 You can already select text with your finger in an SSH app and copy to the iOS system clipboard, as long as the text you want to copy is visible on the screen. But how do you copy large amounts of text from inside a text editor like Vim, copy command output via pipes, or copy from the scrollback buffer within a  `tmux` session?
 
-In all of these cases -- not only when using when your finger -- you should be able to copy text on the remote server and then paste it into any iOS app. That's the dream.
+In all of these cases -- not only when using your finger -- you should be able to copy text on the remote server and then paste it into any iOS app. That's the dream.
 
 ## When the Remote Machine is Running Linux
 
