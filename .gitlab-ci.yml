@@ -20,7 +20,7 @@ build:
 
 deploy:
   stage: deploy
-  image: zeroplusx/firebase-tools
+  image: zevdg/docker-firebase
   artifacts:
     paths:
       - _site
