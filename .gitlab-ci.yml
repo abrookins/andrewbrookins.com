@@ -1,0 +1,33 @@
+cache:
+    paths:
+    - _site/
+
+build:
+  stage: build
+  image: "ruby:2.3"
+  cache:
+    paths:
+      - vendor/ruby
+  artifacts:
+    paths:
+      - _site
+  only:
+    - master
+  before_script:
+    - bundle
+  script:
+    - jekyll build
+
+deploy:
+  stage: deploy
+  image: zeroplusx/firebase-tools
+  artifacts:
+    paths:
+      - _site
+  environment: Production
+  only:
+    - master
+  script:
+    - firebase use default --token $FIREBASE_TOKEN
+    - export COMMIT_HASH=$(echo $CI_BUILD_REF | cut -b -6)
+    - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID, $CI_BUILD_REF_NAME/$COMMIT_HASH" --non-interactive --token $FIREBASE_TOKEN
