@@ -23,7 +23,7 @@ This post details options available for remote machines running Linux with an ac
 
 P.S., I also wrote recently about [the state of coding on the iPad Pro in 2019](https://andrewbrookins.com/technology/coding-on-ipad-pro-2019/).
 
-## How Should it Work?
+## How Should It Work?
 
 You can already select text with your finger in an SSH app and copy to the iOS system clipboard, as long as the text you want to copy is visible on the screen. But how do you copy large amounts of text from inside a text editor like Vim, copy command output via pipes, or copy from the scrollback buffer within a  `tmux` session?
 
