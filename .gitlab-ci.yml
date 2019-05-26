@@ -16,7 +16,7 @@ build:
   before_script:
     - bundle
   script:
-    - jekyll build
+    - JEKYLL_ENVIRONMENT=production jekyll build
 
 deploy:
   stage: deploy
