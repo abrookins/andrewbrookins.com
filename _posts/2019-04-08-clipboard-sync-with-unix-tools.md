@@ -95,6 +95,8 @@ Once created, your Shortcut will appear in Spotlight results, so you can press C
 
 However, an unfortunate reality of Shortcuts is that there is no way to complete their execution without tapping the screen. Bummer, dude.
 
+{% include newsletter.html %}
+
 ### Without a Running X Windows Session
 
 Of course, not everyone is running a full Linux desktop with an X Windows session. Many of us use a headless VM for remote development. How can we access the system clipboard in that environment?
