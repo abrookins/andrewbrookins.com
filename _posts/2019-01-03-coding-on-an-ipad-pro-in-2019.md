@@ -17,21 +17,23 @@ manual_newsletter: true
 
 In 2017 I asked, [“Can You Write Code on an iPad?”](https://andrewbrookins.com/tech/can-you-write-code-on-an-ipad/) In 2019 the answer is basically the same: not really. But things are getting interesting.
 
-You may also like my [detailed look at how to synchronize a remote machine's clipboard with the iOS clipboard](/technology/synchronizing-the-ios-clipboard-with-a-remote-server-using-command-line-tools/).
+**Update**: if you code on an iPad, check out my detailed look at [ways to synchronize the iOS clipboard with a remote machine over SSH](https://andrewbrookins.com/technology/synchronizing-the-ios-clipboard-with-a-remote-server-using-command-line-tools/).
 
 ## “Programming” on iOS: the Shortcuts App
 
 The iPad still lacks the ability to do any native _programming_. That is, you won’t find a secret door leading to a UNIX shell where you can install homebrew and a C compiler. If only!
 
+You can safely ignore Swift Playgrounds, unless your goal is to learn Swift. Playgrounds is not a general-purpose programming environment; it’s geared toward kids learning to code.
+
 The closest to programmability that exists as a native function of iOS is the Shortcuts app, which can automate small tasks and connect apps together.
 
 This is the rebranded Apple version of Workflow, a popular app that did more or less the same thing. You can use Shortcuts to string together a series of actions you might normally take, like turning on Do Not Disturb, playing a specific album (I recommend _Brute Force_ by The Algorithm), and opening an SSH client app or a text editor.
 
-Shortcuts is probably useful to someone, but I don’t use it much yet and it’s not programming!
+Shortcuts is probably useful to someone, but I don’t use it much and it’s too limited for me to call it programming!
 
 ## Editing in Native iOS Text Editors
 
-Yet all is not completely lost. First, if you concede that the iPad Pro is a potential thin client that pairs with a server, then you have options. There are great SSH apps available, like Blink. But you don’t necessarily have to connect directly to the server. If you would rather edit natively on the iPad and construct a system of pulleys that heft your code up to a cloud server, that is also possible. We will explore both options.
+Yet all is not completely lost. First, if you concede that the iPad Pro is a potential thin client that pairs with a server, then you have options. There are great SSH apps available, like Blink. But you don’t necessarily have to connect directly to the server to do everything. If you would rather edit natively on the iPad and construct a system of pulleys that heft your code up to a cloud server, perhaps with a continuous integration system like GitLab’s, that is also possible. We will explore both options.
 
 ### You Probably Can’t Run Your Code on iOS Unless It’s Python
 
