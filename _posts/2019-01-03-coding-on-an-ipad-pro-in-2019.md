@@ -17,7 +17,7 @@ manual_newsletter: true
 
 In 2017 I asked, [“Can You Write Code on an iPad?”](https://andrewbrookins.com/tech/can-you-write-code-on-an-ipad/) In 2019 the answer is basically the same: not really. But things are getting interesting.
 
-Fair warning: Much of this post is specific to web application development.
+You may also like my [detailed look at how to synchronize a remote machine's clipboard with the iOS clipboard](/technology/synchronizing-the-ios-clipboard-with-a-remote-server-using-command-line-tools/).
 
 ## “Programming” on iOS: the Shortcuts App
 
@@ -86,13 +86,11 @@ You’ll be refreshing a browser on iOS, of course. I suggest iCab due to its ex
 
 For people who need the power and flexibility of a remote server and a true editor like Vim, there are even more options than there used to be.
 
-There are, of course, VPS providers like Linode and Digital Ocean. These work fine, but one downside is they don't have very strong renewable energy commitments.
+[Digital Ocean](https://m.do.co/c/e063bdbde6da) is a great choice to get started quickly. The web site has great UI/UX, and support is included.
 
-Google uses 100% renewable power, and Google Cloud Shell gives you a micro server with persistent storage and preinstalled development tools for free. The Google Cloud Console app can open a Cloud Shell session natively on iOS. However, good luck getting copy and paste to work in that app! You will also need to set any settings like font size by launching a Cloud Shell session in an iOS browser. You can’t actually use Cloud Shell from an iOS browser though — the app won’t pick up keyboard presses, at least with the onscreen keyboard.
+Meanwhile, Google's commitment to using 100% renewable power makes Google Cloud Platform an attractive choice if you don't need support and want to spend a bit more effort. The "always free" tier of GCP includes an f1-micro instance, which could work as your development VM, depending on your needs.
 
-Instead of using the Cloud Console app, you could connect to a jump host that has the `gcloud` CLI tool installed. You can connect to Cloud Shell from a terminal with the recently added command, `gcloud alpha cloud-shell ssh`. The "always free" tier of GCP includes an f1-micro instance, which could be your jump host to Cloud Shell or just... your development VM.
-
-What also works well is an old Mac that you can set up as a server, because then you can do fun stuff like access the same files as the iPad over iCloud Drive, or use `osascript` to send yourself text messages that deep-link into iOS apps. The world is your oyster at that point. Apple has revived the Mac Mini, so that is a viable home server/desktop computer pair for the iPad. (Or you could, you know, buy a real mobile computer like a laptop.)
+What also works well is an old Mac that you can set up as a server, because then you can sync files between the server and your iPad using iCloud Drive, or use `osascript` to send yourself text messages that deep-link into iOS apps. The world is your oyster at that point. Apple has revived the Mac Mini, so that is a viable home server/desktop computer pair for the iPad.
 
 ### Reaching Your Development Web Server from an iOS Browser
 
