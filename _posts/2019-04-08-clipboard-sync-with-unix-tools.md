@@ -17,11 +17,11 @@ manual_newsletter: true
 
 When developing on a remote computer over SSH from iOS, one problem has vexed me: how to get content from the remote machine's clipboard into the iOS clipboard.
 
-For fun, I decided to see how far I could get toward solving this problem using only command line tools -- that is, without writing any code.
+For fun, I decided to see how far I could get toward solving this problem using only command-line tools -- that is, without writing any code.
 
 This post details options available for remote machines running Linux with an active X Windows session, Linux machines without X Windows, and macOS machines.
 
-P.S., I also wrote recently about [the state of coding on the iPad Pro in 2019](https://andrewbrookins.com/technology/coding-on-ipad-pro-2019/).
+If you're reading this, you might also like my summary of [the state of coding on the iPad Pro in 2019](https://andrewbrookins.com/technology/coding-on-ipad-pro-2019/).
 
 ## How Should It Work?
 
@@ -29,13 +29,15 @@ You can already select text with your finger in an SSH app and copy to the iOS s
 
 In all of these cases -- not only when using your finger -- you should be able to copy text on the remote server and then paste it into any iOS app. That's the dream.
 
+**Tip**: If you want to follow along with this post and do not already have a Linux VM running somewhere, I recommend [Digital Ocean](https://m.do.co/c/e063bdbde6da) if you want something quick to get started.
+
 ## When the Remote Machine is Running Linux
 
-If the remote computer's operating system is Linux, the typical approach on a client computer running macOS, Windows, or Linux is to run an X server locally and SSH to the remote machine with X forwarding turned on. You can then either run a graphical terminal like gnome-terminal over X, or use `xsel` from the command line (e.g., `cat file.txt | xsel --clipboard`) to copy to the clipboard, letting the X server synchronize the clipboard.
+If the remote computer's operating system is Linux, the typical approach on a client computer running macOS, Windows, or Linux is to run an X server locally and SSH to the remote machine with X forwarding turned on. You can then either run a graphical terminal like gnome-terminal over X, or use `xsel` from the command-line (e.g., `cat file.txt | xsel --clipboard`) to copy to the clipboard, letting the X server synchronize the clipboard.
 
 However, no iOS app that I'm aware of supports X forwarding over SSH. An [X Server app exists](https://itunes.apple.com/us/app/id1440418587#?platform=ipad), but it didn't even support pasting from the iOS system clipboard when I tested it, let alone synchronizing the X clipboard and the iOS system clipboard.
 
-So, X forwarding is out. However, we'd still like to access the remote clipboard. How far can we get using just command line tools and an SSH app on iOS like [Blink Shell](https://www.blink.sh)?
+So, X forwarding is out. However, we'd still like to access the remote clipboard. How far can we get using just command-line tools and an SSH app on iOS like [Blink Shell](https://www.blink.sh)?
 
 ### With a Running X Windows Session
 
@@ -92,6 +94,8 @@ If you are the sort of person who would enjoy speaking the words "Hey Siri, clip
 Once created, your Shortcut will appear in Spotlight results, so you can press Command+Space to open Spotlight, type part of your Shortcut name, and then press Enter to run it.
 
 However, an unfortunate reality of Shortcuts is that there is no way to complete their execution without tapping the screen. Bummer, dude.
+
+{% include newsletter.html %}
 
 ### Without a Running X Windows Session
 
@@ -283,7 +287,7 @@ The process is as follows:
 
 As in the [initial Shortcuts example](#getting-the-clipboard-contents-using-the-shortcuts-app), you can use the Shortcuts app to create a shortcut to perform roughly the same action.
 
-The only difference is that the SSH command to run is `lastclip`.
+The only difference is that the SSH command to run is `pbpaste`.
 
 And as mentioned before, if you would like to be a wizard you can give it a magical "Siri Phrase" like "exemplum."
 

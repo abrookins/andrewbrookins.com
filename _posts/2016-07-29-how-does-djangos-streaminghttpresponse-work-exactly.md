@@ -166,17 +166,17 @@ Here is an example that uses the code in this repository:
     <
     f
     One,Two,Three
-    
+
     f
     Hello,world,1
-    
+
     ...
-    
+
     10
     Hello,world,99
-    
+
     0
-    
+
     * Connection #0 to host 192.168.99.100 left intact
-    
+
  <br/>So there you have it. We journeyed from considering when to use `StreamingHttpResponse` over `HttpResponse`, to an example of using the class in your Django project, then into the dungeons of WSGI and WSGI servers, and finally to the client&#8217;s experience. And we managed to stream a response &#8212; go us!

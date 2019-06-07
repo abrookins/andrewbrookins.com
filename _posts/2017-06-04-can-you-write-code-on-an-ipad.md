@@ -13,17 +13,16 @@ categories:
 manual_newsletter: true
 ---
 > The merit in all things consists in the difficulty.
-> 
+>
 > -- Aramis
 
 This is a story about how I experimented with using an iPad Air 2 to write code, what worked and what didn't, and where I ended up.
 
 **Updates**:
 
-I continued my quest in [Can you Write Code on a Chromebook?](/technology/can-you-code-on-a-chromebook-plus/) and [Using Windows 10 and the Surface Book 2 for Web Development](https://andrewbrookins.com/technology/using-windows-10-and-the-surface-book-2-for-web-development/).
-
 In 2019 I reevaluated coding on iOS with [Coding on an iPad Pro in 2019](https://andrewbrookins.com/technology/coding-on-ipad-pro-2019/).
 
+I also continued my quest in [Can you Write Code on a Chromebook?](/technology/can-you-code-on-a-chromebook-plus/) and [Using Windows 10 and the Surface Book 2 for Web Development](https://andrewbrookins.com/technology/using-windows-10-and-the-surface-book-2-for-web-development/).
 
 ## Why?
 
@@ -88,13 +87,19 @@ Still using my laptop at this point, I made a few updates to my old Vim configur
 
 In a week or two, I had fully reacclimated to Vim and was pretty happy, so I took the next step: finding a place to run Vim that wasn't on my computer.
 
+### Digital Ocean
+
+[Digital Ocean](https://m.do.co/c/e063bdbde6da) was my first choice and made getting started easy. The web site has great UI/UX, and support is included.
+
+Pricing on VMs was competitive with other providers like Linode and included features like backups and metrics.
+
 ### Google Cloud Platform
 
-I could use a virtual private server for my development environment, but they tend to be priced for a fixed amount of disk, RAM, CPU, and network traffic. On the other hand, a cloud provider would make some very cool things possible.
+I also experimented with GCP because the flexibility was attractive.
 
-First off, I could install my tools on a Linux disk image and pay for the *compute nodes* (to use Google Cloud Platform terminology) that run my tools separately from the disk. For a couple of days I might run with one CPU and 4 GB of RAM, and then if I needed to temporarily, I could scale the compute node up -- perhaps to run a graphical desktop and work on an Android app. Meanwhile, my network traffic would always be low compared to something like a busy website, so no need to pay for traffic I won't use!
+With GCP, I could pay for the *compute nodes* (to use Google Cloud Platform terminology) that run my dev environment separately from the disk space. For a couple of days I might run with one CPU and 4 GB of RAM, and then if I needed to temporarily, I could scale the compute node up -- perhaps to run a graphical desktop and work on an Android app. Meanwhile, my network traffic would always be low compared to something like a busy website, so no need to pay for traffic I won't use!
 
-Second, I could snapshot my entire development environment automatically and keep it backed up. I could keep a base image and clone that into new project-specific environments if needed.
+Second, I could snapshot my entire development environment automatically and keep it backed up. I could keep a base image and clone that into new project-specific environments if needed. (Both of these features were also possible with Digital Ocean).
 
 Best of all, when I'm not using the machine, I could power down the compute node portion and stop paying for it!
 
