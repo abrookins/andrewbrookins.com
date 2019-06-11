@@ -125,9 +125,10 @@ Here is an example `clip` script:
 
 ```bash
 #!/bin/zsh
-CLIPBOARD=${CLIPBOARD:=~/Dropbox/clip.txt}  # 1
-echo ♕ >> $CLIPBOARD                       # 2
-cat - >> $CLIPBOARD                         # 3
+CLIPBOARD=${CLIPBOARD:=~/Dropbox/clip.txt} # 1
+echo \\n♕\\n >> $CLIPBOARD                 # 2
+cat - >> $CLIPBOARD                        # 3
+echo \\n >> $CLIPBOARD                     # 4
 
 ```
 
@@ -136,6 +137,7 @@ It's only four lines, but there are a few arcane invocations at work:
 1. Use the `CLIPBOARD` environment variable if set; otherwise use a default value.
 2. Append White Chess Queen to the end of the clipboard file.
 3. Append standard input (piped content) to the clipboard file.
+4. Make tac happy by ensuring the entry ends with a newline.
 
 As you can see, I'm going to throw caution to the wind and store my `clip.txt` in Dropbox. You are free to augment `clip` and `lastclip` with some command-line encryption and decryption steps.
 
