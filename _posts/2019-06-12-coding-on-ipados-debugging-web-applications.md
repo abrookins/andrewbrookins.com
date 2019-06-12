@@ -29,7 +29,7 @@ Few people seem to know about Inspect, so this post will take a breezy tour of i
 
 An app called "Inspect" should probably support inspecting HTML and CSS. Good news: Inspect lives up to its name and goes beyond the basics to provide a nice set of developer tools (this is no "Firebug Lite").
 
-As a web developer, I want to point to an element on page page and see these things:
+As a web developer, I want to point to an element on a page and see these things:
 
 * The element's position in the DOM tree
 * The markup used for the element
