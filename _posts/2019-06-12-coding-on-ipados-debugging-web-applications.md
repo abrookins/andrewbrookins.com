@@ -1,9 +1,9 @@
 ---
-title: 'Coding on iPadOS: Debugging Web Applications With Inspect'
+title: 'Coding on iPadOS: Browser Dev Tools with Inspect'
 date: 2019-06-12
 author: Andrew
 layout: post
-permalink: /technology/coding-on-ipados-debugging-web-applications-with-inspect/
+permalink: /technology/coding-on-ipados-browser-dev-tools-with-inspect/
 lazyload_thumbnail_quality:
   - default
 wpautop:
@@ -17,7 +17,7 @@ custom_js:
   - /assets/js/debugging.js
 ---
 
-If you're a web developer who uses an iPad, you will eventually need to debug a web page. This usually means inspecting the DOM tree, changing an element's HTML, and tweaking CSS rules. Such tasks are trivial on macOS, but the only way to inspect a web page rendered by Safari on iPadOS is to connect your iPad to a Mac.
+If you're a web developer who uses an iPad, you will eventually need access to a browser with developer tools. These tools should allow inspecting the DOM tree, changing an element's HTML, and tweaking CSS rules. Such tasks are trivial on macOS, but the only way to inspect a web page rendered by Safari on iPadOS is to connect your iPad to a Mac.
 
 Is that the end of the web developer tools story on iPad? Do we pack it up and go back to our Macs?
 
