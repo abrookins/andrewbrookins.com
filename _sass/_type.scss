@@ -8,13 +8,13 @@
 /* Meat
    ========================================================================== */
 
-p {           
+p {
     font-size: $fsp;
-    line-height: $lh; 
+    line-height: $lh;
 }
 
-.intro {      
-    font-size: $fs3; 
+.intro {
+    font-size: $fs3;
     line-height: 1.4em;
 }
 
@@ -37,11 +37,11 @@ blockquote {
    ========================================================================== */
 
 h1,.h1 {      font-size: $fs1; }
-h2,.h2 {      font-size: $fs2; } 
-h3,.h3 {      font-size: $fs3; } 
-h4,.h4 {      font-size: $fs4; } 
-h5,.h5 {      font-size: $fs5; } 
-h6,.h6 {      font-size: $fs6; } 
+h2,.h2 {      font-size: $fs2; }
+h3,.h3 {      font-size: $fs3; }
+h4,.h4 {      font-size: $fs4; font-weight: bold; }
+h5,.h5 {      font-size: $fs5; font-weight: bold; }
+h6,.h6 {      font-size: $fs6; font-weight: bold; }
 
 .meta {       font-size: $fs6; }
 
@@ -54,32 +54,32 @@ blockquote, blockquote p {  font-size: $fs4; }
 
 
 
-// Iphone 
+// Iphone
 
 @media only screen and (max-width: $breakpoint-1-max-width) {
 
-    p {           
-        font-size: $fs5;
+    p {
+        font-size: $fsp;
         line-height: $lhsmall;
     }
 
-    .intro {      
-        font-size: $fs4; 
+    .intro {
+        font-size: $fs4;
         line-height: 1.4em;
     }
 
     .post ul li {
-        font-size: $fs5;
+        font-size: $fsp;
         line-height: $lhsmall;
         margin-bottom: $lhsmall/2;
     }
 
     h1,.h1 {      font-size: $fs2; }
-    h2,.h2 {      font-size: $fs3; } 
-    h3,.h3 {      font-size: $fs4; } 
-    h4,.h4 {      font-size: $fs5; } 
-    h5,.h5 {      font-size: $fs6; } 
-    h6,.h6 {      font-size: $fs6; } 
+    h2,.h2 {      font-size: $fs3; }
+    h3,.h3 {      font-size: $fs4; }
+    h4,.h4 {      font-size: $fs5; }
+    h5,.h5 {      font-size: $fs6; }
+    h6,.h6 {      font-size: $fs6; }
 
     .meta {       font-size: $fs6; }
 
@@ -88,15 +88,15 @@ blockquote, blockquote p {  font-size: $fs4; }
     .archive input { font-size: $fs3; }
 
     pre {
-        font-size: $fs6;
+        font-size: $fs5;
     }
 
     pre > code {
-        font-size: $fs6;
+        font-size: $fs5;
     }
 
     code {
-        font-size: $fs6;
+        font-size: $fs5;
     }
 
 }
