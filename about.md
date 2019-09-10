@@ -9,6 +9,8 @@ image:
 
 I'm a father and programmer living in Portland, Oregon. Lately I make [databases run in the cloud](https://www.ibm.com/cloud/databases) with Go and Python at IBM, and in my free time I kick it with my family, meditate, and run a Dungeons and Dragons game.
 
+What a guy.
+
 <figure>
 	<img src="/images/family2.jpg" style="max-width: 800px;">
 	<figcaption>A photograph of the family</figcaption>
