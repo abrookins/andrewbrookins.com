@@ -1301,3 +1301,93 @@ border-radius: 0;
     /* Literal.Number.Integer.Long */
 
 }
+
+div.book-ad {
+    @include column(6,10);
+}
+
+img.book-ad {
+    width: 200px !important;
+}
+
+
+.learn-more {
+    margin-bottom: .75em;
+
+    a:visited {
+        color: white;
+    }
+}
+
+.book {
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 25px 0px 0px 25px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    .button {
+        font-family: $sans;
+    }
+}
+
+.book p {
+    font-size: 1.1em;
+}
+
+.book-ad {
+    a, a:visited, a:active {
+        color: white !important;
+    }
+}
+
+.button {
+  display: inline-block;
+  background: #3498db;
+  padding: 1.125em 3em;
+  border-radius: 64px;
+  color: #fff;
+  border: 1px solid #3498db;
+  -webkit-transition: background 1s linear, border 1s linear;
+  transition: background 1s linear, border 1s linear;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  color: #fff;
+  background: #2980b9;
+  border: 1px solid #2980b9;
+}
+
+.button:focus { color: #fff; }
+
+.button i {
+  padding-left: 1em;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.button:hover i {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
+.button.buy {
+  background: transparent;
+  color: #3498db;
+  border: 1px solid #3498db;
+  -webkit-transition: color 1s linear;
+  transition: color 1s linear;
+}
+
+.button.buy:hover {
+  border: 1px solid #2980b9;
+  color: #2980b9;
+}
+
+.action-button p {
+  margin: 1.5em 0 0;
+  font-size: 15px;
+}

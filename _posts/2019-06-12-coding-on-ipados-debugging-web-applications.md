@@ -55,6 +55,8 @@ The sidebar can also be positioned to the right or the bottom of the screen.
 
 <img src="/images/inspect-bottom.jpg">
 
+{% include book.html %}
+
 ## Modifying Markup With Live Preview
 
 Once you inspect an element, you can edit its markup and preview the result live.

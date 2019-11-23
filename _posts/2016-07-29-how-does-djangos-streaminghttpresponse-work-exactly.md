@@ -10,6 +10,8 @@ lazyload_thumbnail_quality:
   - default
 wpautop:
   - -break
+image:
+  feature: stream.jpg
 categories:
   - Django
 ---
@@ -18,8 +20,6 @@ This post tries to explain just what goes on when you use Django&#8217;s `Stream
 I will discuss what happens in your Django application, what happens at the Python Web Server Gateway Interface (WSGI) layer, and look at some examples.
 
 This content is also available as [a README with an example Django project](https://github.com/abrookins/streaming_django).
-
-**Use Django?** Check out the book I'm writing: [Supernatural Django ORM Performance](https://gumroad.com/products/MeGbM).
 
 ## What is a StreamingHttpResponse?
 
@@ -61,6 +61,8 @@ One of the best use cases for streaming responses is to send large files, e.g. a
 With an `HttpResponse`, you would typically load the entire file into memory (produced dynamically or not) and then send it to the client. For a large file, this costs memory on the server and &#8220;time to first byte&#8221; (TTFB) sent to the client.
 
 With a `StreamingHttpResponse`, you can load parts of the file into memory, or produce parts of the file dynamically, and begin sending these parts to the client immediately. **Crucially,** there is no need to load the entire file into memory.
+
+{% include book.html %}
 
 ## A quick note about WSGI
 

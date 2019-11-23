@@ -35,6 +35,8 @@ Shortcuts is probably useful to someone, but I don’t use it much and it’s to
 
 Yet all is not completely lost. First, if you concede that the iPad Pro is a potential thin client that pairs with a server, then you have options. There are great SSH apps available, like Blink. But you don’t necessarily have to connect directly to the server to do everything. If you would rather edit natively on the iPad and construct a system of pulleys that heft your code up to a cloud server, perhaps with a continuous integration system like GitLab’s, that is also possible. We will explore both options.
 
+{% include book.html %}
+
 ### You Probably Can’t Run Your Code on iOS Unless It’s Python
 
 There is some wiggle room around running your code directly on the iPad if you are a Python developer. The Pythonista app has grown over time from a Python text editor focused on iOS automation to a hackable Python development environment that ships with major packages like NumPy, has a bash-like shell implemented in Python, and supports plugins.
@@ -48,9 +50,6 @@ Other than Python, I haven't found any generally useful interpreter or compiler 
 There are increasingly decent text editors that run without the interpreter or compiler component. Apps like GoCoEdit and Textastic offer editing experiences that have started to gain some of the features of desktop editors that go beyond the basics — e.g. fuzzy-finding files.
 
 These editors are beginning to work with each other and with the powerful Git app Working Copy and the Apple-provided Files app to produce interesting effects. Working Copy can check out a Git repository and make it available for editing to apps like GoCoEdit; changes made in the editor reflect automatically back in Working Copy, where you can then commit them.
-
-
-{% include newsletter.html %}
 
 
 ### Features Missing from iOS Text Editors
@@ -77,6 +76,8 @@ Thus you find your files in the Files app, but it isn’t just a directory of fi
 Apps that do anything with files have added more advanced features to take advantage of these new file-related messages that other apps support, so many text editor apps can now do things like open a directory of files exposed by another app (in 2019 that is “advanced” for iOS). Directories opened this way will usually stay in something like a sidebar in the app and continue to be accessible as if they were local to the app.
 
 Eventually this starts to feel pretty cool and natural; going back to a desktop computer, you might expect a consistent “share” button that doesn’t exist. If only there was a professional-grade text editor available on iOS -- and compilers, interpreters, web servers, etc.
+
+{% include newsletter.html %}
 
 ## Connecting to a Real Computer with SSH
 
