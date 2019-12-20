@@ -14,7 +14,16 @@ image:
   feature: openbook.jpg
 manual_newsletter: true
 ---
-I started a publishing company! Spellbook Press launched this week, taking preorders for our first book, [Supernatural Django ORM Performance](https://gumroad.com/products/MeGbM). Check it out!
+I started a publishing company! Spellbook Press launched this week, taking preorders for our first book, ~Supernatural Django ORM Performance~ **The Temple of Django Database Performance**.
+
+<div class="book">
+  <h3>Update: I Finished the Book!</h3>
+  <div class="book-ad">
+  <p>My new book is out! Descend the Sacrificial Cliff of Profiling. Get lost in the Labyrinth of Indexing. Ransack the Crypt of Querying. Then get back to kicking ass and saving the world from unbounded queries!</p>
+  <div class="action-button"><a href="https://spellbookpress.com/books/temple-of-django-database-performance/" class="button learn-more text-center">Learn More <i class="fa fa-arrow-right"></i></a> </div>
+  </div>
+  <image class="book-ad" src="/images/ebook.png" width="50"/>
+</div>
 
 ## The Idea
 
