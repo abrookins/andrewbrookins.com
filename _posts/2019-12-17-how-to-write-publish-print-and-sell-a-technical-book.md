@@ -1,9 +1,9 @@
 ---
-title: 'How to Write, Publish, Print, and Sell a Technical Book'
+title: 'How to Write, Publish, Print, and Sell a Technical Book, Part 1: Preparation'
 date: 2019-12-20
 author: Andrew
 layout: post
-permalink: /publishing/how-to-write-publish-print-and-sell-a-technical-book/
+permalink: /publishing/how-to-write-publish-print-and-sell-a-technical-book-part-1-preparation/
 lazyload_thumbnail_quality:
   - default
 wpautop:
@@ -24,7 +24,7 @@ This article records everything I learned about the process of writing a technic
 I will discuss the following topics:
 
 - Inspiration
-- Whether to self-publish
+- Why self-publish?
 - Selecting a topic
 - Writing the outline
 - Preparing the writing tool-chain
@@ -120,7 +120,7 @@ Choose your topic with the following in mind:
 - It should be a topic that a group of people actually care about (your audience)
 
 It's easy to find topics that you're excited about, and it's also trivial to do a web search to find out how many books are written on a topic. It's harder to estimate the size of a potential book's audience.
-
+ 
 In my case, I considered writing about Django because **lots of people read my Django blog posts**. I have actual evidence that Django developers exist, and my hypothesis is that they will buy a book positioned as the one book every Django developer should read.
 
 ## Writing the Outline
@@ -144,7 +144,8 @@ To you, a self-publisher, the outline has different benefits. It allows you to q
 
 It's also going to be your first window into areas of the topic that you need to research further.
 
-Here's a very high-level outline (no chapter headings or anything, just concepts) for [The Temple of Django Database Performance](https://spellbookpress.com/books/temple-of-django-database-performance/):
+Here's a very high-level outline (no chapter headings or anything, just
+concepts) that I created while preparing to write [The Temple of Django Database Performance](https://spellbookpress.com/books/temple-of-django-database-performance/):
 
 <img src="/images/bookoutline.jpg">
 
@@ -152,3 +153,12 @@ This reflected my early chapter planning: Profilng, Indexing, Requesting Data, M
 
 In the end I combined some of those chapters and simplified their names, so the final chapter list was: Profiling, Indexing, Querying.
 
+## Preparing the Writing Toolchain
+
+When you work with a publisher, the publisher typically has a workflow that all authors use to write their books. That may be writing drafts in Microsoft Word files which are sent around to various reviewers and editors and returned to the author with comments. Or the author might write in AsciiDoc files and receive comments through a custom system maintained by the publisher.
+
+When the writing, review, editing, cover design, interior design, and art is all complete for a book, the publisher then converts it into various file types: a PDF for customers (if desired), a print-specific PDF for the printers, a MOBI/KF8 file for distributing via Amazon Kindle, and an EPUB file for submission to most other ebook markets.
+
+As a self-publisher, you need to develop a toolchain that will allow you to do all of the same things.
+
+Many self-pubilshers write in Markdown ,
