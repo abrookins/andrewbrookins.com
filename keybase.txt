@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/redis_andrew
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://andrewbrookins.com
+  * I am redis_andrew (https://keybase.io/redis_andrew) on keybase.
+  * I have a public key ASC0tvyGuXJgPXJVzqX59sFJTHHXTMmgRVxkB3OaF7X_cwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b4b6fc86b972603d7255cea5f9f6c1494c71d74cc9a0455c6407739a17b5ff730a",
+      "host": "keybase.io",
+      "kid": "0120b4b6fc86b972603d7255cea5f9f6c1494c71d74cc9a0455c6407739a17b5ff730a",
+      "uid": "25a160877056c9473b4596162292f519",
+      "username": "redis_andrew"
+    },
+    "merkle_root": {
+      "ctime": 1582149083,
+      "hash": "a5de65b75cdb4ae866a9b2c1533139bf1762f8b2836e68cb753468ff7f86112aabde5389dfddd7238fbd70ab5ab4d4e3098dc4bc4082d25a77656c22108a6e65",
+      "hash_meta": "57fec07a0538eab9f4bc6fd7f1e3a553e95d67a76f85879d429c45da9b2d21a9",
+      "seqno": 14654770
+    },
+    "service": {
+      "entropy": "tBP53lxPzkO/0yj0EmAgcKHS",
+      "hostname": "andrewbrookins.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.2.0"
+  },
+  "ctime": 1582149097,
+  "expire_in": 504576000,
+  "prev": "77d827ab8daa81073472adf6d990043c62c5d5568ed9d840d4b6319983c1e7d6",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgtLb8hrlyYD1yVc6l+fbBSUxx10zJoEVcZAdzmhe1/3MKp3BheWxvYWTESpcCB8Qgd9gnq42qgQc0cq322ZAEPGLF1VaO2dhA1LYxmYPB59bEINWJoQ6zgB9J4DiR/Fvch0/KAwEonHeEF41Rl9ReWQeTAgHCo3NpZ8RAZh5z5h0LvN5nWUsbS+ArpWTcGAYmjs2S5Qkm0T1/K7qqSoQmhHjklem+ngvGKitCanWYMFSi5FMhr/lSogUGBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINkPwqVq2dlIMV11u56LbbhEG+v+ep45B4Gr5MwbhwW4o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/redis_andrew
+
+==================================================================
