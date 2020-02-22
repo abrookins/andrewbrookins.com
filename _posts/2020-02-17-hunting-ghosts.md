@@ -15,15 +15,13 @@ image:
 manual_newsletter: false
 ---
 
-I was sober the night I met the ghost hunters.
+The night sky above I-5 was devoid of stars as I drove to meet the ghost hunters. My destination? I signed an agreement never to reveal its name.
 
-The night sky above I-5 was devoid of stars as I drove the bruised Ford pickup my father gave me before he died. My destination? I signed an agreement never to reveal its name.
-
-I can tell you it was a few hours northwest of Portland, Oregon, on a long spit abutting the coast. Somewhere on that foggy stretch was an old hotel whose staff, terrified by recent wailing and window-scratchings, had invited a team of paranormal investigators to visit late at night. I was coming along to write the story.
+I can tell you it was a few hours northwest of Portland, Oregon, on a long spit abutting the coast. Somewhere on that foggy stretch was an old hotel whose staff, terrified by recent wailing and window-scratchings, had invited a team of paranormal investigators to visit late at night. I was coming along for the story.
 
 After an hour driving in the dark I had begun feeling nervous not about ghosts, but about the investigators. Who were they? Was this all just a ruse? The hotel, when it appeared from the fog that swirled along that quiet stretch of land so close to the ocean, did not help my courage: crumbling white stucco sculpture adorned its walls, and the signage -- wooden, painted -- was dilapidated. My pulse quickened.
 
-The team gave me instructions to meet to park near one of the hotel's buildings and meet them in the lot. Under no circumstances was I to visit the front desk.
+The team gave me instructions to park near one of the hotel's buildings and meet them in the lot. Under no circumstances was I to visit the front desk.
 
 Worse than the appearance of the old hotel was the cell reception. The team's instructions made little sense to me after I arrived, and without a signal I couldn't call them. I parked and became aware of how little I had brought to this meeting: barely enough gas, a flip phone that was now useless, a small notebook, a black gel pen.
 
