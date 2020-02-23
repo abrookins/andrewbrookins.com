@@ -68,16 +68,30 @@ Someone called out from a hallway. "We're almost ready!"
 TODO: Describe equipment more.
 
 The investigator from the parking lot -- let's call him Dale -- showed me around the rest of the suite. In one room, they had stacked various cameras, tripods,
-and electro-magnetic-field (EMF) sensors.  In another room, a second investigator sat with headphones, listening to a digital audio recorder. Various microphones lay on the floor.
+and electro-magnetic-field (EMF) sensors. In another room, a second investigator sat with headphones, listening to a digital audio recorder. Various microphones lay on the floor.
 
-"Mike," he said, shaking my hand.
+"Matt," he said, shaking my hand.
 
 I gave him my name.
 
 He grinned. "You should hear this."
 
-He took off the headphones and offered them to me.
+He took off his headphones and offered them to me.
 
-Until this point, I had wondered if I could go the whole night without entering into this reality. Everyone in the room be­lieved in the existence and current presence of ghosts. They had invited me in in to participate, and what were they going to get in return?
+Until this point, I had wondered if I could go the whole night without entering into this reality. Everyone in the room be­lieved in the existence and current presence of ghosts. They had invited me to participate. What were they going to get in return?
 
-Equipment lay all around me, prepared to record facts about the unseen world. Would my skepticism ground the current, completing a circuit with another dimension, or would I be more like a resistor dampening the effects?
+Would my skepticism act as a ground to that current, completing a circuit with another dimension? Or would I resist?
+
+---
+
+Parapsychologists, paranormal investigators, and -- to use a more casual moniker -- ghost hunters often make audio recordings during an investigation.
+
+Recording audio ghost phenomena dates back to the early 20th century. The psychologist Konstantin Raudive popularized it with his 1968 book _Breakthrough: An Amazing Experiment in Electronic Communication with the Dead_.
+
+What do these recordings actually capture? Typically, hours of static. When that static includes noises that a listener identifies as language, a paranormal investigator would consider that portion of the recording "electronic voice phenomena" (EVP). In other words, the voice of a ghost.
+
+TODO: EVP example recording. With spectrogram if possible.
+
+When I donned Matt's head phones, I didn't know any of this. Cosmic static flooded my ears. He guided me to a laptop and pointed at a spectrogram. As his finger traced a black arc, I thought I heard breathing.
+
+
