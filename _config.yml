@@ -52,6 +52,7 @@ permalink:   /:categories/:title
 assets:
   sources:
     - _assets/fonts
+    - _assets/audio
 
 plugins:
   - jekyll-paginate

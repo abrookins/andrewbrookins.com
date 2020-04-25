@@ -15,33 +15,43 @@ image:
 manual_newsletter: false
 ---
 
+<p>
+  <center>
+    <audio id="player" src="/assets/audio/tech-book.mp3" controls>
+      <a href="/assets/audio/tech-book.mp3">Download audio version</a>
+    </audio>
+  </center>
+</p>
+
 In 2019, I spent most of my free time writing [The Temple of Django Database Performance](https://spellbookpress.com/books/temple-of-django-database-performance/), which I self-published in the fall of that year. This post summarizes what I learned along the way.
 
-By the way, it's a great book that every human should own at least two copies of.
+By the way, it's a great book that everyone should own at least two copies of.
 
 ## Vision
 
-Let's talk about vision first. I thought it would matter more, and that the uniqueness of my project would generate buzz and thus sales. But that wasn't the case.
+Let's talk about vision first.  Before I knew the technical subject I wanted to write about, I knew that the book was going to be like a Dungeons and Dragons adventure.
+
+There would be a fantasy story mixed into the book, creature art, and maps.
+
+I thought this aspect would matter more, and that the uniqueness of my project would generate buzz and thus sales. But that wasn't the case.
 
 Instead, sales have been regular but not lucrative.
 
 Was the problem that my vision was wrong, and I didn't know what developers wanted to read?
 
-Or did I fail to market the book as well as I could have?
-
-The answer is ... yes.
+The answer is ... probably.
 
 Without getting into what I like about my vision for the book, let's talk about what went wrong.
 
 ## My Book Was Too Niche
 
-I never intended to spend so much time on this book. I planned it as a 50-page project to experiment with mashing up fantasy role-playing games with technical content.
+I never intended to spend so much time on this book. I planned it as a 50-page experiment in mashing up fantasy role-playing games and technical content.
 
-Instead of a book for beginners, I wanted to write about database performance-tuning for Django developers.
+Instead of a book for beginners, I decided to write about database performance-tuning for experienced Django developers.
 
-This was the kind of topic that I liked to read, and about which people write blog posts -- not books. Most books about Django are writen for beginners, and a single chapter might cover databases.
+This is the kind of topic that I like to read, and about which people write blog posts -- not books. Most people write books about Django for beginners, and a single chapter might cover databases.
 
-So! I decided I would address in a longer format a topic I enjoyed. And I would add the fantasy parts that had made me excited about the project to begin with.
+So! I decided I would address in a longer format a topic I enjoyed. And I would add the fantasy parts that had excited me about the project to begin with.
 
 But it turns out there's a reason people don't write super niche books like how to tune a PostgreSQL database when used with version 23 of some web framework. The addressable market is too small to generate enough sales to make the book worth writing.
 
@@ -51,9 +61,7 @@ This wouldn't have been a problem if I'd stuck to the time investment into the b
 
 A 50-page book on a niche topic might have worked well.
 
-A 162-page book selling at full price, though -- well, there are better ideas in publishing.
-
-OK, we got the failure story out of the way. I didn't get rich overnight and finally buy that house for my kids after writing a book about Django.
+A 162-page book selling at full price, though? Well, there are better ideas in publishing.
 
 Can you make money writing books? Sales numbers for other books suggest that you can (take a look at Julia Evans' numbers), and I'm confident that I'll find my formula after a couple more tries.
 
@@ -66,7 +74,7 @@ Here's the spec sheet -- afterward I'll comment on some of these items in more d
 * Writing: AsciiDoc
 * Editors: Vim, VS Code, Intellij (I get around)
 * Build automation: Makefile
-* Source control: Hopes and prayers... just kidding, GitLab
+* Source control: GitLab
 * CI: GitLab
 * Ebook packaging: asciidoctor-epub
 * PDF rendering: asciidoctor-fopub and custom stylesheets
@@ -78,7 +86,7 @@ Here's the spec sheet -- afterward I'll comment on some of these items in more d
 
 ### AsciiDoc No More
 
-The most contraversial argument in this article is probably that AsciiDoc is a bad choice for a book.
+The most controversial argument in this article is probably that AsciiDoc is a bad choice for a book.
 
 It seems like a _great_ choice for technical documentation. But writing a book whose layout and design you want to have a lot of control over, across PDF, EPUB, and Kindle? Not again, thanks.
 
@@ -115,7 +123,7 @@ My only complaint is that I have no idea what is going on with taxes -- internat
 
 Now let's talk about PRINT.
 
-And when I say print, I mostly mean Amazon's self-publishing program, Kindle Direct Publishing. 
+And when I say print, I mostly mean Amazon's self-publishing program, Kindle Direct Publishing.
 
 Before this project, I had a vague sense that Amazon was bad. Full disclosure: I'm a Prime customer and have, in the past, tried to make money through Amazon's affiliate program (want to buy some shampoo, my dude?!).
 

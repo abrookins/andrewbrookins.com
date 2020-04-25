@@ -14,4 +14,18 @@
   ga('create', 'UA-11725342-1', 'auto');
   ga('send', 'pageview');
 
+  function initCustom() {
+    var player = document.getElementById("player");
+
+    player.addEventListener("play", function () {
+      ga("send", "event", "audio", "played", document.title, 1);
+    });
+
+    player.addEventListener("pause", function (e) {
+      ga("send", "event", "audio", "paused", document.title, 1);
+      ga("send", "event", "audio", "paused_at", document.title, player.currentTime);
+    });
+  }
+
+  window.addEventListener("load", initCustom);
 </script>
