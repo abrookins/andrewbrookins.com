@@ -1,6 +1,6 @@
 ---
 title: Hunting Ghosts
-date: 2020-02-22
+date: 2020-04-26
 author: Andrew
 layout: post
 permalink: /life/hunting-ghosts/
@@ -11,87 +11,140 @@ wpautop:
 categories:
   - Ghosts
 image:
-  feature: btrees.jpg
+  feature: patrick-tomasso-SDA-pOBbNdY-unsplash.jpg
 manual_newsletter: false
 ---
 
-The night sky above I-5 was devoid of stars as I drove to meet the ghost hunters. My destination? I signed an agreement never to reveal its name.
+The night sky above Interstate 5 was empty as I drove to meet the ghost hunters. My destination? I agreed never to tell.
 
-I can tell you it was a few hours northwest of Portland, Oregon, on a long spit abutting the coast. Somewhere on that foggy stretch was an old hotel whose staff, terrified by recent wailing and window-scratchings, had invited a team of paranormal investigators to visit late at night. I was coming along for the story.
+I can say it was a few hours northwest of Portland, Oregon, on a spit abutting the coast. Somewhere on that foggy stretch was an old hotel whose staff, scared by recent wailings and window-scratchings, had invited a team of paranormal investigators to visit late at night. I was coming along for the story.
 
-After an hour driving in the dark I had begun feeling nervous not about ghosts, but about the investigators. Who were they? Was this all just a ruse? The hotel, when it appeared from the fog that swirled along that quiet stretch of land so close to the ocean, did not help my courage: crumbling white stucco sculpture adorned its walls, and the signage -- wooden, painted -- was dilapidated. My pulse quickened.
+After an hour driving in the dark I began to feel anxious not about ghosts, but about the ghost hunters. Was this all a ruse? The hotel, when it appeared from the swirling fog, did not help: crumbling white stucco adorned its walls, and the paint on its sign curled under a soft light.
 
-The team gave me instructions to park near one of the hotel's buildings and meet them in the lot. Under no circumstances was I to visit the front desk.
+The team had given me instructions to meet them in the parking lot. Under no circumstances was I to visit the front desk.
 
-Worse than the appearance of the old hotel was the cell reception. The team's instructions made little sense to me after I arrived, and without a signal I couldn't call them. I parked and became aware of how little I had brought to this meeting: barely enough gas, a flip phone that was now useless, a small notebook, a black gel pen.
+These instructions made little sense after I arrived. The hotel had two lots and three buildings on its sprawling grounds. I tried calling my contact, but the reception was bad.
 
-I walked around the lot, which was nearly empty that night, hoping the right people would notice me.  After twenty minutes I went to the front office, breaking protocol. The sleepy attendant gave me a run-down of room prices (they were expensive), but I wasn't listening. I said I'd think on it, left the office, and walked again into the darkness.
+I parked in the lot farthest from the front desk and became aware of how little I had brought to this meeting: barely enough gas, a flip phone that was now useless, a small notebook, a pen.
 
-Not long afterward, a man found me.
-
-He had short, straight black hair. Younger than I expected. He made his apologies and ushered me toward one of the hotel rooms. These rooms had external entrances. I braced myself.
+After I walked around the near-empty lot for twenty minutes, a man found me. He had short, straight black hair. Younger than I expected. He apologized and ushered me toward one of the hotel rooms.
 
 "You didn't go to the office, right?" he said.
 
-I gripped the pen in my pocket.
-
 "No."
 
-"Good. The staff asked us not to. This way."
+"OK, good."
 
-He opened the door and we walked in. The interior was smoky. A woman sat on a black couch, smoking a cigarette.  She was young, like the investigator. A man sat next to her. They both had embarrassed smiles on their faces.
+He opened the door and we walked in. A woman sat on a black couch, smoking a cigarette. She was young, like the investigator. A man sat next to her. They both wore embarrassed smiles.
 
-"This is Andrew," the investigator from the parking lot said. "He's the writer."
+"This is the writer," said the man from the parking lot.
 
-"Hey," the man on the couch said.
+The man on the couch nodded toward me, but said nothing.
 
-"you're not going to mention the hotel's name, right?" the woman said.
+"You're not going to mention the hotel's name, right?" the woman said.
 
 "No."
 
 "We'd get in a lot of trouble."
 
-"Mm hmm," I mumbled, writing in my notebook.
-
-TODO: What did they see?
+"Sure," I said, scribbling nonsense in my notebook.
 
 "You want a drink?" the man on the couch asked.
 
-For the first time, I re­alized that the two had glasses on a table in front of them and a bottle of vodka. Condensation beaded on the surface of the bottle. The smoke in the air grated at my throat.
+I noticed two glasses on the table and a bottle of vodka. Condensation beaded on the surface of the bottle. The smoke in the air grated my throat.
 
-"No thanks," I said, waving my hand.
+"No, thanks," I said, waving my hand. I looked away. The room was large, pooling around a kitchenette.
 
-I looked away. The room was large, pooling around a kitchenette.
+“We’re telling the truth,” the woman said.
 
-Someone called out from a hallway. "We're almost ready!"
+I looked back at her.
 
-TODO: Describe equipment more.
+“I believe you.”
 
-The investigator from the parking lot -- let's call him Dale -- showed me around the rest of the suite. In one room, they had stacked various cameras, tripods,
-and electro-magnetic-field (EMF) sensors. In another room, a second investigator sat with headphones, listening to a digital audio recorder. Various microphones lay on the floor.
+“It’s horrible. I’ve seen it twice now. An old woman crawling on the floor in the attic.”
 
-"Matt," he said, shaking my hand.
+“I saw the same thing,” the man said.
 
-I gave him my name.
+I scribbled in the notebook.
 
-He grinned. "You should hear this."
+“I’ll show you the equipment,” said the man from the parking lot.
 
-He took off his headphones and offered them to me.
+He took me to a room stacked with cameras, tripods, and electromagnetic-field meters. There, another man, shorter than the first and who wore his hair in a ponytail, sat in front of a laptop.
 
-Until this point, I had wondered if I could go the whole night without entering into this reality. Everyone in the room be­lieved in the existence and current presence of ghosts. They had invited me to participate. What were they going to get in return?
+He pulled off a pair of thick headphones, and we exchanged names.
 
-Would my skepticism act as a ground to that current, completing a circuit with another dimension? Or would I resist?
+"You should hear this." He grinned, offering the headphones to me.
 
----
+Before meeting the ghost hunters, I had read about their tools. The psychologist Konstantin Raudive first talked about ghost audio in his 1968 book _Breakthrough: An Amazing Experiment in Electronic Communication with the Dead_.
 
-Parapsychologists, paranormal investigators, and -- to use a more casual moniker -- ghost hunters often make audio recordings during an investigation.
+Raudive claimed to hear the voices of ghosts while playing back audio recordings. Modern-day ghost hunters call these sounds "electronic voice phenomena.”
 
-Recording audio ghost phenomena dates back to the early 20th century. The psychologist Konstantin Raudive popularized it with his 1968 book _Breakthrough: An Amazing Experiment in Electronic Communication with the Dead_.
+So I expected more than static from this recording.
 
-What do these recordings actually capture? Typically, hours of static. When that static includes noises that a listener identifies as language, a paranormal investigator would consider that portion of the recording "electronic voice phenomena" (EVP). In other words, the voice of a ghost.
+I took the headphones. As the short man traced his finger along the oscillogram on his laptop’s screen, I heard someone breathing in the audio.
 
-TODO: EVP example recording. With spectrogram if possible.
+I closed my eyes.
 
-When I donned Matt's head phones, I didn't know any of this. Cosmic static flooded my ears. He guided me to a laptop and pointed at a spectrogram. As his finger traced a black arc, I thought I heard breathing.
+<br/>
 
+*Once, my brothers and I met some girls at a bar. They brought us back to their house. I guess it was their parents' house. Something caught fire. And we just left. I remember seeing it in the rear-view. The house all on fire.*
 
+<br/>
+
+“Incredible,” I said, handing him the headphones.
+
+“You heard it too?”
+
+“I heard it,” I said.
+
+Next, the short man and I snuck into one of the hotel’s storerooms.
+
+We climbed a ladder into the attic of the building and stood near a window secured from the inside by a length of wood.
+
+When my eyes adjusted to the darkness, I saw the outlines of cardboard boxes stored on the shelves of the small room. I was close enough to the man to hear his breathing.
+
+“This is the place,” he said.
+
+“What do we do?”
+
+“Just wait. Open yourself up to it.”
+
+“To what?”
+
+He nodded at a corner of the room. The air smelled stale. An old shoe lay by itself in the corner.
+
+“To whatever is here with us.”
+
+I waited.
+
+He looked down at the sensors glowing red in the darkness on a machine he held in his left hand.
+
+“It’s getting colder,” he said.
+
+I looked at the device, but the numbers didn’t mean anything to me.
+
+“Look.” He pointed at the electromagnetic-field reading.
+
+Then we started walking toward the dark corner. The attic floor creaked. We stood only a foot or two from the shoe, and the number on the meter fluctuated.
+
+Then we waited.
+
+I stared at the shoe.
+
+<br/>
+
+*Loved a girl once. Before your mom. Before my ex too.*
+
+*We’d ride horses. I took her out every chance I got. Her dad didn’t like me, though. He knew about me and my brothers.*
+
+*One day I wanted to show off. I told her to follow me, and we jumped our horses over a old fence.*
+
+*Well, they both threw us. I landed right on the fence and a nail skewered me. Right through the thigh.*
+
+*She broke her leg. I had to carry her like that, trailing blood everywhere. All the way back to her dad’s house.*
+
+*Of course she couldn’t see me anymore after that. Then I went off to Germany for the war. When I came back, she already married some other guy.*
+
+*I still think about her sometimes.*
+
+<br/>
