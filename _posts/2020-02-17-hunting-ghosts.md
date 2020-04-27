@@ -15,13 +15,21 @@ image:
 manual_newsletter: false
 ---
 
+<p>
+  <center>
+    <audio id="player" src="/assets/audio/hunting-ghosts.mp3" controls>
+      <a href="/assets/audio/hunting-ghosts.mp3">Download audio version</a>
+    </audio>
+  </center>
+</p>
+
 The night sky above Interstate 5 was empty as I drove to meet the ghost hunters. My destination? I agreed never to tell.
 
 I can say it was a few hours northwest of Portland, Oregon, on a spit abutting the coast. Somewhere on that foggy stretch was an old hotel whose staff, scared by recent wailings and window-scratchings, had invited a team of paranormal investigators to visit late at night. I was coming along for the story.
 
 After an hour driving in the dark I began to feel anxious not about ghosts, but about the ghost hunters. Was this all a ruse? The hotel, when it appeared from the swirling fog, did not help: crumbling white stucco adorned its walls, and the paint on its sign curled under a soft light.
 
-The team had given me instructions to meet them in the parking lot. Under no circumstances was I to visit the front desk.
+The team had given me instructions to meet them in the parking lot. Under no circumstance was I to visit the front desk.
 
 These instructions made little sense after I arrived. The hotel had two lots and three buildings on its sprawling grounds. I tried calling my contact, but the reception was bad.
 
@@ -101,7 +109,7 @@ Next, the short man and I snuck into one of the hotel’s storerooms.
 
 We climbed a ladder into the attic of the building and stood near a window secured from the inside by a length of wood.
 
-When my eyes adjusted to the darkness, I saw the outlines of cardboard boxes stored on the shelves of the small room. I was close enough to the man to hear his breathing.
+When my eyes adjusted to the darkness, I saw the outlines of cardboard boxes stored on shelves in the small room. I was close enough to the man to hear his breathing.
 
 “This is the place,” he said.
 
@@ -137,7 +145,7 @@ I stared at the shoe.
 
 *We’d ride horses. I took her out every chance I got. Her dad didn’t like me, though. He knew about me and my brothers.*
 
-*One day I wanted to show off. I told her to follow me, and we jumped our horses over a old fence.*
+*One day I wanted to show off. I told her to follow me, and we jumped our horses over an old fence.*
 
 *Well, they both threw us. I landed right on the fence and a nail skewered me. Right through the thigh.*
 
@@ -147,4 +155,12 @@ I stared at the shoe.
 
 *I still think about her sometimes.*
 
+
+<br/>
+
+---
+
+Audio read by Andrew Brookins.
+
+Music sampled from "Remember Me" by Doxent Zsigmond, featuring Javolenus, Quarkstar, Siobhan Dakay.
 <br/>

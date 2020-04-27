@@ -15,6 +15,15 @@ image:
 manual_newsletter: true
 ---
 
+<p>
+  <center>
+    <audio id="player" src="/assets/audio/ipad.mp3" controls>
+      <a href="/assets/audio/ipad.mp3">Download audio version</a>
+    </audio>
+  </center>
+</p>
+
+
 In 2017 I asked, [“Can You Write Code on an iPad?”](https://andrewbrookins.com/tech/can-you-write-code-on-an-ipad/) In 2019 the answer is basically the same: not really. But things are getting interesting.
 
 **Update**: if you code on an iPad, check out my detailed look at [ways to synchronize the iOS clipboard with a remote machine over SSH](https://andrewbrookins.com/technology/synchronizing-the-ios-clipboard-with-a-remote-server-using-command-line-tools/). I also explored [how to use browser dev tools on iPadOS](/technology/coding-on-ipados-browser-dev-tools-with-inspect/) using the Inspect app in a recent post.
