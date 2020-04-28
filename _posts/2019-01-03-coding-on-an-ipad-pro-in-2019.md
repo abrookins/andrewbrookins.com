@@ -98,7 +98,7 @@ You’ll be refreshing a browser on iOS, of course. I suggest iCab due to its ex
 
 For people who need the power and flexibility of a remote server and a true editor like Vim, there are even more options than there used to be.
 
-[Digital Ocean](https://m.do.co/c/e063bdbde6da) is a great choice to get started quickly. The web site has great UI/UX, and support is included.
+<a class="digital-ocean" href="https://m.do.co/c/e063bdbde6da">Digital Ocean</a> is a great choice to get started quickly. The web site has great UI/UX, and support is included.
 
 Meanwhile, Google's commitment to using 100% renewable power makes Google Cloud Platform an attractive choice if you don't need support and want to spend a bit more effort. The "always free" tier of GCP includes an f1-micro instance, which could work as your development VM, depending on your needs.
 

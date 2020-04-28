@@ -13,8 +13,6 @@ categories:
 image:
   feature: matt-artz-gears.jpg
 manual_newsletter: true
-custom_js:
-  - /assets/js/debugging.js
 ---
 
 If you're a web developer who uses an iPad, you will eventually need access to a browser with developer tools. These tools should allow inspecting the DOM tree, changing an element's HTML, and tweaking CSS rules. Such tasks are trivial on macOS, but the only way to inspect a web page rendered by Safari on iPadOS is to connect your iPad to a Mac.
