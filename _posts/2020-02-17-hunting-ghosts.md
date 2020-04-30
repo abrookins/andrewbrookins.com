@@ -27,7 +27,7 @@ The night sky above Interstate 5 was empty as I drove to meet the ghost hunters.
 
 I can say it was a few hours northwest of Portland, Oregon, on a spit abutting the coast. Somewhere on that foggy stretch was an old hotel whose staff, scared by recent wailings and window-scratchings, had invited a team of paranormal investigators to visit late at night. I was coming along for the story.
 
-After an hour driving in the dark I began to feel anxious not about ghosts, but about the ghost hunters. Was this all a ruse? The hotel, when it appeared from the swirling fog, did not help: crumbling white stucco adorned its walls, and the paint on its sign curled under a soft light.
+After an hour driving in the dark I began to feel anxious not about ghosts, but about the ghost hunters. Was this all a ruse? The hotel, when it appeared from the swirling fog, didn't help my nerves: crumbling white stucco adorned its walls, and the paint on its sign curled under a soft light.
 
 The team had given me instructions to meet them in the parking lot. Under no circumstance was I to visit the front desk.
 
