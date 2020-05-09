@@ -42,7 +42,7 @@ This scene disturbed me enough that I took my cigarette breaks at the front of t
 
 It was during one of these breaks, around ten at night — I work the swing shift — that I saw the second man.
 
-He was older than the first, in his forties, and while I stood smoking he emerged from the shadowy woods and climbed into the large garbage bin that our office uses. He dug around for a few minutes, then climbed out and walked over to me.
+He was older than the first, in his forties, and while I stood smoking he emerged from the woods and climbed into the large garbage bin that our office uses. He dug around for a few minutes, then climbed out and walked over to me.
 
 "Have you seen her?"
 
@@ -86,7 +86,7 @@ Once I was back inside, I looked at my hands. I washed them twice, and then felt
 
 I suppose I’m writing this in case something happens to me. If you find this journal, make sure my mom gets it. She’ll know what to do. Her name is Theresa Browning. She lives in Newport Beach, Oregon.
 
-***
+<center>* * *</center>
 
 Later that night, after my shift, I take a flashlight and walk behind the building.
 
@@ -96,7 +96,7 @@ I walk farther from my office than I’ve ever gone, expecting the woods to end 
 
 There’s a gap in the tree line on the other side of the tracks from me, and a walking path worn into the dirt there. I step across the tracks, feeling a gentle vibration in the steel as I do so.
 
-The path leads to a small camp. I sweep the flashlight around to see the it better. A tent stands in the middle, next to a radio player with its antenna sticking up. I turn to go, but something catches my eye. A glint in the air.
+The path leads to a small camp. I sweep the flashlight around to see it better. A tent stands in the middle, next to a radio player with its antenna sticking up. I turn to go, but something catches my eye. A glint in the air.
 
 I move closer to it. Wires hanging from the branches of the trees reflect the light. They’re thin and wet with a sticky substance.
 
@@ -104,7 +104,7 @@ I stumble back to the railroad and turn to run. But as I do so I notice somethin
 
 I want to leave, but the thought of the lost woman weighs on me. So I strike out for the bridge, and whoever is on it.
 
-A few steps over the water reveal that the bridge has no walking path. I stand directly on the railroad track.
+A few steps over the water reveal that the bridge has no walking path. I stand directly on the railroad tracks.
 
 "Hey!” call.
 
@@ -116,7 +116,7 @@ The sound cuts through the night and, surprised, I lose my footing and fall agai
 
 "We have to get out of here!" I shout at the figure as I push myself back up.
 
-I look around and find I’m alone. The train shoots around a bend, trudging through the woods from the direction I’d just come. It’s nearly to the bridge.
+But when I look around, I’m alone. The train shoots around a bend, trudging through the woods from the direction I’d just come. It’s nearly to the bridge.
 
 I throw myself forward to run to the other side, which I might be able to make, but my shoe sticks in the rail and I fall face-first.
 
@@ -124,7 +124,7 @@ When I look up again, my ears are ringing. I can’t see out of my left eye. The
 
 Then the train reaches the bridge.
 
-* * *
+<center>* * *</center>
 
 My name is David Browning. Until this morning, I lived at 17th and Haskell Street.
 
