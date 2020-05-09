@@ -86,7 +86,9 @@ Once I was back inside, I looked at my hands. I washed them twice, and then felt
 
 I suppose I’m writing this in case something happens to me. If you find this journal, make sure my mom gets it. She’ll know what to do. Her name is Theresa Browning. She lives in Newport Beach, Oregon.
 
-<center>* * *</center>
+<br/>
+<center><strong>* * *</strong></center>
+<br/>
 
 Later that night, after my shift, I take a flashlight and walk behind the building.
 
@@ -124,7 +126,9 @@ When I look up again, my ears are ringing. I can’t see out of my left eye. The
 
 Then the train reaches the bridge.
 
-<center>* * *</center>
+<br/>
+<center><strong>* * *</strong></center>
+<br/>
 
 My name is David Browning. Until this morning, I lived at 17th and Haskell Street.
 
