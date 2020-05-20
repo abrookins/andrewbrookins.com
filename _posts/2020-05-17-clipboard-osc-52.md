@@ -1,9 +1,9 @@
 ---
-title: Using the Clipboard Over SSH on iOS with Control Codes
-date: 2020-05-17
+title: "Copying to the iOS Clipboard Over SSH with Control Codes"
+date: 2020-05-19
 author: Andrew
 layout: post-dark
-permalink: /technology/using-the-clipboard-over-ssh-on-ios-with-control-codes/
+permalink: /technology/copying-to-the-ios-clipboard-over-ssh-with-control-codes/
 lazyload_thumbnail_quality:
   - default
 wpautop:
@@ -11,7 +11,7 @@ wpautop:
 categories:
   - Fiction
 image:
-  feature: alex-s-qxsxb2jhMQ0-unsplash.jpg
+  feature: 
 manual_newsletter: false
 ---
 
