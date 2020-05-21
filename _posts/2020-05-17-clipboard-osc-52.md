@@ -45,7 +45,7 @@ If you haven't seen this type of binding before in tmux, here's how it works. I 
 
 To configure Vim, I created a key binding that, like tmux, pipes whatever I've selected to the "yank" script.
 
-```
+```vimscript
 " copy to attached terminal using the yank(1) script:
 " https://github.com/sunaku/home/blob/master/bin/yank
 function! Yank(text) abort
