@@ -1,5 +1,5 @@
 ---
-title: David Browning
+title: "Story: David Browning"
 date: 2020-05-07
 author: Andrew
 layout: post-dark
