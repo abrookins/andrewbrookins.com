@@ -1,5 +1,5 @@
 ---
-title: "Handoff from Vim to Working Copy on iPad"
+title: "Handoff from Vim over SSH to Working Copy on iPad"
 date: 2020-06-07
 author: Andrew
 layout: post
