@@ -1,5 +1,5 @@
 ---
-title: 
+title: "Handoff from Vim to Working Copy on iPad"
 date: 2020-06-07
 author: Andrew
 layout: post
