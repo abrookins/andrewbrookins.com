@@ -30,16 +30,16 @@ I like to _write_ code in Vim, but when I’m just reading through code on an iP
 
 So how hard is it to tell Vim to hand off the file I’m editing to Working Copy on my iPad?
 
-Thanks to the x-callback-url specification, this is pretty easy. Here are the moving parts:
+Thanks to X-Callback URLs, this is pretty easy. Here are the moving parts:
 
-1. A custom Vim command that builds a Working Copy x-callback-url for the Git repository and file in the current Vim buffer.
-2. An iPad Shortcut that opens whatever x-callback-url is in the system clipboard.
+1. A custom Vim command that builds a Working Copy X-Callback URL for the Git repository and file in the current Vim buffer.
+2. An iPad Shortcut that opens an X-Callback URL from the system clipboard.
 
 **Important note**: This technique depends on you being able to copy text from Vim to your iPad's clipboard via SSH. Read [my post](https://andrewbrookins.com/technology/copying-to-the-ios-clipboard-over-ssh-with-control-codes/) to learn how to do this if you haven’t yet.
 
 ## Building a Working Copy URL from Vim
 
-I use Vim, so I'm going to detail a Vimscript function to build the Working Copy x-callback-url that you need to open your current file in Working Copy. However, if you use Emacs you can easily adapt this function to elisp.
+I use Vim, so I'm going to detail a Vimscript function to build the Working Copy X-Callback URL that you need to open your current file in Working Copy. However, if you use Emacs you can easily adapt this function to elisp.
 
 Here it is:
 
@@ -50,9 +50,9 @@ function! BuildWorkingCopyUrl()
 endfunction
 ```
 
-Working Copy supports an "open" command via x-callback-url, via the URL `working-copy://open?repo=<repo-name>&path=<path-to-file>`. We use `git rev-parse --show-toplevel` to get the base repository name, and then a Vim command to get the filename in the current buffer. 
+Working Copy supports an "open" command via the X-Callback URL `working-copy://open?repo=<repo-name>&path=<path-to-file>`. We use `git rev-parse --show-toplevel` to get the base repository name, and then a Vim command to get the filename in the current buffer. 
     
-Finally, we call the `Yank()` function. I won't detail that because I spent an entire blog post on it already. However, you should know that this copies the URL into the *iPad*'s clipboard.
+Finally, we call the `Yank()` function. I won't detail `Yank()` because I spent an entire blog post on it already. However, you should know that this copies the URL into the *iPad*'s clipboard.
 
 I bind this function to a leader-key-prefixed keybinding:
 
@@ -74,7 +74,7 @@ Save the Shortcut and give it a search-friendly name. I named mine 2workingcopy.
 
 ## The Final Product
 
-Once you have a Shortcut, to do the handoff you’ll run your function in Vim first. That’ll copy the Working Copy x-callback-url to the iPad’s clipboard. Then you can run your Shortcut from the home screen, the Dock (⌘ + Option + D), or from Spotlight (⌘ + Space).
+Once you have a Shortcut, to do the handoff you’ll run your function in Vim first. That’ll copy the Working Copy X-Callback URL to the iPad’s clipboard. Then you can run your Shortcut from the home screen, the Dock (⌘ + Option + D), or from Spotlight (⌘ + Space).
 
 <div class="full-size-wrapper">
     <video autoplay loop muted class="full-size">
@@ -82,4 +82,4 @@ Once you have a Shortcut, to do the handoff you’ll run your function in Vim fi
     </video>
 </div>
 
-Wrapping up: This is an example of the fun stuff you can do by combining access to the iPad’s clipboard from a remote system with x-callback-urls and Shortcuts. Poke around and see what else you can automate — then let me know if you find anything cool!
+Wrapping up: This is an example of the fun stuff you can do by combining access to the iPad’s clipboard from a remote system with X-Callback URLs and Shortcuts. Poke around and see what else you can automate — then let me know if you find anything cool!
