@@ -20,7 +20,7 @@ Usually, I write code on a remote server using Vim. About the only touch interac
 
 You can see in this video that it’s ... not nothing. But it’s also deeply cursed.
 
-<img src=“/images/scrolling-vim-ssh.gif”/>
+<img src="/images/scrolling-vim-ssh.gif"/>
 
 I like to _write_ code in Vim, but when I’m just reading through code on an iPad? In that case, Working Copy is my jam. The app has a great search feature and is, of course, touch native.
 
