@@ -14,8 +14,6 @@ image:
   feature: garage.jpg
 manual_newsletter: false
 ---
-# “Handing Off” from Vim on a Remote Server to Working Copy on an iPad
-
 This tip scratches an itch that I sometimes have while writing code on an iPad.
 
 Usually, I write code on a remote server using Vim. About the only touch interactivity that I get with Vim over SSH is scrolling, which my terminal emulator Blink must send as an ANSI control sequence that Vim understands.
