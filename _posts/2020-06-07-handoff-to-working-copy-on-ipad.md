@@ -3,7 +3,7 @@ title: "Handoff from Vim over SSH to Working Copy on iPad"
 date: 2020-06-07
 author: Andrew
 layout: post
-permalink: /technology/handoff-from-vim-to-working-copy-on-ipad
+permalink: /technology/handoff-from-vim-to-working-copy-on-ipad/
 lazyload_thumbnail_quality:
   - default
 wpautop:
