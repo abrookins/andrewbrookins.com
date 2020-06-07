@@ -20,9 +20,11 @@ Usually, I write code on a remote server using Vim. About the only touch interac
 
 You can see in this video that it’s ... not nothing. But it’s also deeply cursed.
 
-<video loop autoplay muted playsinline>
-<source src="/assets/video/vim-scroll-ssh.mp4" type="video/mp4">
-</video>
+<div class="full-size-wrapper">
+    <video autoplay loop muted class="full-size">
+        <source src="/assets/video/vim-scroll-ssh.mp4" type="video/mp4">
+    </video>
+</div>
 
 I like to _write_ code in Vim, but when I’m just reading through code on an iPad? In that case, Working Copy is my jam. The app has a great search feature and is, of course, touch native.
 
@@ -36,9 +38,13 @@ Thanks to the x-callback-url specification, this is pretty easy. Here are the pa
 
 Once you have a Shortcut, to do the handoff you’ll run your function in Vim first. That’ll copy the Working Copy x-callback-url to the iPad’s clipboard. Then you can run your Shortcut from the home screen, the Dock (⌘ + Option + D), or from search (⌘ + Space).
 
-<video loop autoplay muted playsinline>
-<source src="/assets/video/handoff-working-copy.mp4" type="video/mp4">
-</video>
+
+<div class="full-size-wrapper">
+    <video autoplay loop muted class="full-size">
+        <source src="/assets/video/handoff-working-copy.mp4" type="video/mp4">
+    </video>
+</div>
+
 
 My advice if you use search to run the Shortcut — which I do — is to name it so that it’s the first result after you type just a few letters. Something weird like “2workingcopy” works. Then all you have to do is type a few characters and press Enter, which launches the first result in the list — your Shortcut.
 
