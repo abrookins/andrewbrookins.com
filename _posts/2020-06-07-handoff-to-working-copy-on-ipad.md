@@ -57,7 +57,10 @@ Finally, we call the `Yank()` function. I won't detail `Yank()` because I spent 
 
 I bind this function to a leader-key-prefixed keybinding:
 
+```vimscript
     nnoremap <silent> <Leader>wc :call BuildWorkingCopyUrl()<CR>
+
+```
 
 So now if I want to hand off a file to Working Copy, I press `,wc` and then run an iPad shortcut. Let's talk about that Shortcut next.
     
