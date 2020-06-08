@@ -48,6 +48,7 @@ function! BuildWorkingCopyUrl()
     let url = "working-copy://open?repo=" . systemlist("basename `git rev-parse --show-toplevel`")[0] ."&path=" . fnamemodify(expand("%"), ":~:.")
     call Yank(url)
 endfunction
+
 ```
 
 Working Copy supports an "open" command via the X-Callback URL `working-copy://open?repo=<repo-name>&path=<path-to-file>`. We use `git rev-parse --show-toplevel` to get the base repository name, and then a Vim command to get the filename in the current buffer. 
