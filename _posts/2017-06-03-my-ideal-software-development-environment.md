@@ -10,6 +10,7 @@ wpautop:
   - -break
 categories:
   - Technology
+  - iOS
 ---
 > Someone who looks for me in form  
 > or seeks me in sound  

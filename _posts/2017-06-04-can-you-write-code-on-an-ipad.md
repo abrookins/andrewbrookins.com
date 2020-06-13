@@ -9,7 +9,8 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Technology, iOS
+  - Technology
+  - iOS
 manual_newsletter: true
 ---
 > The merit in all things consists in the difficulty.

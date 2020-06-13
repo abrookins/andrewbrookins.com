@@ -9,7 +9,9 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Technology, Time, Apple
+  - Technology
+  - Time
+  - Apple
 image:
   feature: clock.jpg
 manual_newsletter: false

@@ -9,7 +9,9 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Unix, technology
+  - Unix
+  - technology
+  - iOS
 image:
   feature: cables.jpg
 manual_newsletter: true

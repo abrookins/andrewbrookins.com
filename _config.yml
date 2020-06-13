@@ -64,4 +64,4 @@ base_url:          https://andrewbrookins.com/
 #base_url: ""
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "node_modules"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "node_modules", "Session.vim", ".undodir"]

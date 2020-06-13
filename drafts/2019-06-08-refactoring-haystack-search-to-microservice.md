@@ -9,7 +9,11 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Django, Python, Haystack, Solr, Search
+  - Django
+  - Python
+  - Haystack
+  - Solr
+  - Search
 image:
   feature: cables.jpg
 manual_newsletter: true

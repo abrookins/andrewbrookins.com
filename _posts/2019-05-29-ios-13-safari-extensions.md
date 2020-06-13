@@ -9,7 +9,10 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Technology, iOS, Safari, iPad
+  - Technology
+  - iOS
+  - Safari
+  - iPad
 image:
   feature: zebra.jpg
 manual_newsletter: false

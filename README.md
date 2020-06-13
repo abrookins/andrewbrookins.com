@@ -1,6 +1,6 @@
 # andrewbrookins.com
 
-This is the sourcecode for https://andrewbrookins.com. It's based on a Jekyll theme called [Balcac](https://github.com/ColeTownsend/Balzac-for-Jekyll).
+This is the sourcecode for https://andrewbrookins.com. It's based on a Jekyll theme called [Balzac](https://github.com/ColeTownsend/Balzac-for-Jekyll).
 
 Most of this README is just the text of the Balzac README. Not much to see here!
 

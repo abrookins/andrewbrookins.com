@@ -9,7 +9,8 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - iOS, technology
+  - iOS
+  - technology
 image:
   feature: garage.jpg
 manual_newsletter: false

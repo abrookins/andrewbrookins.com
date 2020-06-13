@@ -11,6 +11,7 @@ aktt_notify_twitter:
 categories:
   - Django
   - Technology
+  - Python
 ---
 This post describes how to use a few common tools to instantly set up and tear down Django development environments.
 
