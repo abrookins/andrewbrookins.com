@@ -20,10 +20,6 @@ coding on an iPad Pro [in
 2019](https://andrewbrookins.com/technology/coding-on-ipad-pro-2019/) and an
 iPad Air 2 [in 2017](https://andrewbrookins.com/tech/can-you-write-code-on-an-ipad/).
 
-For fellow programmers, I reflected on [my own
-post](https://andrewbrookins.com/tech/my-ideal-software-development-environment/)
-on the subject.
-
 After ten years writing software, I now work as a writer and video producer (and I still code!), so in the future I'll explore the iPad and iPhone as a tool for media work.
 
 ## Books
