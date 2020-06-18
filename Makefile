@@ -25,4 +25,4 @@ deploy_staging: deps build
 
 local_deploy_staging: deps build
 	JEKYLL_ENV=production bundle exec jekyll build \
-		&& sudo -S rm -rf /var/www/jekyll && sudo -S cp -r _site /var/www/staging && sudo -S chown -R www-data:www-data /var/www/staging
+		&& sudo -S rm -rf /var/www/staging && sudo -S cp -r _site /var/www/staging && sudo -S chown -R www-data:www-data /var/www/staging
