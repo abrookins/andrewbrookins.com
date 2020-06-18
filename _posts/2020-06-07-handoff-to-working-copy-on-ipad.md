@@ -22,7 +22,7 @@ Usually, I write code on a remote server using Vim. About the only touch interac
 You can see in this video that it’s ... not nothing.
 
 <div class="full-size-wrapper">
-    <video autoplay loop muted class="full-size">
+    <video autoplay loop muted playsinline class="full-size">
         <source src="/assets/video/vim-scroll-ssh.mp4" type="video/mp4">
     </video>
 </div>
@@ -82,7 +82,7 @@ Save the Shortcut and give it a search-friendly name. I named mine 2workingcopy.
 Once you have a Shortcut, to do the handoff you’ll run your function in Vim first. That’ll copy the Working Copy X-Callback URL to the iPad’s clipboard. Then you can run your Shortcut from the home screen, the Dock (⌘ + Option + D), or from Spotlight (⌘ + Space).
 
 <div class="full-size-wrapper">
-    <video autoplay loop muted class="full-size">
+    <video autoplay loop muted playsinline class="full-size">
         <source src="/assets/video/handoff-working-copy.mp4" type="video/mp4">
     </video>
 </div>
