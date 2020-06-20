@@ -15,11 +15,15 @@ image:
   feature: garage.jpg
 manual_newsletter: false
 ---
-This tip scratches an itch that I sometimes have while writing code on an iPad.
+Have you ever been working in Vim over SSH on an iPad and wanted to open up the current file in Working Copy? Think of it like the iOS/macOS Handoff feature -- but for Vim!
 
-Usually, I write code on a remote server using Vim. About the only touch interactivity that I get with Vim over SSH is scrolling, which my terminal emulator Blink must send as an ANSI control sequence that Vim understands.
+Well, I've wanted this, and I finally made it work. Kind of. Read on for the juicy details.
 
-You can see in this video that it’s ... not nothing.
+## But Why?
+
+Usually, I write code on a remote server using Vim. About the only touch interactivity that I get with Vim over SSH is scrolling, thanks to mouse-related control ANSI control codes.
+
+You can see in this video that it’s better than nothing.
 
 <div class="full-size-wrapper">
     <video autoplay loop muted class="full-size">
@@ -85,6 +89,6 @@ Once you have a Shortcut, to do the handoff you’ll run your function in Vim fi
     <video autoplay loop muted class="full-size">
         <source src="/assets/video/handoff-working-copy.mp4" type="video/mp4">
     </video>
-</div>
+    </div>
 
 Wrapping up: This is an example of the fun stuff you can do by combining access to the iPad’s clipboard from a remote system with X-Callback URLs and Shortcuts. Poke around and see what else you can automate — then let me know if you find anything cool!
