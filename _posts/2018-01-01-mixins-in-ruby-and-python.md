@@ -9,7 +9,9 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Technology, Ruby, Python
+  - Technology
+  - Python
+  - Ruby
 image:
   feature: david-clode-smaller.jpg
 ---

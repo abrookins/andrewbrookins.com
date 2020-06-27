@@ -8,6 +8,7 @@ guid: http://andrewbrookins.com/?p=1239
 permalink: /tech/video-of-my-djangocon-talk-the-evolution-of-a-restful-django-backend-i/
 categories:
   - Technology
+  - Python
 ---
 The video of my first _ever_ conference talk is now available on YouTube. [Check it out here](https://www.youtube.com/watch?v=zlfSCdu0y6s) or watch it below. It could have been better, but least now my daughter will always be able to find a video of her dad looking foolish on the internet. 
 
