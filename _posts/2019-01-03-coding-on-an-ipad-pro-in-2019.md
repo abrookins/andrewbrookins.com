@@ -9,7 +9,9 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Technology, iOS, markdown, Python
+  - Technology
+  - iOS
+  - Markdown
 image:
   feature: ipad23.jpg
 manual_newsletter: true

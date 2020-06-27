@@ -10,6 +10,7 @@ aktt_notify_twitter:
   - 'no'
 categories:
   - Technology
+  - Python
 ---
 When profiling a Python app, it&#8217;s helpful to have a decorator that wraps functions and reports details about their performance. Assuming you are doing this to report some metric about the function, you&#8217;ll want the decorator to work with both bound and unbound functions (IE, regular functions and methods of a class), and if the decorator wraps a method, you&#8217;ll probably want to know the name of the class the method belongs to.
 

@@ -1,5 +1,5 @@
 ---
-title: Hunting Ghosts
+title: "Story: Hunting Ghosts"
 date: 2020-04-26
 author: Andrew
 layout: post

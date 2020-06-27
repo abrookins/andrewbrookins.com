@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.description }}">
-<meta name="keywords" content="{{ page.tags | join: ', ' }}">
+<meta name="keywords" content="{{ page.categories | join: ', ' }}">
 
 {% include graphs.html %}
 

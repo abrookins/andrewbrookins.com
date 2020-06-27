@@ -14,6 +14,7 @@ image:
   feature: stream.jpg
 categories:
   - Django
+  - Python
 ---
 This post tries to explain just what goes on when you use Django&#8217;s `StreamingHttpResponse`.
 

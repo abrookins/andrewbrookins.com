@@ -9,7 +9,9 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Unix, technology
+  - Unix
+  - iOS
+  - Technology
 image:
   feature: matt-artz-gears.jpg
 manual_newsletter: true
