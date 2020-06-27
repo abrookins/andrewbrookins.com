@@ -9,7 +9,9 @@ lazyload_thumbnail_quality:
 wpautop:
   - -break
 categories:
-  - Technology, Python, Reliability
+  - Technology
+  - Python
+  - Reliability
 custom_css:
   - /assets/css/simulator.css
 image:
