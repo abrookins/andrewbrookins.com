@@ -8,9 +8,10 @@ description: Andrew Brookins writes about how people get work done on mobile tec
     <section class="article archive">
       <article class="archive-wrap">
           <ol class="post-list">
-            <lh><h2><span class="bb">Apple, iPad, and iOS</span></h2></lh>
+
+            <lh><h2><span class="bb">Python</span></h2></lh>
             {% for post in site.posts %}
-              {% if post.categories contains "iOS" or post.categories contains "Apple" %}
+              {% if post.categories contains "Python" %}
                   <li>
                     <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                         <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
@@ -20,9 +21,9 @@ description: Andrew Brookins writes about how people get work done on mobile tec
               {% endif %}
             {% endfor %}
 
-            <lh><h2><span class="bb">Python</span></h2></lh>
+            <lh><h2><span class="bb">Apple, iPad, and iOS</span></h2></lh>
             {% for post in site.posts %}
-              {% if post.categories contains "Python" %}
+              {% if post.categories contains "iOS" or post.categories contains "Apple" %}
                   <li>
                     <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                         <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>

@@ -7,20 +7,9 @@ image:
   feature: zack-spear-25261-unsplash.jpg
 ---
 
-I'm Andrew Brookins. I write about Apple, iOS, iPadOS, and programming.
+I'm Andrew Brookins. I write about Python programming and technology.
 
 Continue reading for all the juicy details.
-
-## iPads
-
-I'm obsessed with iPads, iOS, and how people get serious work done with mobile technology.
-
-I tried
-coding on an iPad Pro [in
-2019](https://andrewbrookins.com/technology/coding-on-ipad-pro-2019/) and an
-iPad Air 2 [in 2017](https://andrewbrookins.com/tech/can-you-write-code-on-an-ipad/).
-
-After ten years writing software, I now work as a writer and video producer (and I still code!), so in the future I'll explore the iPad and iPhone as a tool for media work.
 
 ## Books
 
@@ -31,19 +20,25 @@ If you're a Django developer, you should totally buy it!
 
 ## Software Development
 
-I worked for ten years as a professional software developer, and many of my past blog posts detailed that world.
+I've worked for over ten years as a software developer. A couple of years ago, I [charted ten years of learning investments](https://andrewbrookins.com/technology/ten-years-of-learning-investments/) related to my career.
 
-A couple of years ago, I [charted ten years of learning investments](https://andrewbrookins.com/technology/ten-years-of-learning-investments/) related to my career.
-
-A lot of my programming experience is with Python. I [compared mixins in Ruby and
+Most of my experience is with Python. I [compared mixins in Ruby and
 Python](https://andrewbrookins.com/technology/mixins-in-python-and-ruby-compared/). I've also [explored how Django's StreamingHttpResponse works](https://andrewbrookins.com/django/how-does-djangos-streaminghttpresponse-work-exactly/).
 
-Lately I've been mulling our industry's ethical dillemmas, as have many software
-developers. I wrote about [using the "common
+Lately I've been mulling our industry's ethical dilemmas. I wrote about [using the "common
 good" as an idea around which to center the ethics of software engineering](https://andrewbrookins.com/technology/what-are-we-doing-here-software-engineering/).
 
-Many software problems end up being about how an app or service handles outages. I built an outage simulator to help visualize this concept and then wrote a [blog
-post](https://andrewbrookins.com/technology/demonstrating-stability-patterns-with-an-outage-simulator/) about it.
+## iPads
+
+I'm mildly obsessed with iPads, iOS, and how people get serious work done with mobile technology.
+
+I tried
+coding on an iPad Pro [in
+2019](https://andrewbrookins.com/technology/coding-on-ipad-pro-2019/) and an
+iPad Air 2 [in 2017](https://andrewbrookins.com/tech/can-you-write-code-on-an-ipad/).
+
+Lately I've also been [writing and producing technical videos using an iPad and iPhone](https://andrewbrookins.com/technology/recording-pro-audio-and-video-at-home-with-ipads-and-iphones/).
+
 
 ## Family
 

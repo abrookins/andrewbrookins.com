@@ -1300,6 +1300,9 @@ border-radius: 0;
     }
     /* Literal.Number.Integer.Long */
 
+    .transparent {
+      filter: invert(100%);
+    }
 }
 
 div.book-ad {
