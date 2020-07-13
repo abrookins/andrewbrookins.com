@@ -18,9 +18,7 @@ image:
 manual_newsletter: false
 ---
 
-In January, I started a new job writing and producing technical education videos.
-
-I was *supposed* to record these videos in a posh studio down in Mountain View, California, but COVID-19 had other plans.
+In January, I started a new job writing and producing technical education videos. I was *supposed* to record these videos in a studio in Mountain View, California, but COVID-19 had other plans.
 
 So, for the past six months, I’ve had to learn how to record professional audio and video from home, using an iPad Pro and iPhone 8. In this post, I cover the tools, apps, and techniques I use to get my job done.
 
