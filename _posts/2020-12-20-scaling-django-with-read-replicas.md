@@ -35,11 +35,11 @@ However, most managed database services offer replication as a feature that you 
 
 ## Configuring Multiple Databases in Django
 
-From this point on, I'm going to assume that you have a Postgres cluster with at least one replica running somewhere -- either one you configured yourself, my example database running via Docker, or a managed database service.
+From this point on, I'm going to assume that you have a Postgres cluster with at least one replica running somewhere -- either one you configured yourself, my example Django project running via Docker, or a managed database service.
 
 Your next step is to configure Django so that it knows about your replicas. The goal here is for the primary to handle read and write queries, while your replicas handle _only_ reads.
 
-The first thing you'll do is add the replicas to the `DATABASES` setting. Here is what my example app looks like -- note that my example uses a single replica:
+The first thing you'll do is add the replicas to the `DATABASES` setting. Here is what my example app looks like -- note that this example uses a single replica:
 
 ```python
 DATABASES = {
@@ -98,17 +98,63 @@ class PrimaryReplicaRouter:
 
 **Note**: If you have more than one replica, your `db_for_read()` method should instead randomly choose a replica, as the example in the Django docs does: `        return random.choice(['replica1', 'replica2'])`.
 
+## How to Confirm that Replication is Working
+
+To confirm replication is working, connect to the primary node and run this SQL query.
+
+```
+SELECT pid,usename,application_name,state,sync_state FROM pg_stat_replication;
+```
+
+You should see something like the following:
+
+```
+ pid | usename | application_name |   state   | sync_state
+-----+---------+------------------+-----------+------------
+  34 | rep     | walreceiver      | streaming | async
+```
+
+You can also connect to a replica using Django:
+
+ ./manage.py dbshell --database replica
+
+In addition to these techniques, Postgres's output from the replicas will indicate replication activity.
+
+## Testing Replication
+
+You are supposed to be able to mark a database as a ["test mirror"](https://docs.djangoproject.com/en/3.1/topics/testing/advanced/#testing-primary-replica-configurations) to map requests to that database to the default database.
+
+This never worked correctly in my testing with a custom router. In fact, I haven't found a good configuration that allows you to leave your replica databases defined in `DATABASES` while running unit tests.
+
+Instead, I use settings inheritance to create a `test_settings.py` file that I use for tests, which only contains the primary database and excludes my custom router:
+
+```python
+from quest.settings import *
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'quest',
+        'USER': 'quest',
+        'PASSWORD': DATABASE_PASSWORD,
+        'HOST': PRIMARY_HOST
+    }
+}
+
+DATABASE_ROUTERS = []
+```
+
 ## So, What Could Go Wrong? (Replication Lag)
 
 We have now covered most of the material on working with read-only replicas that you can find in the Django documentation -- and, incidentally, most web tutorials on this topic written from a Django perspective. So, what could go wrong?
 
-The problem with reading from replicas is that for replication to be performant, it really needs to be _asynchronous_. What doest that mean? The primary database doesn't wait until all replicas are synchronized before telling you that your write is complete.
+The problem with reading from replicas is that replication really needs to be _asynchronous_ to perform well. What does that mean? The primary database doesn't wait until all replicas are synchronized before telling you that your write is complete.
 
-And that can lead to many kinds of reality distortions, as we shall see. The Django docs mention this, but unless you already practice the Dark Arts the warning might sound like gibberish:
+And that can lead to many kinds of reality distortion, as we shall see. The Django docs mention this, but unless you already practice the Dark Arts the warning might sound like gibberish:
 
 > The primary/replica [configuration] doesn’t provide any solution for handling replication lag (i.e., query inconsistencies introduced because of the time taken for a write to propagate to the replicas).
 
-The "inconsistencies" that this paragraph mentions are, in concrete terms, are usually failures of *read-your-writes consistency* or *monotonic reads* consistency.
+The "inconsistencies" that this paragraph mentions are, in concrete terms, usually failures of *read-your-writes consistency* or *monotonic reads* consistency.
 
 ### Read-Your-Writes Consistency
 
@@ -139,7 +185,7 @@ This is an example of a failure to provide monotonic reads consistency. In other
 
 ### Working With Replication Lag
 
-This all may sound truly dreadful ("consistency guarantees" -- ugh!), and it is, so you should ask yourself:
+This all may sound truly dreadful ("consistency guarantees" -- ugh!), and in truth it is, so you should ask yourself:
 
 >Will users actually care if they see this data out of order, or fail to see new data immediately?
 
@@ -149,7 +195,7 @@ Assuming it does matter, what can we do about these two kinds of failures with D
 
 ### Guaranteeing Read-Your-Writes Consistency
 
-The simplest thing is to always route reads of models that users routinely edit to the leader -- and send all other reads to the replicas.
+The simplest solution to guarantee users always see their own writes is to route reads of models that users edit to the primary database -- and send all other reads to the replicas.
 
 ```python
 class PrimaryReplicaRouter:
@@ -159,7 +205,9 @@ class PrimaryReplicaRouter:
         return 'replica'
 ```
 
-Because you get a type object for the `model` argument to the `db_for_read()` method, you could probably introduce a [proxy model](https://docs.djangoproject.com/en/3.1/topics/db/models/#proxy-models) for user profiles that you _only_ use on the page that displays the user's own profile. When other users view their profile, though, you use the true `UserProfile` class.
+Because you get a type object for the `model` argument to the `db_for_read()` method, you could probably introduce a [proxy model](https://docs.djangoproject.com/en/3.1/topics/db/models/#proxy-models) for data that you _only_ when a user views their own data.
+
+For example, you might use a proxy model called `UsersOwnProfile` when a user views their profile, but when other users view their profile, you use the true `UserProfile` class.
 
 Then you could do something like this:
 
@@ -170,8 +218,7 @@ class PrimaryReplicaRouter:
         if model is UsersOwnProfile:
             return 'primary'
 
-        # Other user profiles -- and all other data -- comes
-        # from a replica.
+        # Other user profiles -- and all other data -- come from a replica.
         return 'replica'
 ```
 
@@ -183,9 +230,9 @@ One way to guarantee that users see data in a consistent order is to always dire
 
 * A middleware function that makes the user ID accessible to the database router
 * A database router (as we've discussed)
-* A consistent hash function that will assign users to a replica
+* A hash function that will assign users to a replica consistently
 
-So, first, the middleware. Consider this middleware one, which uses thread local storage:
+So, first, the middleware. Consider this example, which uses thread local storage to store the user's ID:
 
 ```python
 import threading
@@ -193,17 +240,19 @@ import threading
 request_config = threading.local()
 
 class RouterMiddleware (object):
-    def process_view( self, request, view_func, args, kwargs ):
+    def process_view( self, request, view_func, *args, **kwargs):
         if request.is_authenticated():
             request_config.user_id = request.user.id
 
-    def process_response( self, request, response ):
-        if hasattr(request_config, 'user_id' ):
+    def process_response(self, request, response):
+        if hasattr(request_config, 'user_id'):
             del request_config.user_id
         return response
 ```
 
-So, when a logged-in user accesses the Django application, this middleware is going to save their ID in a thread-local variable. Next, the database router needs to read that ID and, if it's present, consistently hash it to a "bucket" (a particular replica).
+So, when a logged-in user accesses the Django application, this middleware saves their ID in a thread-local variable.
+
+When (and if) Django issues a database query for this user, the database router will look for that ID and, if it's present, use a consistent hashing function to assign that ID to a particular replica.
 
 ```python
 import random
@@ -217,6 +266,10 @@ REPLICAS = ['replica1', 'replica2']
 
 
 def hash_to_bucket(user_id, num_buckets):
+    """Consistently hash `user_id` into one of `num_buckets` buckets.
+
+    Approach derived from: https://stats.stackexchange.com/questions/26344/how-to-uniformly-project-a-hash-to-a-fixed-number-of-buckets
+    """
     i = mmh3.hash128(str(user_id))
     p = i / float(2**128)
     for j in range(0, num_buckets):
@@ -226,34 +279,21 @@ def hash_to_bucket(user_id, num_buckets):
 
 
 
-class PrimaryReplicaRouter:
+class HashingPrimaryReplicaRouter:
     def db_for_read(self, model, **hints):
-        user_id = getattr(request_config, 'user_id')
+        """Consistently direct reads of authenticated users to the same replica."""
+        user_id = getattr(request_config, 'user_id', None)
         if user_id:
             bucket = hash_to_bucket(user_id)
             return REPLICAS[bucket]
         return random.choice(REPLICAS)
 ```
 
+Is your brain melting yet?
 
-## Confirming that Replication is Working
+No?
 
+Then let's talk about "one more thing."
 
-To confirm replication is working, connect to the primary node and run this SQL query.
-
-```
-SELECT pid,usename,application_name,state,sync_state FROM pg_stat_replication;
-```
-
-You should see something like the following:
-
-```
- pid | usename | application_name |   state   | sync_state
------+---------+------------------+-----------+------------
-  34 | rep     | walreceiver      | streaming | async
-```
-
-You can also connect to a replica (frpom ):
-
- ./manage.py dbshell --database replica
+## One More Thing: Control Consistency Per Transaction with Postgres
 
