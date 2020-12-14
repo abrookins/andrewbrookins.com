@@ -18,7 +18,7 @@ image:
   feature: prague.jpg
 manual_newsletter: false
 ---
-Replication is a feature of PostgreSQL that you typically use to achieve high-availability, by having copies of a running database ready to step in if your primary database fails. However, you can also use replication to make your Django application faster. In this post, I'll explain how to configure Django to query read-only Postgres replicas, allowing you to scale your database read performance linearly with the number of replicas.
+Replication is a feature of PostgreSQL that you typically use to achieve high availability, by running copies of a database that are ready to take over if your primary database fails. However, you can also use replication to make your Django applications faster. In this post, I'll explain how to configure Django to query read-only Postgres replicas, allowing you to scale your database read performance linearly with the number of replicas.
 
 I'll also talk about how reading from replicas can go wrong -- specifically, I'll detail the consistency errors that *replication lag* can cause -- and the tools that Django gives you to work with this problem.
 
