@@ -4,7 +4,7 @@ tagline: Scale Database Reads Linearly While Maintaining Consistency
 date: 2020-12-13
 author: Andrew
 layout: post
-permalink: /python/scaling-django-with-postgres-read-replicas
+permalink: /python/scaling-django-with-postgres-read-replicas/
 lazyload_thumbnail_quality:
   - default
 wpautop:
@@ -59,6 +59,7 @@ DATABASES = {
         'HOST': REPLICA_HOST
     }
 }
+
 ```
 
 As you can see, I store the primary database under the "default" key and the replica under the "replica" key. If I did nothing else, Django would have no idea what to do with the replica: it wouldn't use that database, and would continue to use the default database for all queries.
@@ -95,6 +96,7 @@ class PrimaryReplicaRouter:
 
     def allow_migrate(self, db, app_label, model_name=None, **hints):
         return True
+
 ```
 
 **Note**: If you have more than one replica, your `db_for_read()` method should instead randomly choose a replica, as the example in the Django docs does: `        return random.choice(['replica1', 'replica2'])`.
@@ -208,6 +210,7 @@ class PrimaryReplicaRouter:
         if model is UserProfile:
             return 'primary'
         return 'replica'
+
 ```
 
 Because you get a type object for the `model` argument to the `db_for_read()` method, you could probably introduce a [proxy model](https://docs.djangoproject.com/en/3.1/topics/db/models/#proxy-models) for data that you _only_ when a user views their own data.
@@ -225,6 +228,7 @@ class PrimaryReplicaRouter:
 
         # Other user profiles -- and all other data -- come from a replica.
         return 'replica'
+
 ```
 
 The more general you want to guarantee read-your-writes consistency, the darker the sorcery becomes. For example, another approach is to [keep track of the replication status of replicas](https://brandur.org/postgres-reads).
@@ -296,6 +300,7 @@ class HashingPrimaryReplicaRouter:
 
         # Anonymous users get a random replica.
         return random.choice(REPLICAS)
+
 ```
 
 Is your brain melting yet?
@@ -327,6 +332,7 @@ with transaction.atomic():
         cursor.execute("SET LOCAL synchronous_commit TO ON;")
         Event.objects.create(name="task_created", data=serializer.data,
                             user=self.request.user)
+
 ```
 
 For the single transaction in this example, Postgres will require confirmation that all replicas have the change before considering the transaction successful. So, you can be sure that users will see their writes, _and_ that writes will appear in the correct order, when those things matter.
