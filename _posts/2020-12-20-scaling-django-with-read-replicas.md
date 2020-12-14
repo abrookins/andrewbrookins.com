@@ -28,7 +28,7 @@ With replication, you run multiple copies, or "replicas," of the same database, 
 
 Let me put that a different way: by configuring Django to query read-only replicas, you can _scale performance linearly_ by adding replicas. So, in theory, you'll get 2x performance by adding two replicas, 4x performance with four, and so on.
 
-## Configuring Replication
+## Configuring Replication in Postgres
 
 Configuring replication in Postgres is a _project_. However, if you study the `postgres_leader` and `postgres_follower` directories in my [example Django project](https://github.com/abrookins/quest/tree/read-replicas), you can see what's required. Postgres also has [extensive documentation](https://www.postgresql.org/docs/12/high-availability.html) on replication.
 
@@ -99,7 +99,7 @@ class PrimaryReplicaRouter:
 
 ```
 
-**Note**: If you have more than one replica, your `db_for_read()` method should instead randomly choose a replica, as the example in the Django docs does: `        return random.choice(['replica1', 'replica2'])`.
+**Note**: If you have more than one replica, your `db_for_read()` method should instead randomly choose a replica, as the example in the Django docs does: `return random.choice(['replica1', 'replica2'])`.
 
 ## How to Confirm that Replication is Working
 
@@ -163,7 +163,7 @@ And that can lead to many kinds of reality distortion, as we shall see. The Djan
 
 The "inconsistencies" that this paragraph mentions are, in concrete terms, usually failures of *read-your-writes consistency* or *monotonic reads* consistency.
 
-### Read-Your-Writes Consistency
+### Failing to Guarantee Read-Your-Writes Consistency
 
 Consider this unfortunate timeline of events from an ecommerce site:
 
@@ -179,20 +179,21 @@ Consider this unfortunate timeline of events from an ecommerce site:
 
 This is an example of an application that fails to provide read-your-writes consistency. That is, the application can't ensure that users will be able to read their own writes to the database -- due to replication lag, they may not see the data immediately after writing it.
 
-### Monotonic Reads Consistency
+### Failing to Guarantee Monotonic Reads Consistency
 
 Next, consider this example from a self-help forum for the aforementioned lightsaber web site:
 
 * I visit a page forum page titled "Help adding items to my wishlist"
 * I scroll past the instructions and read the comments
-* The first comment reads, "There's nothing wrong with the site ya geezer"
-* The second comment reads, "What's up with the site today - I keep getting duplicates in my wishlist??"
+* The comments are in order from oldest to newest
+* The first comment reads, "Answer: There's nothing wrong with the site ya geezer"
+* The second comment reads, "Question: What's up with the site today - I keep getting duplicates in my wishlist??"
 
-This is an example of a failure to provide monotonic reads consistency. In other words, the application might show us writes database *out of order*. This can happen if Django routes queries to multiple replicas, and the replicas are in different states of synchronizing data from the leader.
+This is an example of a failure to provide monotonic reads consistency. In other words, the application might show us database writes *out of order*. This can happen if Django routes queries to multiple replicas, and the replicas are in different states of synchronizing data from the leader.
 
-### Working With Replication Lag
+## Solving Consistency Problems Caused By Replication Lag
 
-This all may sound truly dreadful ("consistency guarantees" -- ugh!), and in truth it is, so you should ask yourself:
+This all may sound truly dreadful ("consistency guarantees" -- ugh!), and the truth is that it is, so you should ask yourself:
 
 >Will users actually care if they see this data out of order, or fail to see new data immediately?
 
@@ -207,15 +208,17 @@ The simplest solution to guarantee users always see their own writes is to route
 ```python
 class PrimaryReplicaRouter:
     def db_for_read(self, model, **hints):
+        # Imagine that UserProfile is the only user-
+        # editable model in this application.
         if model is UserProfile:
             return 'primary'
         return 'replica'
 
 ```
 
-Because you get a type object for the `model` argument to the `db_for_read()` method, you could probably introduce a [proxy model](https://docs.djangoproject.com/en/3.1/topics/db/models/#proxy-models) for data that you _only_ when a user views their own data.
+Because you get a type object for the `model` argument to the `db_for_read()` method, you could probably introduce a [proxy model](https://docs.djangoproject.com/en/3.1/topics/db/models/#proxy-models) that you use when a user views their own data.
 
-For example, you might use a proxy model called `UsersOwnProfile` when a user views their profile, but when other users view their profile, you use the true `UserProfile` class.
+For example, you might use a proxy model for the `UserProfile` model called `UsersOwnProfile`. When a user views their profile, you use `UsersOwnProfile`, but when a user views other profiles, you use the `UserProfile` class.
 
 Then you could do something like this:
 
@@ -233,13 +236,13 @@ class PrimaryReplicaRouter:
 
 The more general you want to guarantee read-your-writes consistency, the darker the sorcery becomes. For example, another approach is to [keep track of the replication status of replicas](https://brandur.org/postgres-reads).
 
-### Guaranteeing Monotonic Read Consistency
+### Guaranteeing Monotonic Reads Consistency
 
 One way to guarantee that users see data in a consistent order is to always direct their reads to the same replica. How would you do this with Django? You'll need three things:
 
 * A middleware function that makes the user ID accessible to the database router
-* A database router that reads the user ID and hashes it to assign a replica
-* A hash function that will consistently assign the same user ID to the same "bucket" (replica)
+* A database router that reads the user ID if it's present and returns the correct replica for that user
+* A hash function that will consistently assign a user ID to the same "bucket" (replica)
 
 First, let's examine the middleware. Consider this example, which uses thread local storage to store the user's ID:
 
@@ -262,9 +265,9 @@ class RouterMiddleware (object):
 
 So, when a logged-in user accesses the Django application, this middleware saves their ID in a thread-local variable.
 
-When (and if) Django issues a database query for this user, the database router will look for that ID and, if it's present, use a consistent hashing function to assign that ID to a particular replica.
+When (and if) Django issues a database query for this user, the database router will look for that ID and, if it's present, use a consistent hashing function to assign that ID to a replica.
 
-That following example does just this -- just note that it expects two replicas defined in the `DATABASES` setting: "replica1" and "replica1".
+That following example does just this -- note that it expects two replicas defined in the `DATABASES` setting: "replica1" and "replica1".
 
 ```python
 import random
@@ -313,9 +316,9 @@ Then let's talk about "one more thing."
 
 With Postgres, you have another tool to maintain consistency when it matters and prefer speed when consistency is less important: the `synchronous_commit` setting.
 
-[Entire articles]() have been written on this setting. The gist of it is that you can control write consistency at the level of individual tggransactions (and not just transactions -- also sessions, users, databases, and instances!).
+[Entire articles](https://www.compose.com/articles/postgresql-and-per-connection-write-consistency-settings/) have been written on this setting. The gist of it is that you can control write consistency at the level of individual transactions (and not just transactions -- also sessions, users, databases, and instances!).
 
-As a precursor, my recommendation is to configure Postgres so that replication is asynchronous by default, but such that you can turn on synchronous commits on the fly. The following settings accomplish this:
+My recommendation is to configure Postgres so that replication is asynchronous by default, but such that you can turn on synchronous commits when you need them. The following settings accomplish this:
 
     synchronous_commit = local
     synchronous_standby_names='*'
@@ -336,3 +339,9 @@ with transaction.atomic():
 ```
 
 For the single transaction in this example, Postgres will require confirmation that all replicas have the change before considering the transaction successful. So, you can be sure that users will see their writes, _and_ that writes will appear in the correct order, when those things matter.
+
+## Summary
+
+Querying replicas is a great way to scale your read performance, and you can use a variety of techniques to manage consistency from the application side.
+
+With a little elbow grease, you can also control write consistency on individual transactions with Postgres!
