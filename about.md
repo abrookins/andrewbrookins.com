@@ -7,16 +7,16 @@ image:
   feature: zack-spear-25261-unsplash.jpg
 ---
 
-I'm Andrew Brookins. I write about Python programming and technology.
-
-Continue reading for all the juicy details.
+I'm Andrew Brookins. I write about Python programming, databases, and any technology I'm excited about. Scroll down for the juicy details.
 
 ## Books
 
-My latest book is [The Temple of
+I wrote [The Temple of
 Django Database
-Performance](https://spellbookpress.com/books/temple-of-django-database-performance/).
+Performance](https://spellbookpress.com/books/temple-of-django-database-performance/) to help Django developers level up their database performance skills.
 If you're a Django developer, you should totally buy it!
+
+The working title for my next book is _Planet of the Redis Lords_. Check out the [example code for the book](https://github.com/abrookins/redis-spaceship) for a preview!
 
 ## Software Development
 
@@ -25,8 +25,6 @@ I've worked for over ten years as a software developer. A couple of years ago, I
 Most of my experience is with Python. I [compared mixins in Ruby and
 Python](https://andrewbrookins.com/technology/mixins-in-python-and-ruby-compared/). I've also [explored how Django's StreamingHttpResponse works](https://andrewbrookins.com/django/how-does-djangos-streaminghttpresponse-work-exactly/).
 
-Lately I've been mulling our industry's ethical dilemmas. I wrote about [using the "common
-good" as an idea around which to center the ethics of software engineering](https://andrewbrookins.com/technology/what-are-we-doing-here-software-engineering/).
 
 ## iPads
 

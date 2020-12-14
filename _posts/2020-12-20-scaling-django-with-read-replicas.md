@@ -18,21 +18,24 @@ image:
   feature: prague.jpg
 manual_newsletter: false
 ---
-Replication is a disaster recovery feature of Postgres that you can also use to make your Django application faster. In this post, I'll explain how to configure Django to query read-only PostgreSQL replicas, allowing you to scale your database read performance linearly with the number of replicas.
+Replication is a feature of PostgreSQL that you typically use to achieve high-availability, by having copies of a running database ready to step in if your primary database fails. However, you can also use replication to make your Django application faster. In this post, I'll explain how to configure Django to query read-only Postgres replicas, allowing you to scale your database read performance linearly with the number of replicas.
 
 I'll also talk about how reading from replicas can go wrong -- specifically, I'll detail the consistency errors that *replication lag* can cause -- and the tools that Django gives you to work with this problem.
 
 ## What is Replication?
 
-With replication, you run multiple copies, or "replicas," of the same database, each of which synchronizes changes from the leader (also called the "primary") database. This not only gives you the superpower to immediately failover to a replica if the primary crashes -- it also lets you scale reads across all replicas and the leader.
+With replication, you run a cluster of Postgres database instances: a leader, also called a "primary," database, and multiple "replicas." All write queries execute on the leader, making it the trusted source of your data, and the replicas continuously copy changes from the leader to keep themselves up to date. Replicas not only give you the superpower to failover to a replica if the leader crashes, which is known as high availability -- they also let you scale reads across all replicas and the leader.
 
-Let me put that a different way: by configuring Django to query read-only replicas, you can _scale performance linearly_ by adding replicas. So, in theory, you'll get 2x performance by adding two replicas, 4x performance with four, and so on.
+Put a different way: by configuring Django to query replicas, you can _scale performance linearly_ by adding replicas. So, in theory, you'll get 2x performance by adding two replicas, 4x performance with four, and so on.
+
+**Read-only replica or hot standby?** With Postgres, replicas usually don't allow queries of any kind -- replicas are only there for failover. However, you can configure replicas to run in "hot standby" mode, which allows them to service read-only queries. Another term for hot standby replicas is "read-only replicas," or "read replicas," which is how this post will refer to them.
 
 ## Configuring Replication in Postgres
 
 Configuring replication in Postgres is a _project_. However, if you study the `postgres_leader` and `postgres_follower` directories in my [example Django project](https://github.com/abrookins/quest/tree/read-replicas), you can see what's required. Postgres also has [extensive documentation](https://www.postgresql.org/docs/12/high-availability.html) on replication.
 
-However, most managed database services offer replication as a feature that you can click to enable. If you want to test replication without configuring it yourself, try DigitalOcean's Managed Databases product. Sign up with <a href="https://m.do.co/c/e063bdbde6da">this link</a> and you'll get $100 in credit -- while I get to run this blog for another month.
+However, most managed database services offer replication as a feature that you can click to enable. If you want to test replication without configuring it yourself, try DigitalOcean's [Managed Databases product](https://m.do.co/c/e061bdbde6da).
+
 
 ## Configuring Multiple Databases in Django
 
@@ -126,13 +129,13 @@ You can also connect to a replica using Django:
 
 In addition to these techniques, Postgres's output from the replicas will indicate replication activity.
 
-## Testing Replication
+## Running Tests When Replication Is Active
 
-You are supposed to be able to mark a database as a ["test mirror"](https://docs.djangoproject.com/en/3.1/topics/testing/advanced/#testing-primary-replica-configurations) to map requests to that database to the default database.
+There seems to be no way to properly run unit tests with Django if you've configured read-only replicas, so you'll need to disable the replica configuration while running tests.
 
-This never worked correctly in my testing with a custom router. In fact, I haven't found a good configuration that allows you to leave your replica databases defined in `DATABASES` while running unit tests.
+You are supposed to be able to mark a database as a ["test mirror"](https://docs.djangoproject.com/en/3.1/topics/testing/advanced/#testing-primary-replica-configurations), but this appears [not to work](https://code.djangoproject.com/ticket/23718).
 
-Instead, I use settings inheritance to create a `test_settings.py` file that I use for tests, which only contains the primary database and excludes my custom router:
+My advice is to use settings inheritance to create a `test_settings.py` file that only contains the primary database and excludes your custom router:
 
 ```python
 from quest.settings import *
@@ -252,8 +255,8 @@ import threading
 request_config = threading.local()
 
 
-class RouterMiddleware (object):
-    def process_view( self, request, view_func, *args, **kwargs):
+class RouterMiddleware(object):
+    def process_view(self, request, view_func, *args, **kwargs):
         if request.is_authenticated():
             request_config.user_id = request.user.id
 
@@ -261,6 +264,7 @@ class RouterMiddleware (object):
         if hasattr(request_config, 'user_id'):
             del request_config.user_id
         return response
+
 ```
 
 So, when a logged-in user accesses the Django application, this middleware saves their ID in a thread-local variable.
@@ -320,8 +324,11 @@ With Postgres, you have another tool to maintain consistency when it matters and
 
 My recommendation is to configure Postgres so that replication is asynchronous by default, but such that you can turn on synchronous commits when you need them. The following settings accomplish this:
 
+```
     synchronous_commit = local
     synchronous_standby_names='*'
+
+```
 
 Setting `synchronous_commit` to "local" ensures that Postgres returns a successful commit after the primary database flushes the change to disk, but before any replicas have done so. _However_, we also set `synchronous_standby_names` to "*", meaning all replicas are considered synchronous.
 
