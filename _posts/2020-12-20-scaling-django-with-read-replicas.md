@@ -17,7 +17,7 @@ image:
   feature: IMG_Jul52020at90431PM.jpg
 manual_newsletter: false
 ---
-Replication is a disaster recovery feature of most databases that you can also use to make your Django application faster. In this post, I'll explain how to configure Django to query multiple read-only PostgreSQL replicas, which allows you to scale your database rad performance linearly with the number of replicas.
+Replication is a disaster recovery feature Postgres that you can also use to make your Django application faster. In this post, I'll explain how to configure Django to query multiple read-only PostgreSQL replicas, which allows you to scale your database read performance linearly with the number of replicas.
 
 I'll also talk about how reading from replicas can go wrong -- specifically, I'll detail the consistency errors that *replication lag* can cause -- and the tools that Django gives you to work with this problem.
 
@@ -35,9 +35,9 @@ However, most managed database services offer replication as a feature that you 
 
 ## Configuring Multiple Databases in Django
 
-From this point on, I'm going to assume that you have a Postgres cluster with at least one replica running somewhere -- either one you configured yourself, my example Django project running via Docker, or a managed database service.
+From this point on, I'm going to assume that you have a Postgres cluster with a primary database and at least one replica running somewhere -- either a cluster you configured yourself, my example Django project running via Docker, or a managed database service.
 
-Your next step is to configure Django so that it knows about your replicas. The goal here is for the primary to handle read and write queries, while your replicas handle _only_ reads.
+Your next step is to configure Django so that it knows about your replicas. The goal here is for the primary to handle write queries, while your replicas handle reads.
 
 The first thing you'll do is add the replicas to the `DATABASES` setting. Here is what my example app looks like -- note that this example uses a single replica:
 
@@ -255,6 +255,8 @@ So, when a logged-in user accesses the Django application, this middleware saves
 
 When (and if) Django issues a database query for this user, the database router will look for that ID and, if it's present, use a consistent hashing function to assign that ID to a particular replica.
 
+That following example does just this -- just note that it expects two replicas defined in the `DATABASES` setting: "replica1" and "replica1".
+
 ```python
 import random
 
@@ -279,7 +281,6 @@ def hash_to_bucket(user_id, num_buckets):
     return num_buckets
 
 
-
 class HashingPrimaryReplicaRouter:
     def db_for_read(self, model, **hints):
         """Consistently direct reads of authenticated users to the same replica."""
@@ -287,6 +288,8 @@ class HashingPrimaryReplicaRouter:
         if user_id:
             bucket = hash_to_bucket(user_id)
             return REPLICAS[bucket]
+
+        # Anonymous users get a random replica.
         return random.choice(REPLICAS)
 ```
 
@@ -296,29 +299,29 @@ No?
 
 Then let's talk about "one more thing."
 
-## One More Thing: Control Consistency Per Transaction with Postgres and synchronous_commit
+## One More Thing: Controlling Consistency Per Transaction with synchronous_commit
 
 With Postgres, you have another tool to maintain consistency when it matters and prefer speed when consistency is less important: the `synchronous_commit` setting.
 
-[Entire articles]() have been written on this setting. The gist of it is that you can control, at the level of individual transactions, the level of write consistency that you want.
+[Entire articles]() have been written on this setting. The gist of it is that you can control write consistency at the level of individual transactions (and not just transactions -- also sessions, users, databases, and instances!).
 
-As a precursor, my recommendation is to configure Postgres so that replication is asynchronous by default, but you can override it on the fly. You can do so with the following settings:
+As a precursor, my recommendation is to configure Postgres so that replication is asynchronous by default, but such that you can turn on synchronous commits on the fly. The following settings accomplish this:
 
     synchronous_commit = local
     synchronous_standby_names='*'
 
 Setting `synchronous_commit` to "local" ensures that Postgres returns a successful commit after the primary database flushes the change to disk, but before any replicas have done so. _However_, we also set `synchronous_standby_names` to "*", meaning all replicas are considered synchronous.
 
-This means that while they will behave asynchronous normally, whenever we want, we can turn on synchronous commits. With Django, doing that looks like the following:
+This state of affairs, while seemingly contradictory, means that commits won't wait for replicas unless we explicitly turn on synchronous commits by setting `synchronous_commits` to "on". With Django, doing that within a transaction looks like the following:
 
 ```python
-        # Make sure the database connection confirms writes to replicas
-        # before returning success during this transaction.
-        with transaction.atomic():
-            with connection.cursor() as cursor:
-                cursor.execute("SET LOCAL synchronous_commit TO ON;")
-                Event.objects.create(name="task_created", data=serializer.data,
-                                    user=self.request.user)
+# Make sure Postgres confirms writes to replicas before it considers
+# this transaction complete.
+with transaction.atomic():
+    with connection.cursor() as cursor:
+        cursor.execute("SET LOCAL synchronous_commit TO ON;")
+        Event.objects.create(name="task_created", data=serializer.data,
+                            user=self.request.user)
 ```
 
-For the single transaction in this example, Postgres will require confirmation that all replicas have the change before returning a successful commit. So, you can be sure that users will see their writes, _and_ that writes will appear in the correct order, when those things matter.
+For the single transaction in this example, Postgres will require confirmation that all replicas have the change before considering the transaction successful. So, you can be sure that users will see their writes, _and_ that writes will appear in the correct order, when those things matter.
