@@ -17,9 +17,9 @@ image:
   feature: IMG_Jul52020at90431PM.jpg
 manual_newsletter: false
 ---
-Replication is an important disaster recovery feature of most modern databases, but you can also use it to make your Django application faster. In this post, I'll explain how to configure Django to query multiple read-only PostgreSQL replicas, allowing you to scale database performance by adding more replicas.
+Replication is a disaster recovery feature of most databases that you can also use to make your Django application faster. In this post, I'll explain how to configure Django to query multiple read-only PostgreSQL replicas, which allows you to scale your database rad performance linearly with the number of replicas.
 
-I'll also talk about what can go wrong -- specifically, *replication lag* -- and the tools that Django gives you to work with this problem.
+I'll also talk about how reading from replicas can go wrong -- specifically, I'll detail the consistency errors that *replication lag* can cause -- and the tools that Django gives you to work with this problem.
 
 ## What is Replication?
 
@@ -229,15 +229,16 @@ The more general you want to guarantee read-your-writes consistency, the darker 
 One way to guarantee that users see data in a consistent order is to always direct their reads to the same replica. How would you do this with Django? You'll need three things:
 
 * A middleware function that makes the user ID accessible to the database router
-* A database router (as we've discussed)
-* A hash function that will assign users to a replica consistently
+* A database router that reads the user ID and hashes it to assign a replica
+* A hash function that will consistently assign the same user ID to the same "bucket" (replica)
 
-So, first, the middleware. Consider this example, which uses thread local storage to store the user's ID:
+First, let's examine the middleware. Consider this example, which uses thread local storage to store the user's ID:
 
 ```python
 import threading
 
 request_config = threading.local()
+
 
 class RouterMiddleware (object):
     def process_view( self, request, view_func, *args, **kwargs):
@@ -295,5 +296,29 @@ No?
 
 Then let's talk about "one more thing."
 
-## One More Thing: Control Consistency Per Transaction with Postgres
+## One More Thing: Control Consistency Per Transaction with Postgres and synchronous_commit
 
+With Postgres, you have another tool to maintain consistency when it matters and prefer speed when consistency is less important: the `synchronous_commit` setting.
+
+[Entire articles]() have been written on this setting. The gist of it is that you can control, at the level of individual transactions, the level of write consistency that you want.
+
+As a precursor, my recommendation is to configure Postgres so that replication is asynchronous by default, but you can override it on the fly. You can do so with the following settings:
+
+    synchronous_commit = local
+    synchronous_standby_names='*'
+
+Setting `synchronous_commit` to "local" ensures that Postgres returns a successful commit after the primary database flushes the change to disk, but before any replicas have done so. _However_, we also set `synchronous_standby_names` to "*", meaning all replicas are considered synchronous.
+
+This means that while they will behave asynchronous normally, whenever we want, we can turn on synchronous commits. With Django, doing that looks like the following:
+
+```python
+        # Make sure the database connection confirms writes to replicas
+        # before returning success during this transaction.
+        with transaction.atomic():
+            with connection.cursor() as cursor:
+                cursor.execute("SET LOCAL synchronous_commit TO ON;")
+                Event.objects.create(name="task_created", data=serializer.data,
+                                    user=self.request.user)
+```
+
+For the single transaction in this example, Postgres will require confirmation that all replicas have the change before returning a successful commit. So, you can be sure that users will see their writes, _and_ that writes will appear in the correct order, when those things matter.
