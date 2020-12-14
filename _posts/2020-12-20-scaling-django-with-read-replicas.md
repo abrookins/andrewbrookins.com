@@ -1,6 +1,7 @@
 ---
 title: "Scaling Django with Postgres Read Replicas"
-date: 2020-12-20
+tagline: Scale Database Reads Linearly While Maintaining Consistency
+date: 2020-12-13
 author: Andrew
 layout: post
 permalink: /python/scaling-django-with-postgres-read-replicas
@@ -14,10 +15,10 @@ categories:
   - Databases
   - Django
 image:
-  feature: IMG_Jul52020at90431PM.jpg
+  feature: prague.jpg
 manual_newsletter: false
 ---
-Replication is a disaster recovery feature Postgres that you can also use to make your Django application faster. In this post, I'll explain how to configure Django to query multiple read-only PostgreSQL replicas, which allows you to scale your database read performance linearly with the number of replicas.
+Replication is a disaster recovery feature of Postgres that you can also use to make your Django application faster. In this post, I'll explain how to configure Django to query multiple read-only PostgreSQL replicas, allowing you to scale your database read performance linearly with the number of replicas.
 
 I'll also talk about how reading from replicas can go wrong -- specifically, I'll detail the consistency errors that *replication lag* can cause -- and the tools that Django gives you to work with this problem.
 
@@ -103,7 +104,9 @@ class PrimaryReplicaRouter:
 To confirm replication is working, connect to the primary node and run this SQL query.
 
 ```
-SELECT pid,usename,application_name,state,sync_state FROM pg_stat_replication;
+SELECT pid,usename,application_name,state,sync_state
+FROM pg_stat_replication;
+
 ```
 
 You should see something like the following:
@@ -112,11 +115,12 @@ You should see something like the following:
  pid | usename | application_name |   state   | sync_state
 -----+---------+------------------+-----------+------------
   34 | rep     | walreceiver      | streaming | async
+
 ```
 
 You can also connect to a replica using Django:
 
- ./manage.py dbshell --database replica
+```./manage.py dbshell --database replica```
 
 In addition to these techniques, Postgres's output from the replicas will indicate replication activity.
 
@@ -142,9 +146,10 @@ DATABASES = {
 }
 
 DATABASE_ROUTERS = []
+
 ```
 
-## So, What Could Go Wrong? (Replication Lag)
+## So, What Could Go Wrong? (Answer: Replication Lag)
 
 We have now covered most of the material on working with read-only replicas that you can find in the Django documentation -- and, incidentally, most web tutorials on this topic written from a Django perspective. So, what could go wrong?
 
@@ -303,7 +308,7 @@ Then let's talk about "one more thing."
 
 With Postgres, you have another tool to maintain consistency when it matters and prefer speed when consistency is less important: the `synchronous_commit` setting.
 
-[Entire articles]() have been written on this setting. The gist of it is that you can control write consistency at the level of individual transactions (and not just transactions -- also sessions, users, databases, and instances!).
+[Entire articles]() have been written on this setting. The gist of it is that you can control write consistency at the level of individual tggransactions (and not just transactions -- also sessions, users, databases, and instances!).
 
 As a precursor, my recommendation is to configure Postgres so that replication is asynchronous by default, but such that you can turn on synchronous commits on the fly. The following settings accomplish this:
 
