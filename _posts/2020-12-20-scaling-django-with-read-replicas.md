@@ -18,7 +18,7 @@ image:
   feature: prague.jpg
 manual_newsletter: false
 ---
-Replication is a disaster recovery feature of Postgres that you can also use to make your Django application faster. In this post, I'll explain how to configure Django to query multiple read-only PostgreSQL replicas, allowing you to scale your database read performance linearly with the number of replicas.
+Replication is a disaster recovery feature of Postgres that you can also use to make your Django application faster. In this post, I'll explain how to configure Django to query read-only PostgreSQL replicas, allowing you to scale your database read performance linearly with the number of replicas.
 
 I'll also talk about how reading from replicas can go wrong -- specifically, I'll detail the consistency errors that *replication lag* can cause -- and the tools that Django gives you to work with this problem.
 
