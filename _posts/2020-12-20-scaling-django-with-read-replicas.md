@@ -285,7 +285,7 @@ So, when a logged-in user accesses the Django application, this middleware saves
 
 When (and if) Django issues a database query for this user, the database router will look for that ID and, if it's present, use a consistent hashing function to assign that ID to a replica.
 
-That following example does just this -- note that it expects two replicas defined in the `DATABASES` setting: "replica1" and "replica1".
+That following example does just this -- note that it expects two replicas defined in the `DATABASES` setting: "replica1" and "replica2".
 
 ```python
 import random
