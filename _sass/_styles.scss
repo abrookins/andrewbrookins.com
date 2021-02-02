@@ -7,7 +7,7 @@ body {
   background: $white;
   min-height: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden
 }
 
 h1,h2,h3,h4,h5 {
@@ -16,6 +16,8 @@ h1,h2,h3,h4,h5 {
 
 p {
     margin-bottom: $lh;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 a, a:visited, a:active {
