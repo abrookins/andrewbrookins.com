@@ -46,7 +46,7 @@ class RunningHero:
     """This hero can run. Better than nothing!"""
     def run(self):
         # Run for your life!
-   
+
 
 class Board:
     """An imaginary game board that doesn't do anything."""
@@ -96,7 +96,7 @@ Python 3.5 defined the methods in each protocol formally, but did so using abstr
 
 If you wanted to hook into a protocol, you could use an ABC as documentation -- but you couldn't use `mypy` to check that an object implemented the protocol unless the object subclassed one of these ABCs.
 
-That goes against the nature of protocols because they've always relied on duck typing, or the ability of a Python program to check the behavior of an object -- through its attributes and methods -- rather than its type. 
+That goes against the nature of protocols because they've always relied on duck typing, or the ability of a Python program to check the behavior of an object -- through its attributes and methods -- rather than its type.
 
 Where am I going with all this?
 
